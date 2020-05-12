@@ -20,18 +20,7 @@ public class PrettyWomenPage extends BaseActions {
     public void openPrettyWomenPage() {
 
         driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
-        currentUrlPrettyWomen = driver.getCurrentUrl();
 
-        Assert.assertEquals(currentUrlPrettyWomen, Data.expectedUrlSearch);
-        System.out.println(currentUrlPrettyWomen);
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        String actualTitle = driver.findElement(Locators.TITLE_PRETTY_WOMEN).getText();
-        Assert.assertEquals(Data.expectedTitlePrettyWomen, actualTitle);
     }
 
     public void searchByAge() {
