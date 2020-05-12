@@ -16,9 +16,13 @@ public class RegistrationTests extends BaseUI {
 
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistartion();
+
         mainPage.completeSecondPartOfRegistration();
 
-
+        WebElement checkBoxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
+        Assert.assertTrue(!driver.findElement(Locators.CHECKBOX_CONFIRMATION).isSelected(), "Element is not displayed");
+        checkBoxConfirmation.click();
+        //video 10 11:00
     }
 }
 

@@ -6,6 +6,7 @@ import org.testng.Assert;
 
 import java.sql.SQLOutput;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class GiftsPage extends BaseActions {
 
@@ -54,6 +55,10 @@ public class GiftsPage extends BaseActions {
 
 
     public void selectGiftsFromRegularList() {
+
+      // DO I NEED WAITS HERE IF IT'S PASSES WITHOUT IT?
+
+      //  driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
         List<WebElement> giftsRegularList = driver.findElements(Locators.REGULAR_GIFTS_LIST);
 

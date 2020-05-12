@@ -19,6 +19,8 @@ public class GiftsTest extends BaseUI {
         }
     }
 
+    //I COULDN'T GET TITLE - NETU TITLE
+
     @Test
     public void testSelectionOfBestsellers() {
         giftsPage.openGiftsPage();

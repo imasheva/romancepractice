@@ -1,6 +1,9 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.util.concurrent.TimeUnit;
 
 public class SignInPage extends BaseActions {
 
@@ -15,12 +18,15 @@ public class SignInPage extends BaseActions {
 
     }
 
+    public void login() {
 
-    public void signIn() {
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
-       // sendKeys("");
-       // sendKeys("");
-        ////button[@id='show-registration-block']   -  click
+        driver.findElement(Locators.EMAIL_LOGIN).sendKeys(Data.emailSignIn);
+        driver.findElement(Locators.PASSWORD_LOGIN).sendKeys(Data.passwordSignIn);
+        driver.findElement(Locators.BUTTON_LOGIN).click();
+
+
 
 
     }

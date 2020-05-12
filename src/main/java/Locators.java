@@ -50,12 +50,18 @@ public class Locators {
     //SIGN IN page
     public static final By LINK_SIGN_IN= By.cssSelector("a[href='https://romanceabroad.com/users/login_form']");
     public static final By TITLE_SIGN_IN= By.xpath("//h1");
+    public static final By EMAIL_LOGIN= By.xpath("//div[@class='col-xs-8']//input[@id='email']");
+    public static final By PASSWORD_LOGIN= By.xpath("//div[@class='col-xs-8']//input[@id='password']");
+    public static final By BUTTON_LOGIN= By.xpath("//div[@class='col-xs-8']//input[@id='password']");
+
 
 
     //GIFTS
 
     public static final By LINK_GIFTS_PAGE= By.cssSelector("a[href='https://romanceabroad.com/store/category-sweets']");
     public static final By BESTSELLERS_LIST= By.xpath("//div[@class='g-users-gallery__item col-xs-4 col-md-3 col-lg-2 bestseller']");
+
+
 
     public static final By REGULAR_GIFTS_LIST= By.xpath("//div[@class='contrasting-block']");
     public static final By BUTTON_QUICK_VIEW= By.xpath("//input[@value='Quick view']");

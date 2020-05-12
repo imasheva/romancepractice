@@ -8,7 +8,7 @@ public class MainPageTests extends BaseUI{
     @Test
     public void testMainPageIFrame() throws InterruptedException {
 
-        //scroll
+        //scroll didn't work for me
         mainPage.testIframeOnMainPage();
         //failed
     }

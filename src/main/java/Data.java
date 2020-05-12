@@ -19,7 +19,7 @@ public class Data {
     //Registration MainPage
 
     public static final String nickname = "donaldtrump";
-    public static final String phone = "444789678";
+    public static final String phone = "6197247589";
 
     //Registration p2
 
@@ -28,11 +28,19 @@ public class Data {
     public static final String monthOfBirth = "May";
     public static final String yearOfBirth = "1995";
 
+    //VOPROS - How to use it? Can't send string "Sunnyvale"
     public static final String location = "Sunnyvale";
 
     //SIGN IN page
     public static final String expectedUrlSignIn = "https://romanceabroad.com/";
-    public static final String expectedTitleSignIn = "Sign in";
+    public static final String expectedTitleSignIn = "The Best Free Ukrainian Dating Site| Romanceabroad.Com";
+
+
+    //VOPROS - tam 2 headera kogda nabirau //h1
+
+    public static final String emailSignIn = "ima@gmail.com";
+    public static final String passwordSignIn = "123456";
+
 
     //Gifts page
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";

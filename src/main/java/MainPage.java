@@ -32,7 +32,10 @@ public class MainPage extends BaseActions {
 
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
-        /*NE POLUCHILOS to use generator: add dependency + method / shows error
+        //OLEKSII QUESTION BELOW:
+
+        /*NE POLUCHILOS to use generator: add dependency + method -> DOBAVILA / shows error
+
         driver.findElement(Locators.TEXT_FIELD_NICKNAME).sendKeys(generateNewNumber(Data.nickname));*/
 
         driver.findElement(Locators.TEXT_FIELD_NICKNAME).sendKeys(Data.nickname);
@@ -75,15 +78,17 @@ public class MainPage extends BaseActions {
 
         driver.findElement(Locators.TEXT_FIELD_PHONE).sendKeys(Data.phone);
 
+        //VOPROS - POCHEMU NE POLUCHAETSYA CLEAR V TELEFON INPUT?
+
+        //KAK PRAVILNO S ETIM INPUT FIELD TEST PISAT?
+        //KAJDYI RAZ PO RAZNOMU - TO EMPTY, TO CUPERTINO I NE MOGU UDALIT, SEICHAS PROSTO EMPTY
+        //MOI TELEFON VVOJU - VYHODIT LIST -MASSACHUSETTS, CALIFORNIA NA AREA CODE 619
+
       //  WebElement location = driver.findElement(Locators.LOCATION_INPUT);
       //  location.clear(); - ne poluchaetsya to use clear method
       //  location.sendKeys(Data.location);
 
-        WebElement checkBoxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
-        if (!driver.findElement(Locators.CHECKBOX_CONFIRMATION).isSelected()) {
-            checkBoxConfirmation.click();
 
-        }
     }
 
 
@@ -91,14 +96,12 @@ public class MainPage extends BaseActions {
 
     public void testIframeOnMainPage() throws InterruptedException {
 
-        //do I need open page? method and assertions?
-        //Add waits
-        //Add title assertion
-        //Add press tabs Loop
-        //Add scroll
+        //do I need open page method? // ZDES MAIN URL -> THEN WE DON'T NEED OTDELNO ASSERTION, RIGHT?
+
+        //FAILED FOR ME IFRAME HOTYA VSYO KAK TY SDELALA
 
        // Video 7 55:31
-
+        Thread.sleep(5000);
         WebElement ele = driver.findElement (Locators.IFRAME);
         ajaxScroll(ele);
         driver.switchTo().frame(ele);
