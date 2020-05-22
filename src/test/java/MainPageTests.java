@@ -47,9 +47,11 @@ public class MainPageTests extends BaseUI {
     public void testBookNow(){
         mainPage.navigateToLinkHome();
         mainPage.verifyBookNow();
-
-
-
+    }
+    @Test
+    public void testDiscountAlert(){
+        mainPage.navigateToLinkHome();
+        mainPage.verifyDiscountAlert();
     }
 
 

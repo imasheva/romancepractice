@@ -11,6 +11,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static org.testng.Assert.assertTrue;
+
 public class MainPage extends BaseActions {
 
     //CONSTRUCTOR
@@ -33,11 +35,24 @@ public class MainPage extends BaseActions {
 
 
     public void completeFirstPartOfRegistartion() {
-        driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.email);
-        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.password);
-        driver.findElement(Locators.BUTTON_NEXT).click();
-    }
 
+        // HOW TO OPTIMIZE IT?
+
+        driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.email);
+        String strEmail = driver.findElement(Locators.TEXT_FIELD_EMAIL).getAttribute("value");
+        System.out.println("Email: " + strEmail);
+
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.password);
+        String strPassword = driver.findElement(Locators.TEXT_FIELD_PASSWORD).getAttribute("value");
+        System.out.println("Password: " + strPassword);
+
+        WebElement btnNext = driver.findElement(Locators.BUTTON_NEXT);
+        if (btnNext.isDisplayed() && btnNext.isEnabled()) {
+            btnNext.click();
+            System.out.println("Button" + "Next" + "is displyed and enabled");
+        }
+
+    }
 
     public void completeSecondPartOfRegistration() {
 
@@ -46,20 +61,51 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.TEXT_FIELD_NICKNAME).sendKeys(generateNewNumber(Data.nickname));*/
 
         driver.findElement(Locators.TEXT_FIELD_NICKNAME).sendKeys(Data.nickname);
+        String strNickName = driver.findElement(Locators.TEXT_FIELD_NICKNAME).getAttribute("value");
+        System.out.println("Nickname: " + strNickName);
 
         driver.findElement(Locators.LIST_DAYS).click();
         clickValueOfLists(Locators.LIST_VALUE_DAY, Data.dayOfBirth);
 
+        WebElement dayEl = driver.findElement(Locators.LIST_VALUE_DAY);
+        System.out.println(dayEl.getText());
+
+        // HOW TO PRINT WHICH DAYS, MONTH, YEAR SELECTED
+        //GET TEXT?          //*/span[contains(text(),"7")]  How to fetch the text from span tag?
+        //NOT SURE HOW TO CREATE SOME VERIFICATION AND PRINT
+
+        /*  *** SENDS THIS :
+          public static final String dayOfBirth = "1";
+         public static final String monthOfBirth = "May";
+         public static final String yearOfBirth = "1995";
+         */
+
+        /*
+        IN CONSOLE PRINTS THESE:
+        Day selected: 1
+        Month selected: 0
+        Year selected: 2002
+         */
+
+        String day = driver.findElement(Locators.LIST_VALUE_DAY).getAttribute("data-value");
+        System.out.println("Day selected: " + day);
+
         driver.findElement(Locators.LIST_MONTHS).click();
         clickValueOfLists(Locators.LIST_VALUE_MONTH, Data.monthOfBirth);
+
+        String month = driver.findElement(Locators.LIST_VALUE_MONTH).getAttribute("data-value");
+        System.out.println("Month selected: " + month);
 
         driver.findElement(Locators.LIST_YEARS).click();
         clickValueOfLists(Locators.LIST_VALUE_YEAR, Data.yearOfBirth);
 
+        String year = driver.findElement(Locators.LIST_VALUE_YEAR).getAttribute("data-value");
+        System.out.println("Year selected: " + year);
+
+
         WebElement checkbox = driver.findElement((Locators.CHECKBOX_CONFIRMATION));
         if (!checkbox.isSelected()) {
             checkbox.click();
-
         }
       /*  driver.findElement(By.xpath("//div[@id='yearSelect']")).click();
 
@@ -80,7 +126,7 @@ public class MainPage extends BaseActions {
         // Video 7 55:31
         Thread.sleep(5000);
         WebElement ele = driver.findElement(Locators.IFRAME);
-      //  public static final By IFRAME = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
+        //  public static final By IFRAME = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
 
         ajaxScroll(ele);
         driver.switchTo().frame(ele);
@@ -146,7 +192,7 @@ public class MainPage extends BaseActions {
 
         for (int i = 0; i < links.size(); i++) {
 
-           String info = links.get(i).getText();
+            String info = links.get(i).getText();
             System.out.println(info);
             links.get(i).click();
 
@@ -163,67 +209,71 @@ public class MainPage extends BaseActions {
                 Assert.assertEquals(Data.expectedUrlPrettyWomen, actualUrlPrettyWomen);
                 driver.findElement(By.xpath("//a[@class='g-pic-border g-rounded']")).isDisplayed();
 
-                if(actualUrlPrettyWomen.contains("#")){
+                if (actualUrlPrettyWomen.contains("#")) {
                     Assert.fail("It contains restricted #");
-                }else{
+                } else {
                     System.out.println("No special character. It is good url!");
                 }
 
             }
-            if(info.contains("PHOTOS")){
+            if (info.contains("PHOTOS")) {
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
                 actualUrlPhotos = driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedTitlePhotos, actualTitle);
                 Assert.assertEquals(Data.expectedUrlPhotos, actualUrlPhotos);
                 driver.findElement(By.xpath("//div[@class='g-users-gallery__content']")).isDisplayed();
 
-                if(actualUrlPhotos.contains("#")){
+                if (actualUrlPhotos.contains("#")) {
                     Assert.fail("It contains restricted #");
-                }else{
+                } else {
                     System.out.println("No special character. It is good url!");
                 }
 
 
-            }if(info.contains("GIFTS")){
+            }
+            if (info.contains("GIFTS")) {
                 actualUrlGifts = driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedUrlGifts, actualUrlGifts);
                 driver.findElement(By.xpath("//div[@class='g-users-gallery__photo ']")).isDisplayed();
-                if(actualUrlGifts.contains("#")){
+                if (actualUrlGifts.contains("#")) {
                     Assert.fail("It contains restricted #");
-                }else{
+                } else {
                     System.out.println("No special character. It is good url!");
                 }
 
 
-            }if(info.contains("TOUR")){
+            }
+            if (info.contains("TOUR")) {
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
                 actualUrlTourToUkraine = driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedTitleTourToUkraine, actualTitle);
                 Assert.assertEquals(Data.expectedUrlTourUkraine, actualUrlTourToUkraine);
                 driver.findElement(By.xpath("//div[@class='store-content']")).isDisplayed();
-                if(actualUrlTourToUkraine.contains("#")){
+                if (actualUrlTourToUkraine.contains("#")) {
                     Assert.fail("It contains restricted #");
-                }else{
+                } else {
                     System.out.println("No special character. It is good url!");
                 }
 
 
-            }if(info.contains("BLOG")){
+            }
+            if (info.contains("BLOG")) {
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
                 actualUrlBlog = driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedTitleBlog, actualTitle);
                 Assert.assertEquals(Data.expectedUrlBlog, actualUrlBlog);
                 driver.findElement(By.xpath("//div[@class='info-content-block wysiwyg']")).isDisplayed();
-                if(actualUrlBlog.contains("#")){
+                if (actualUrlBlog.contains("#")) {
                     Assert.fail("It contains restricted #");
-                }else{
+                } else {
                     System.out.println("No special character. It is good url!");
                 }
-            }if(info.contains("SIGN")){
-             //   actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();   //doesn't find
+            }
+            if (info.contains("SIGN")) {
+                //   actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();   //doesn't find
                 actualUrlSignIn = driver.getCurrentUrl();
-              //  Assert.assertEquals(Data.expectedTitleSignIn, actualTitle);
-             //   Assert.assertEquals(Data.expectedUrlSignIn, actualUrlSignIn);
+                //  Assert.assertEquals(Data.expectedTitleSignIn, actualTitle);
+                //   Assert.assertEquals(Data.expectedUrlSignIn, actualUrlSignIn);
                 driver.findElement(By.xpath("//div[@class='lc-content-outer']")).isDisplayed();
 
             }
@@ -238,24 +288,39 @@ public class MainPage extends BaseActions {
 
     public int countIframeSize() {
 
-        int  size;
+        int size;
         size = driver.findElements(By.xpath("//iframe")).size();
         System.out.println(size + " " + "iFrame number");
         return size;
     }
-    public void navigateToLinkHome(){
+
+    public void navigateToLinkHome() {
         ajaxClick(Locators.LINK_HOME);
     }
 
     public void verifyBookNow() {
-       // ajaxClick(Locators.BOOK_NOW_TAB);
+        // ajaxClick(Locators.BOOK_NOW_TAB);
 
         // Tak pravilno as sert delat?
         //If it's too much code, to chto delat?
 
-      WebElement bookNow = wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.BOOK_NOW_TAB)));
-      Assert.assertTrue(bookNow.isDisplayed()); //ESLI ASSERT IN THE MIDDLE OF TEST CASE, TO OSTAVLYAT V MAIN CLASSE?
-      bookNow.click();
+        WebElement bookNow = wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.BOOK_NOW_TAB)));
+        assertTrue(bookNow.isDisplayed()); //ESLI ASSERT IN THE MIDDLE OF TEST CASE, TO OSTAVLYAT V MAIN CLASSE?
+        bookNow.click();
+
+    }
+
+    public void verifyDiscountAlert() {
+
+        WebElement discountAlert = wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.BOOK_NOW_TAB)));
+        assertTrue(discountAlert.isDisplayed());
+
+        //HOW TO DO ASSERTION FOR WEBELEMENT CONTAINS 60% DISCOUNT?
+
+        //   String actualString = driver.findElement(Locators.BOOK_NOW_TAB).getText();
+        //  assertTrue(actualString.contains("BOOK NOW "));
+
+        discountAlert.click();
 
     }
 }

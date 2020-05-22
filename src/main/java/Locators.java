@@ -14,6 +14,7 @@ public class Locators {
     public static final By LOCATION_INPUT = By.xpath("//div[@id='yearSelect']//ul/li");
     public static final By CHECKBOX_CONFIRMATION = By.cssSelector("#confirmation");
     public static final By BOOK_NOW_TAB = By.xpath("//a[contains(text(),'BOOK NOW')]");
+   // public static final By BOOK_NOW_TAB = By.xpath("//div[@class='discountalert']");
 
     //Registration part1
     public static final By TEXT_FIELD_EMAIL = By.cssSelector("#email");
