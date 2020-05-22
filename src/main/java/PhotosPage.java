@@ -17,23 +17,27 @@ public class PhotosPage extends BaseActions {
 
     }
 
-    public void checkPhotos() {
+    public void checkPhotosList() {
 
         navigateToLinkPage(Locators.LINK_PHOTOS_PAGE);
         wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
         //    public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__info']");
         // public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__photo']//a");
-
+       // String name = "Tanya";
         List<WebElement> photosList = driver.findElements(Locators.LIST_PHOTOS);
         System.out.println("Print size of photos list: " + photosList.size());
 
         for (int i = 0; i < photosList.size(); i++) {
 
             String info = photosList.get(i).getText();
+
             if (info.contains("Tanya")) {
                 //photosList.get(i).click();
-                ajaxClick(photosList.get(i));
+              //  ajaxClick(photosList.get(i));
+                //click on name
+                driver.findElements(By.xpath("//div[@class='g-users-gallery__info']//div//a")).get(i).click();
                 System.out.println(info + "Found Tatyana");
+                break;
             }
 
         }

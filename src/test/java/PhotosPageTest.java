@@ -35,7 +35,7 @@ public class PhotosPageTest extends BaseUI {
     public void checkPhotosList(){
 
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        photosPage.checkPhotos();
+        photosPage.checkPhotosList();
         }
 
 

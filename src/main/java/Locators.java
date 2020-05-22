@@ -3,7 +3,7 @@ import org.openqa.selenium.By;
 public class Locators {
 
     //MAIN PAGE
-
+    public static final By LINK_HOME = By.xpath("//a[contains(text(),'HOME')]");
     //TABS ON MAIN PAGE
     public static final By TAB_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li");
     public static final By TITLE_OF_PAGE = By.xpath("//h1");
@@ -13,6 +13,7 @@ public class Locators {
     public static final By BUTTON_REGISTRATION = By.cssSelector("#show-registration-block");
     public static final By LOCATION_INPUT = By.xpath("//div[@id='yearSelect']//ul/li");
     public static final By CHECKBOX_CONFIRMATION = By.cssSelector("#confirmation");
+    public static final By BOOK_NOW_TAB = By.xpath("//a[contains(text(),'BOOK NOW')]");
 
     //Registration part1
     public static final By TEXT_FIELD_EMAIL = By.cssSelector("#email");

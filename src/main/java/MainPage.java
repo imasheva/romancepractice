@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -79,6 +80,8 @@ public class MainPage extends BaseActions {
         // Video 7 55:31
         Thread.sleep(5000);
         WebElement ele = driver.findElement(Locators.IFRAME);
+      //  public static final By IFRAME = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
+
         ajaxScroll(ele);
         driver.switchTo().frame(ele);
         driver.findElement(Locators.YOUTUBE_PLAY_BUTTON).click();
@@ -239,6 +242,21 @@ public class MainPage extends BaseActions {
         size = driver.findElements(By.xpath("//iframe")).size();
         System.out.println(size + " " + "iFrame number");
         return size;
+    }
+    public void navigateToLinkHome(){
+        ajaxClick(Locators.LINK_HOME);
+    }
+
+    public void verifyBookNow() {
+       // ajaxClick(Locators.BOOK_NOW_TAB);
+
+        // Tak pravilno as sert delat?
+        //If it's too much code, to chto delat?
+
+      WebElement bookNow = wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.BOOK_NOW_TAB)));
+      Assert.assertTrue(bookNow.isDisplayed()); //ESLI ASSERT IN THE MIDDLE OF TEST CASE, TO OSTAVLYAT V MAIN CLASSE?
+      bookNow.click();
+
     }
 }
 

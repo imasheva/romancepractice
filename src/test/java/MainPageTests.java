@@ -9,11 +9,6 @@ import java.util.concurrent.TimeUnit;
 public class MainPageTests extends BaseUI {
 
 
-    @Test
-    public void testMainPageIFrame() throws InterruptedException {
-        //use scroll in future
-        mainPage.testIframeOnMainPage();
-    }
 
     @Test
     public void checkTabs() {
@@ -43,6 +38,21 @@ public class MainPageTests extends BaseUI {
         int numberOfIframes = mainPage.countIframeSize();
         Assert.assertTrue(numberOfIframes > 0, "Number is more than 0");
     }
+    @Test
+    public void testMainPageIFrame() throws InterruptedException {
+        //use scroll in future
+        mainPage.testIframeOnMainPage();
+    }
+    @Test
+    public void testBookNow(){
+        mainPage.navigateToLinkHome();
+        mainPage.verifyBookNow();
+
+
+
+    }
+
+
 
 
 }
