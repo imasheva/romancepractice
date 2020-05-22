@@ -10,8 +10,11 @@ public class BlogPageTest extends BaseUI {
 
     @Test
     public void testBlogPage() {
+
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        blogPage.verifyBlogLinkIsDisplayed();
+
+        blogPage.clickLinkBlog();
+
         actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
         actualUrlBlog = driver.getCurrentUrl();
 
@@ -28,13 +31,15 @@ public class BlogPageTest extends BaseUI {
     }
       @Test    //VIDEO 11, 27:55
 
-    public void testList(){
+    public void testBlogPageListOfLinksOnRight(){
          // blogPage.verifyBlogLinkIsDisplayed();
           driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-          blogPage.verifyListNumber();
+          blogPage.testBlogPageListonRight();
 
-
-
+      }
+      @Test
+    public void testBlogPageListOfLinksOnLeft(){
+        blogPage.testBlogPageLinksonOnLeft();
       }
 
 }
