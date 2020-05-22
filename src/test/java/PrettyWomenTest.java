@@ -4,6 +4,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class PrettyWomenTest extends BaseUI {
 
     String currentUrlPrettyWomen;
@@ -15,7 +17,7 @@ public class PrettyWomenTest extends BaseUI {
         prettyWomenPage.openPrettyWomenPage();
         currentUrlPrettyWomen = driver.getCurrentUrl();
 
-        Assert.assertEquals(currentUrlPrettyWomen, Data.expectedUrlSearch);
+        Assert.assertEquals(currentUrlPrettyWomen, Data.expectedUrlPrettyWomen);
         System.out.println(currentUrlPrettyWomen);
         try {
             Thread.sleep(3000);
@@ -33,6 +35,7 @@ public class PrettyWomenTest extends BaseUI {
     @Test
     public void testDropDownViewOptions() {
         prettyWomenPage.openPrettyWomenPage();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         prettyWomenPage.testDropDownSelectOptions();
     }
 
@@ -40,6 +43,7 @@ public class PrettyWomenTest extends BaseUI {
     @Test
     public void testListViewOption() {
         prettyWomenPage.openPrettyWomenPage();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         prettyWomenPage.testListViewOption();
 
     }

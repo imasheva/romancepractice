@@ -18,13 +18,12 @@ public class SignInPage extends BaseActions {
 
     }
 
-    public void login() {
-
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+    public void signIn() {
 
         driver.findElement(Locators.EMAIL_LOGIN).sendKeys(Data.emailSignIn);
         driver.findElement(Locators.PASSWORD_LOGIN).sendKeys(Data.passwordSignIn);
         driver.findElement(Locators.BUTTON_LOGIN).click();
+
 
 
 

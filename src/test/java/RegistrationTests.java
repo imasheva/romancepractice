@@ -9,6 +9,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class RegistrationTests extends BaseUI {
 
     @Test
@@ -16,13 +18,10 @@ public class RegistrationTests extends BaseUI {
 
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistartion();
-
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         mainPage.completeSecondPartOfRegistration();
 
-        WebElement checkBoxConfirmation = driver.findElement(Locators.CHECKBOX_CONFIRMATION);
-        Assert.assertTrue(!driver.findElement(Locators.CHECKBOX_CONFIRMATION).isSelected(), "Element is not displayed");
-        checkBoxConfirmation.click();
-        //video 10 11:00
+
     }
 }
 

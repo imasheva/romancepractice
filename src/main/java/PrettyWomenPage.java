@@ -42,8 +42,6 @@ public class PrettyWomenPage extends BaseActions {
 
     public void testDropDownSelectOptions() {
 
-        // wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.DROP_DOWN_LIST_VIEW_OPTIONS));
-
         WebElement dropDownListViewOptions = driver.findElement(Locators.DROP_DOWN_LIST_VIEW_OPTIONS);
         getDropDownListByIndex(dropDownListViewOptions, Data.view_Option);
 

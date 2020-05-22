@@ -1,8 +1,11 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class GiftsTest extends BaseUI {
     String currentUrlGifts;
+
 
     @Test
     public void testGiftsPage() {
@@ -24,6 +27,7 @@ public class GiftsTest extends BaseUI {
     @Test
     public void testSelectionOfBestsellers() {
         giftsPage.openGiftsPage();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         giftsPage.selectGiftsfromBestsellers();
 
     }
@@ -31,6 +35,7 @@ public class GiftsTest extends BaseUI {
     @Test
     public void testSelectionOfRegularGifts(){
         giftsPage.openGiftsPage();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         giftsPage.selectGiftsFromRegularList();
 
     }

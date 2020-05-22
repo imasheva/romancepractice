@@ -14,39 +14,40 @@ public class GiftsPage extends BaseActions {
         super(driver, wait);
     }
 
-    String currentUrlGifts;
 
     public void openGiftsPage() {
-
         driver.findElement(Locators.LINK_GIFTS_PAGE).click();
-
-        currentUrlGifts = driver.getCurrentUrl();
-
-        Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
-
-        System.out.println(currentUrlGifts);
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
     }
 
     public void selectGiftsfromBestsellers() {
 
+
+       // clickValueOfLists(Locators.BESTSELLERS_LIST, Data.bestSellerItem);
+     /*
+
+     //OLEKSII METHOD
+      //  public void clickValueOfLists(By locator, String text) {
+            List<WebElement> elements = driver.findElements(Locators.BESTSELLERS_LIST);
+            for (int i = 0; i < elements.size(); i++) {
+
+                WebElement elementOfList = elements.get(i);
+                String value = elementOfList.getText();
+
+                if (value.contains(Data.bestSellerItem)) {
+                    elementOfList.click();
+                }
+
+            }
+     */
+
         List<WebElement> bestSellersList = driver.findElements(Locators.BESTSELLERS_LIST);
 
         System.out.println("Bestseller items size: " + bestSellersList.size());
-
         for (int i = 0; i < bestSellersList.size(); i++) {
 
             System.out.println("Bestseller items name: " + bestSellersList.get(i).getText()); //How to print each
 
-            // String name =   bestSellersList.get(i).getText(); //Nado sohranyat otdelno?
-
-            if (bestSellersList.get(i).getText().equalsIgnoreCase("Spa")) {
+            if (bestSellersList.get(i).getText().equalsIgnoreCase(Data.bestSellerItem)) {
                 bestSellersList.get(i).click();
                 break;
             }
@@ -58,22 +59,21 @@ public class GiftsPage extends BaseActions {
 
       // DO I NEED WAITS HERE IF IT'S PASSES WITHOUT IT?
 
-      //  driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
         List<WebElement> giftsRegularList = driver.findElements(Locators.REGULAR_GIFTS_LIST);
 
         for (int i = 0; i < giftsRegularList.size(); i++) {
 
-            String gift = giftsRegularList.get(i).getText();
+            WebElement element = giftsRegularList.get(i);
 
-            if (gift.toLowerCase().contains(Data.giftNameFromRegularList)) {
+            String gift = element.getText();
+
+            if (gift.toLowerCase().contains(Data.giftItemRegularList)) {
                 //click on Quick view button
                 driver.findElements(Locators.BUTTON_QUICK_VIEW).get(i).click();
                 break;
             }
         }
-
-
 
     }
 }

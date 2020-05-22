@@ -28,7 +28,8 @@ public class BaseUI {
     PrettyWomenPage prettyWomenPage;
     SignInPage signInPage;
     GiftsPage giftsPage;
-    SoftAssert softAssert = new SoftAssert();
+    BlogPage blogPage;
+    SoftAssert softAssert = new SoftAssert();  //VID 10 16:36
 
     @BeforeMethod
     @Parameters("browser")
@@ -67,6 +68,7 @@ public class BaseUI {
         prettyWomenPage = new PrettyWomenPage(driver, wait);
         signInPage = new SignInPage(driver, wait);
         giftsPage = new GiftsPage(driver, wait);
+        blogPage = new BlogPage(driver, wait);
         driver.manage().window().maximize();
         driver.get(Data.mainUrl);
 
