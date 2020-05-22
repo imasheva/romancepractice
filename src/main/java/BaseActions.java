@@ -31,6 +31,7 @@ public class BaseActions {
     public void getDropDownListByIndex(WebElement element, int index) {
         Select select = new Select(element);
         select.selectByIndex(index);
+
     }
 
     public void getDropDownListByText(WebElement element, String text) {
@@ -38,9 +39,11 @@ public class BaseActions {
         select.selectByVisibleText(text);
     }
 
+
     public void getDropDownListByValue(WebElement element, String value) {
         Select select = new Select(element);
         select.selectByValue(value);
+
     }
 
     //CLICKS
@@ -107,6 +110,7 @@ public class BaseActions {
             String value = elementOfList.getText();
             if (value.contains(text)) {
                 elementOfList.click();
+
             }
 
         }

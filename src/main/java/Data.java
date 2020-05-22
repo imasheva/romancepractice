@@ -19,7 +19,7 @@ public class Data {
 
     //Registration p2
 
-    public static final String dayOfBirth = "1";
+    public static final String dayOfBirth = "2";
     public static final String monthOfBirth = "May";
     public static final String yearOfBirth = "1995";
 

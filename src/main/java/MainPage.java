@@ -36,7 +36,7 @@ public class MainPage extends BaseActions {
 
     public void completeFirstPartOfRegistartion() {
 
-        // HOW TO OPTIMIZE IT?
+        // HOW TO OPTIMIZE CODE BELOW?
 
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.email);
         String strEmail = driver.findElement(Locators.TEXT_FIELD_EMAIL).getAttribute("value");
@@ -46,10 +46,12 @@ public class MainPage extends BaseActions {
         String strPassword = driver.findElement(Locators.TEXT_FIELD_PASSWORD).getAttribute("value");
         System.out.println("Password: " + strPassword);
 
+        //What better assertion to use for button clicked?
+
         WebElement btnNext = driver.findElement(Locators.BUTTON_NEXT);
         if (btnNext.isDisplayed() && btnNext.isEnabled()) {
             btnNext.click();
-            System.out.println("Button" + "Next" + "is displyed and enabled");
+            System.out.println("Button next  is displyed, enabled and clicked");
         }
 
     }
@@ -66,13 +68,17 @@ public class MainPage extends BaseActions {
 
         driver.findElement(Locators.LIST_DAYS).click();
         clickValueOfLists(Locators.LIST_VALUE_DAY, Data.dayOfBirth);
+        System.out.println("Day selected: " + Data.dayOfBirth);
 
-        WebElement dayEl = driver.findElement(Locators.LIST_VALUE_DAY);
-        System.out.println(dayEl.getText());
 
-        // HOW TO PRINT WHICH DAYS, MONTH, YEAR SELECTED
+        // HOW TO PRINT WHICH DAYS, MONTH, YEAR SELECTED by Using Method Like below?
+
+        //    String day = driver.findElement(Locators.LIST_VALUE_DAY).getAttribute("data-value");
+        //   System.out.println("Day selected: " + day);
+
+
         //GET TEXT?          //*/span[contains(text(),"7")]  How to fetch the text from span tag?
-        //NOT SURE HOW TO CREATE SOME VERIFICATION AND PRINT
+        //NOT SURE HOW TO CREATE SOME VERIFICATION
 
         /*  *** SENDS THIS :
           public static final String dayOfBirth = "1";
@@ -87,37 +93,31 @@ public class MainPage extends BaseActions {
         Year selected: 2002
          */
 
-        String day = driver.findElement(Locators.LIST_VALUE_DAY).getAttribute("data-value");
-        System.out.println("Day selected: " + day);
 
         driver.findElement(Locators.LIST_MONTHS).click();
         clickValueOfLists(Locators.LIST_VALUE_MONTH, Data.monthOfBirth);
+        System.out.println("Month selected: " + Data.monthOfBirth);
 
-        String month = driver.findElement(Locators.LIST_VALUE_MONTH).getAttribute("data-value");
-        System.out.println("Month selected: " + month);
 
         driver.findElement(Locators.LIST_YEARS).click();
         clickValueOfLists(Locators.LIST_VALUE_YEAR, Data.yearOfBirth);
-
-        String year = driver.findElement(Locators.LIST_VALUE_YEAR).getAttribute("data-value");
-        System.out.println("Year selected: " + year);
+        System.out.println("Year selected: " + Data.yearOfBirth);
 
 
         WebElement checkbox = driver.findElement((Locators.CHECKBOX_CONFIRMATION));
         if (!checkbox.isSelected()) {
             checkbox.click();
         }
-      /*  driver.findElement(By.xpath("//div[@id='yearSelect']")).click();
 
-            List<WebElement> elements = driver.findElements(By.xpath("//li[@data-handler='selectYear']"));
+        driver.findElement(Locators.TEXT_FIELD_PHONE).sendKeys(Data.phone);
+        String phoneNum = driver.findElement(Locators.TEXT_FIELD_PHONE).getAttribute("value");
+        System.out.println("Phone number: " + phoneNum);
 
-            for (int i = 0; i < elements.size(); i++) {
-                WebElement elementOfList = elements.get(i);
-                String value = elementOfList.getText();
-                if (value.contains(Data.yearOfBirth)) {
-                    elementOfList.click();
-                }
-            }*/
+        // HOW TO VERIFY LOCATION TEXT DISPLAYED AFTER ENTERING NUMBER ???
+
+        WebElement location = driver.findElement(Locators.LOCATION_INPUT);
+        String title = location.getAttribute("title");
+        System.out.println(location.getAttribute("title"));
 
     }
 
