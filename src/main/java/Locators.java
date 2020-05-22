@@ -85,6 +85,7 @@ public class Locators {
    // public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__photo']//a");
    // public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__item col-xs-6 col-sm-4 col-md-3 col-lg-2 big']");
    // public static final By LIST_PHOTOS = By.xpath("//div[@id='gallery']//div[@class='g-users-gallery__item col-xs-6 col-sm-4 col-md-3 col-lg-2 big']");
-    public static final By LIST_PHOTOS = By.xpath("//*[@class='g-users-gallery__item col-xs-6 col-sm-4 col-md-3 col-lg-2 big']");
+ //   public static final By LIST_PHOTOS = By.xpath("//*[@class='g-users-gallery__item col-xs-6 col-sm-4 col-md-3 col-lg-2 big']");
+    public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__info']");
 
 }
