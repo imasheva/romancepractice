@@ -26,7 +26,8 @@ public class BlogPageTest extends BaseUI {
             System.out.println("No special character. It is good url!");
         }
     }
-      @Test
+      @Test    //VIDEO 11, 27:55
+
     public void testList(){
          // blogPage.verifyBlogLinkIsDisplayed();
           driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

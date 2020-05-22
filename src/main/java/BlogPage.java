@@ -34,10 +34,11 @@ public class BlogPage extends BaseActions {
         for (int i = 0; i < list.size(); i++) {
             info = list.get(i).getText();
             System.out.println(info);
-            list.get(i).click();
 
-            if (info.toLowerCase().contains("Kharkov dating agency")) {
-                //  if (info.contains("Kharkov dating")) {
+            //  if (info.toLowerCase().contains("Kharkov dating agency")) {
+            if (info.contains("Kharkov dating")) {
+                list.get(i).click();
+                // YA PYTAUS SDELAT ASSERT POSLE TOGO KAK NASHEL I NAJAL NA 1-I LINK, A ONO DELAET ASSERTION NA SAM BLOG PAGE
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
                 actualUrlKharkovDatingAgency = driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedTitleKharkovDatingAgency, actualTitle);

@@ -76,4 +76,9 @@ public class Locators {
     public static final By LINK_BLOG = By.cssSelector("a[href='https://romanceabroad.com/content/view/blog']");
     public static final By BLOG_LIST = By.xpath("//div[@class='info-content-block wysiwyg']//ul//li");
 
+    //Photos Page
+    public static final By LINK_PHOTOS_PAGE = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
+    public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__photo']//a");
+
+
 }
