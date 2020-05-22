@@ -23,11 +23,11 @@ public class BlogPage extends BaseActions {
     //OLEKSII PLEASE HELP!!!
     //I WANTED TO ENTER EACH AND EVERY LINK IN THE LIST AND DO ASSERTIONS TO URL, TITLE, AND OTHER ELEMENTS
 
-    public void testBlogPageListonRight(){
+    public void testBlogPageListOnRight() {
         String actualTitle;
         String actualUrlKharkovDatingAgency;
         String info;
-        navigateToLinkPage(Locators.LINK_BLOG);
+        //navigateToLinkPage(Locators.LINK_BLOG);
         //wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.BLOG_LIST)));
         List<WebElement> list = driver.findElements(Locators.BLOG_LIST_RIGHT);
         System.out.println("Size of the list: " + list.size());
@@ -35,11 +35,13 @@ public class BlogPage extends BaseActions {
         for (int i = 0; i < list.size(); i++) {
             info = list.get(i).getText();
             System.out.println(info);
-            ajaxClick(list.get(i));
+         //   ajaxClick(list.get(i));
 
             //  if (info.toLowerCase().contains("Kharkov dating agency")) {
             if (info.contains("Kharkov dating")) {
-               // list.get(i).click();
+                // list.get(i).click();
+                   ajaxClick(list.get(i));
+
                 // YA PYTAUS SDELAT ASSERT POSLE TOGO KAK NASHEL I NAJAL NA 1-I LINK, A ONO DELAET ASSERTION NA SAM BLOG PAGE
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
                 actualUrlKharkovDatingAgency = driver.getCurrentUrl();
@@ -67,7 +69,7 @@ public class BlogPage extends BaseActions {
             ajaxClick(links.get(i));
             clickBlogMenuRight();
             links = driver.findElements(Locators.BLOG_LIST_LEFT);
-            
+
         }
 
     }

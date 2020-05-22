@@ -20,8 +20,7 @@ public class PhotosPage extends BaseActions {
     public void checkPhotos() {
 
         navigateToLinkPage(Locators.LINK_PHOTOS_PAGE);
-
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.LIST_PHOTOS)));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
 
         // public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__photo']//a");
 
@@ -34,9 +33,7 @@ public class PhotosPage extends BaseActions {
 
             String info = photosList.get(i).getText();
             photosList.get(i).click();
-
             System.out.println(info);
-
         }
 
 

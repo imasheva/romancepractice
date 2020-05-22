@@ -34,7 +34,8 @@ public class BlogPageTest extends BaseUI {
     public void testBlogPageListOfLinksOnRight(){
          // blogPage.verifyBlogLinkIsDisplayed();
           driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-          blogPage.testBlogPageListonRight();
+          blogPage.clickLinkBlog();
+          blogPage.testBlogPageListOnRight();
 
       }
       @Test
