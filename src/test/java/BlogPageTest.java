@@ -21,8 +21,6 @@ public class BlogPageTest extends BaseUI {
         Assert.assertEquals(Data.expectedTitleBlog, actualTitle);
         Assert.assertEquals(Data.expectedUrlBlog, actualUrlBlog);
 
-        driver.findElement(By.xpath("//div[@class='info-content-block wysiwyg']")).isDisplayed();
-
         if (actualUrlBlog.contains("#")) {
             Assert.fail("It contains restricted #");
         } else {

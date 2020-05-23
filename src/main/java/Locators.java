@@ -7,6 +7,7 @@ public class Locators {
     //TABS ON MAIN PAGE
     public static final By TAB_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li");
     public static final By TITLE_OF_PAGE = By.xpath("//h1");
+    public static final By HEADER_ROMANCE_ABROAD= By.xpath("//a//img[@src='/img/logo.jpg']");
 
     public static final By IFRAME = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By YOUTUBE_PLAY_BUTTON = By.cssSelector("button.ytp-large-play-button.ytp-button");

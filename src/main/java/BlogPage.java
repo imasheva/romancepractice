@@ -19,6 +19,8 @@ public class BlogPage extends BaseActions {
     public void clickLinkBlog() {
 
         navigateToLinkPage(Locators.LINK_BLOG);
+        driver.findElement(By.xpath("//div[@class='info-content-block wysiwyg']")).isDisplayed();
+
     }
     //OLEKSII PLEASE HELP!!!
     //I WANTED TO ENTER EACH AND EVERY LINK IN THE LIST AND DO ASSERTIONS TO URL, TITLE, AND OTHER ELEMENTS

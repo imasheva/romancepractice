@@ -323,5 +323,12 @@ public class MainPage extends BaseActions {
         discountAlert.click();
 
     }
+
+    public void verifyHeader() {
+
+        WebElement header = driver.findElement(Locators.HEADER_ROMANCE_ABROAD);
+        assertTrue(header.isDisplayed());
+
+    }
 }
 

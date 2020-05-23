@@ -54,6 +54,12 @@ public class MainPageTests extends BaseUI {
         mainPage.verifyDiscountAlert();
     }
 
+    @Test
+    public void verifyRomanceAbroadHeader(){
+        mainPage.navigateToLinkHome();
+        mainPage.verifyHeader();
+
+    }
 
 
 
