@@ -50,6 +50,12 @@ public class BlogPage extends BaseActions {
                 Assert.assertEquals(Data.expectedTitleKharkovDatingAgency, actualTitle);
                 Assert.assertEquals(Data.expectedUrlKharkovDatingAgency, actualUrlKharkovDatingAgency);
 
+
+              //  public static final String expectedTitleKharkovDatingAgency = "Kharkov Dating & Marriage Agency";
+             //   public static final String expectedUrlKharkovDatingAgency = "https://romanceabroad.com/content/view/kharkov-dating-agency";
+
+
+
                 if (actualUrlKharkovDatingAgency.contains("#")) {
                     Assert.fail("It contains restricted #");
                 } else {
