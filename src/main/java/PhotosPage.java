@@ -33,9 +33,8 @@ public class PhotosPage extends BaseActions {
 
             if (info.contains("Tanya")) {
                 //photosList.get(i).click();
-              //  ajaxClick(photosList.get(i));
-                //click on name
-                driver.findElements(By.xpath("//div[@class='g-users-gallery__info']//div//a")).get(i).click();
+                ajaxClick(photosList.get(i));
+
                 System.out.println(info + "Found Tatyana");
                 break;
             }

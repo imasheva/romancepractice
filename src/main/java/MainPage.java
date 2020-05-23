@@ -301,7 +301,7 @@ public class MainPage extends BaseActions {
     public void verifyBookNow() {
         // ajaxClick(Locators.BOOK_NOW_TAB);
 
-        // Tak pravilno as sert delat?
+        // Tak pravilno assert delat?
         //If it's too much code, to chto delat?
 
         WebElement bookNow = wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.BOOK_NOW_TAB)));

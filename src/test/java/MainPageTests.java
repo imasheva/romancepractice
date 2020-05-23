@@ -60,6 +60,32 @@ public class MainPageTests extends BaseUI {
         mainPage.verifyHeader();
 
     }
+    /*
+    public void checkLinksOnWebPage(String typeElement, String attribute) {
+
+        List<WebElement> links = driver.findElements(By.xpath(typeElement));
+        System.out.println("I start taking attributes on page");
+        for (int i = 0; i < links.size(); i++) {
+            WebElement ele = links.get(i);
+            String url = ele.getAttribute(attribute); //attribute - src, href, img
+            verifyLinkActive(url);
+
+        }
+        System.out.println("Total links are" + links.size());
+
+    }
+     */
+
+
+    @Test
+    public void testLinksOnMainPage(){
+        mainPage.navigateToLinkHome();
+        mainPage.checkLinksOnWebPage("//a", "href"); //a  href
+        mainPage.checkLinksOnWebPage("//img", "src"); //img src   //*** video 14, 21:10
+
+
+
+    }
 
 
 

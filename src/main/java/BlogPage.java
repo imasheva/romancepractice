@@ -90,4 +90,6 @@ public class BlogPage extends BaseActions {
         ajaxClick(Locators.LEFT_MENU_BLOG_PAGE);
     }
 
+
+
 }
