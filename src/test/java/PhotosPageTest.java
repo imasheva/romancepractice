@@ -14,7 +14,7 @@ public class PhotosPageTest extends BaseUI {
     public void testPhotosPage() {
         photosPage.javaWaitSec(3);
         photosPage.navigateToLink(Locators.LINK_PHOTOS_PAGE);
-      //  actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
+      //  actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();  //bfr worked, now fails
         actualUrlPhotos = driver.getCurrentUrl();
        // Assert.assertEquals(Data.expectedTitlePhotos, actualTitle);
         Assert.assertEquals(Data.expectedUrlPhotos, actualUrlPhotos);
