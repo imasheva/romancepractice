@@ -7,21 +7,25 @@ import java.util.concurrent.TimeUnit;
 
 public class MainPageTests extends BaseUI {
 
-    @Test
+    public static final boolean testCase9 = true;
+    public static final boolean testCase10 = true;
+    public static final boolean testCase11 = true;
+
+    @Test (priority = 1, enabled = testCase9, groups ={"user"})
     public void checkTabs() {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.javaWaitSec(3);
         mainPage.checkLinks();
     }
 
-    @Test
+    @Test (priority = 1, enabled = testCase10, groups ={"user"})
     public void checkLinksWithAssertions() {       //VIDEO 10 36:57
         mainPage.javaWaitSec(3);
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.checkLinksAddAssertions();
     }
 
-    @Test
+    @Test (priority = 1, enabled = testCase11, groups ={"user"})
     public void checkTabsNames() {                   //  HW 10 - ArrayList<String>
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.checkTabsNamesTest();

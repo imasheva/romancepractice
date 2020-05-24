@@ -7,8 +7,10 @@ import java.util.concurrent.TimeUnit;
 public class PhotosPageTest extends BaseUI {
     String actualTitle;
     String actualUrlPhotos;
+    public static final boolean testCase7 = true;
+    public static final boolean testCase8 = true;
 
-    @Test
+    @Test (priority = 1, enabled = testCase7, groups ={"user"})
     public void testPhotosPage() {
         photosPage.javaWaitSec(3);
         photosPage.navigateToLink(Locators.LINK_PHOTOS_PAGE);
@@ -23,7 +25,7 @@ public class PhotosPageTest extends BaseUI {
             System.out.println("No special character. It is good url!");
         }
     }
-    @Test
+    @Test (priority = 1, enabled = testCase8, groups ={"user"})
     public void checkPhotosList(){
         photosPage.javaWaitSec(3);
         photosPage.navigateToLink(Locators.LINK_PHOTOS_PAGE);
