@@ -46,10 +46,9 @@
             <class name="SignInTest"/>
             <class name="PrettyWomenTest">
                 <methods>
-                    <include name=" .*TestCase3.*"/>
-                    <include name=" .*TestCase4.*"/>
-                    <include name=" .*TestCase5.*"/>
-                    <include name=" .*TestCase6.*"/>
+                    <include name=" .*Random.*"/>
+                    <include name=" .*DropDown.*"/>
+                    <include name=" .*Search.*"/>
                 </methods>
             </class>
             <class name="PhotosPageTest">
