@@ -3,7 +3,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import java.sql.SQLOutput;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -22,30 +21,12 @@ public class GiftsPage extends BaseActions {
     public void selectGiftsfromBestsellers() {
 
 
-       // clickValueOfLists(Locators.BESTSELLERS_LIST, Data.bestSellerItem);
-     /*
-
-     //OLEKSII METHOD
-      //  public void clickValueOfLists(By locator, String text) {
-            List<WebElement> elements = driver.findElements(Locators.BESTSELLERS_LIST);
-            for (int i = 0; i < elements.size(); i++) {
-
-                WebElement elementOfList = elements.get(i);
-                String value = elementOfList.getText();
-
-                if (value.contains(Data.bestSellerItem)) {
-                    elementOfList.click();
-                }
-
-            }
-     */
-
         List<WebElement> bestSellersList = driver.findElements(Locators.BESTSELLERS_LIST);
 
         System.out.println("Bestseller items size: " + bestSellersList.size());
         for (int i = 0; i < bestSellersList.size(); i++) {
 
-            System.out.println("Bestseller items name: " + bestSellersList.get(i).getText()); //How to print each
+            System.out.println("Bestseller items name: " + bestSellersList.get(i).getText()); //How to print each?
 
             if (bestSellersList.get(i).getText().equalsIgnoreCase(Data.bestSellerItem)) {
                 bestSellersList.get(i).click();
@@ -56,8 +37,6 @@ public class GiftsPage extends BaseActions {
 
 
     public void selectGiftsFromRegularList() {
-
-      // DO I NEED WAITS HERE IF IT'S PASSES WITHOUT IT?
 
 
         List<WebElement> giftsRegularList = driver.findElements(Locators.REGULAR_GIFTS_LIST);

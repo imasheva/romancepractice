@@ -10,21 +10,13 @@ public class PhotosPageTest extends BaseUI {
 
     @Test
     public void testPhotosPage() {
-
-
-        //driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
-        photosPage.verifyPhotosLinkIsDisplayed();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-
+        photosPage.javaWaitSec(3);
+        photosPage.navigateToLink(Locators.LINK_PHOTOS_PAGE);
         actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
-
         actualUrlPhotos = driver.getCurrentUrl();
-
         Assert.assertEquals(Data.expectedTitlePhotos, actualTitle);
         Assert.assertEquals(Data.expectedUrlPhotos, actualUrlPhotos);
-
         driver.findElement(By.xpath("//div[@id='gallery']")).isDisplayed();
-
         if (actualUrlPhotos.contains("#")) {
             Assert.fail("It contains restricted #");
         } else {
@@ -33,13 +25,10 @@ public class PhotosPageTest extends BaseUI {
     }
     @Test
     public void checkPhotosList(){
-
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        photosPage.javaWaitSec(3);
+        photosPage.navigateToLink(Locators.LINK_PHOTOS_PAGE);
         photosPage.checkPhotosList();
         }
-
-
-
 
     }
 

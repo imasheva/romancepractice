@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;
@@ -15,7 +16,6 @@ import static org.testng.Assert.assertTrue;
 
 public class MainPage extends BaseActions {
 
-    //CONSTRUCTOR
     public MainPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
@@ -39,14 +39,15 @@ public class MainPage extends BaseActions {
         // HOW TO OPTIMIZE CODE BELOW?
 
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.email);
+
         String strEmail = driver.findElement(Locators.TEXT_FIELD_EMAIL).getAttribute("value");
         System.out.println("Email: " + strEmail);
 
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.password);
+
         String strPassword = driver.findElement(Locators.TEXT_FIELD_PASSWORD).getAttribute("value");
         System.out.println("Password: " + strPassword);
 
-        //What better assertion to use for button clicked?
 
         WebElement btnNext = driver.findElement(Locators.BUTTON_NEXT);
         if (btnNext.isDisplayed() && btnNext.isEnabled()) {
@@ -70,30 +71,6 @@ public class MainPage extends BaseActions {
         clickValueOfLists(Locators.LIST_VALUE_DAY, Data.dayOfBirth);
         System.out.println("Day selected: " + Data.dayOfBirth);
 
-
-        // HOW TO PRINT WHICH DAYS, MONTH, YEAR SELECTED by Using Method Like below?
-
-        //    String day = driver.findElement(Locators.LIST_VALUE_DAY).getAttribute("data-value");
-        //   System.out.println("Day selected: " + day);
-
-
-        //GET TEXT?          //*/span[contains(text(),"7")]  How to fetch the text from span tag?
-        //NOT SURE HOW TO CREATE SOME VERIFICATION
-
-        /*  *** SENDS THIS :
-          public static final String dayOfBirth = "1";
-         public static final String monthOfBirth = "May";
-         public static final String yearOfBirth = "1995";
-         */
-
-        /*
-        IN CONSOLE PRINTS THESE:
-        Day selected: 1
-        Month selected: 0
-        Year selected: 2002
-         */
-
-
         driver.findElement(Locators.LIST_MONTHS).click();
         clickValueOfLists(Locators.LIST_VALUE_MONTH, Data.monthOfBirth);
         System.out.println("Month selected: " + Data.monthOfBirth);
@@ -114,7 +91,7 @@ public class MainPage extends BaseActions {
         System.out.println("Phone number: " + phoneNum);
 
         // HOW TO VERIFY LOCATION TEXT DISPLAYED AFTER ENTERING NUMBER ???
-
+        //DIDN'T WORK FOR ME ((
         WebElement location = driver.findElement(Locators.LOCATION_INPUT);
         String title = location.getAttribute("title");
         System.out.println(location.getAttribute("title"));
@@ -123,18 +100,13 @@ public class MainPage extends BaseActions {
 
     public void testIframeOnMainPage() throws InterruptedException {
 
-        // Video 7 55:31
-        Thread.sleep(5000);
         WebElement ele = driver.findElement(Locators.IFRAME);
-        //  public static final By IFRAME = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
-
         ajaxScroll(ele);
         driver.switchTo().frame(ele);
         driver.findElement(Locators.YOUTUBE_PLAY_BUTTON).click();
 
     }
 
-    // https://www.youtube.com/watch?v=X3LHHhoIwyk
 
     public void checkLinks() {
 
@@ -158,17 +130,9 @@ public class MainPage extends BaseActions {
         }
     }
 
-
     public void checkTabsNamesTest() {
 
         List<WebElement> listTabs = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
-        /*
-        https://stackoverflow.com/questions/36886825/how-to-convert-a-list-of-webelement-to-another-list-in-the-form-of-string
-        List<WebElement> lst=d.findElements(By.tagName("a"));
-        List<String> strings = new ArrayList<String>();
-        for(WebElement e : lst){
-         strings.add(e.getText());
-         */
 
         List<String> strings = new ArrayList<String>();
         for (WebElement tab : listTabs) {
@@ -186,7 +150,6 @@ public class MainPage extends BaseActions {
         String actualUrlTourToUkraine;
         String actualUrlBlog;
         String actualUrlSignIn;
-        //String info;
 
         List<WebElement> links = driver.findElements(Locators.TAB_OF_MAIN_PAGE);
 
@@ -228,8 +191,6 @@ public class MainPage extends BaseActions {
                 } else {
                     System.out.println("No special character. It is good url!");
                 }
-
-
             }
             if (info.contains("GIFTS")) {
                 actualUrlGifts = driver.getCurrentUrl();
@@ -240,8 +201,6 @@ public class MainPage extends BaseActions {
                 } else {
                     System.out.println("No special character. It is good url!");
                 }
-
-
             }
             if (info.contains("TOUR")) {
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
@@ -254,8 +213,6 @@ public class MainPage extends BaseActions {
                 } else {
                     System.out.println("No special character. It is good url!");
                 }
-
-
             }
             if (info.contains("BLOG")) {
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
@@ -275,60 +232,36 @@ public class MainPage extends BaseActions {
                 //  Assert.assertEquals(Data.expectedTitleSignIn, actualTitle);
                 //   Assert.assertEquals(Data.expectedUrlSignIn, actualUrlSignIn);
                 driver.findElement(By.xpath("//div[@class='lc-content-outer']")).isDisplayed();
-
             }
-
             driver.get(Data.mainUrl);
             links = driver.findElements(Locators.TAB_OF_MAIN_PAGE);
-
         }
-
-
     }
 
     public int countIframeSize() {
-
-        int size;
-        size = driver.findElements(By.xpath("//iframe")).size();
+       int size = driver.findElements(By.xpath("//iframe")).size();
         System.out.println(size + " " + "iFrame number");
         return size;
     }
 
-    public void navigateToLinkHome() {
-        ajaxClick(Locators.LINK_HOME);
-    }
-
     public void verifyBookNow() {
-        // ajaxClick(Locators.BOOK_NOW_TAB);
-
-        // Tak pravilno assert delat?
-        //If it's too much code, to chto delat?
-
-        WebElement bookNow = wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.BOOK_NOW_TAB)));
-        assertTrue(bookNow.isDisplayed()); //ESLI ASSERT IN THE MIDDLE OF TEST CASE, TO OSTAVLYAT V MAIN CLASSE?
+        WebElement bookNow = (driver.findElement(Locators.BOOK_NOW_TAB));
+        assertTrue(bookNow.isDisplayed());
         bookNow.click();
-
     }
 
     public void verifyDiscountAlert() {
 
-        WebElement discountAlert = wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.BOOK_NOW_TAB)));
-        assertTrue(discountAlert.isDisplayed());
-
-        //HOW TO DO ASSERTION FOR WEBELEMENT CONTAINS 60% DISCOUNT?
-
-        //   String actualString = driver.findElement(Locators.BOOK_NOW_TAB).getText();
-        //  assertTrue(actualString.contains("BOOK NOW "));
-
-        discountAlert.click();
-
+        String actualString = driver.findElement(Locators.BOOK_NOW_TAB).getText();
+        Assert.assertTrue(actualString.contains("Save 60%"));
     }
 
     public void verifyHeader() {
 
         WebElement header = driver.findElement(Locators.HEADER_ROMANCE_ABROAD);
         assertTrue(header.isDisplayed());
-
     }
+
+
 }
 

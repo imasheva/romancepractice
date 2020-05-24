@@ -23,11 +23,11 @@ public class BaseActions {
         this.driver = driver;
         this.wait = wait;
     }
-
+    // NAVIGATE
     public void navigateToLink(By locator) {
         ajaxClick(locator);
     }
-
+    // GENERATE NUMBERS
     public static String generateNewNumber(String name, int length) {
         return name + RandomStringUtils.random(length, "12345678");
     }
@@ -35,10 +35,11 @@ public class BaseActions {
         driver.findElement(locator).click();
    }
 
+
+    // DROP DOWN SELECT class tag
     public void getDropDownListByIndex(WebElement element, int index) {
         Select select = new Select(element);
         select.selectByIndex(index);
-
     }
 
     public void getDropDownListByText(WebElement element, String text) {
@@ -46,12 +47,36 @@ public class BaseActions {
         select.selectByVisibleText(text);
     }
 
-
     public void getDropDownListByValue(WebElement element, String value) {
         Select select = new Select(element);
         select.selectByValue(value);
-
     }
+
+    public int getSizeDropDownList(By locator) {
+        try {
+            WebElement element = driver.findElement(locator);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
+            Select select = new Select(driver.findElement(locator));
+            return select.getOptions().size();
+        } catch (NoSuchElementException e) {
+            System.out.println("getSizeDropDownList error");
+        }
+        return 0;
+    }
+
+    public void selectItemRandomDropDownOption(By locator, String dropDownName) {
+        try {
+            WebElement element = driver.findElement(locator);
+            //helps to scroll to the webelement
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            Select select = new Select(driver.findElement(locator));
+            select.selectByIndex((int) (Math.random() * (select.getOptions().size() - 1)) + 1);
+            System.out.println(dropDownName + ": " + select.getFirstSelectedOption().getText());
+        } catch (NoSuchElementException e) {
+        }
+    }
+
 
     //CLICKS
     public void ajaxClick(WebElement element) {
@@ -65,15 +90,13 @@ public class BaseActions {
         ajaxClick(driver.findElement(by));
     }
 
-    //Works very good with Chrome, Firefox, not IE
-    public void ajaxClick(By by, int index) {
+    public void ajaxClick(By by, int index) {                //Works good with Chrome, Firefox, not IE
     //  wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by)); //double verification
         wait.until(ExpectedConditions.elementToBeClickable(by));
         ajaxClick(driver.findElements(by).get(index));
     }
 
-    //Works very good with IE
-    public void performClick(By locator) {
+    public void performClick(By locator) {                      //Works very good with IE
         WebElement element = driver.findElement(locator);
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
@@ -97,8 +120,6 @@ public class BaseActions {
         }
     }
 
-
-
     //SCROLLS
 
     public void scrollToBottomOfPage(){
@@ -117,11 +138,11 @@ public class BaseActions {
             String value = elementOfList.getText();
             if (value.contains(text)) {
                 elementOfList.click();
-
             }
-
         }
     }
+    //WAITS
+
     public void javaWaitSec (int sec) {
         try{
             Thread.sleep(sec * 1000);
@@ -136,21 +157,13 @@ public class BaseActions {
             e.printStackTrace();
         }
     }
+
+    //SEND KEYS
     public void ajaxSendKeys(WebElement element, String text) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('value','" + text + "')", element);
     }
-    public void selectItemRandomDropDownOption(By locator, String dropDownName) {
-        try {
-            WebElement element = driver.findElement(locator);
-            //helps to scroll to the webelement
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-            Select select = new Select(driver.findElement(locator));
-            select.selectByIndex((int) (Math.random() * (select.getOptions().size() - 1)) + 1);
-            System.out.println(dropDownName + ": " + select.getFirstSelectedOption().getText());
-        } catch (NoSuchElementException e) {
 
-        }
-    }
+    // LINKS TESTS
     public void checkLinksOnWebPage(String typeElement, String attribute) {
         List<WebElement> links = driver.findElements(By.xpath(typeElement));
         System.out.println("I start taking attributes on page");
@@ -158,16 +171,13 @@ public class BaseActions {
             WebElement ele = links.get(i);
             String url = ele.getAttribute(attribute); //attribute - src, href, img
             verifyLinkActive(url);
-
         }
         System.out.println("Total links are" + links.size());
-
     }
     private void verifyLinkActive(String linkUrl) {
         try {
             URL url = new URL(linkUrl); //links, imgs
             // in console -> //img  (class) or //a (href)
-
             HttpURLConnection httpURLConnect = (HttpURLConnection) url.openConnection();
             httpURLConnect.setConnectTimeout(3000);
             httpURLConnect.connect();
@@ -176,11 +186,9 @@ public class BaseActions {
             } else if (httpURLConnect.getResponseCode() >= 400 && httpURLConnect.getResponseCode() <= 504) {
                 System.out.println(linkUrl + " - " + httpURLConnect.getResponseMessage() + " - " + httpURLConnect.getResponseMessage());
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
 

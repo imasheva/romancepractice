@@ -11,31 +11,25 @@ public class PhotosPage extends BaseActions {
         super(driver, wait);
     }
 
-    public void verifyPhotosLinkIsDisplayed() {
 
-        navigateToLinkPage(Locators.LINK_PHOTOS_PAGE);
-
-    }
-
+    //Doesn't find name. TEST CASE IN PROGRESS!!!! Boshka not working uje, zavtra eshe raz will try
     public void checkPhotosList() {
 
-        navigateToLinkPage(Locators.LINK_PHOTOS_PAGE);
+        //V teste est uje ajax wait,
+        // esli dobavit etot weight - visiblity, chto budet?
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
-        //    public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__info']");
-        // public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__photo']//a");
-       // String name = "Tanya";
+
         List<WebElement> photosList = driver.findElements(Locators.LIST_PHOTOS);
         System.out.println("Print size of photos list: " + photosList.size());
 
         for (int i = 0; i < photosList.size(); i++) {
 
-            String info = photosList.get(i).getText();
-
-            if (info.contains("Tanya")) {
-                //photosList.get(i).click();
+            if (photosList.get(i).getText().contains("Tanya") || photosList.get(i).getText().contains("Tatyana")) {
+                String name = photosList.get(i).getText();
+                System.out.println(name);
                 ajaxClick(photosList.get(i));
-
-                System.out.println(info + "Found Tatyana");
+                System.out.println("Found Tanya");
                 break;
             }
 

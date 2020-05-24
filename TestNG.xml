@@ -8,6 +8,12 @@
 
         <classes>
             <class name ="RegistrationTests"/>
+            <class name ="SignInTest"/>
+            <class name ="PrettyWomenTest"/>
+            <class name ="PhotosPageTest"/>
+            <class name ="GiftsTest"/>
+            <class name ="MainPageTests"/>
+            <class name ="BlogPageTest"/>
 
         </classes>
     </test>
@@ -17,12 +23,25 @@
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name ="RegistrationTests"/>
+            <class name ="SignInTest"/>
+            <class name ="PrettyWomenTest"/>
+            <class name ="PhotosPageTest"/>
+            <class name ="GiftsTest"/>
+            <class name ="MainPageTests"/>
+            <class name ="BlogPageTest"/>
         </classes>
     </test>
     <test name="ChromeTestCases">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name ="RegistrationTests"/>
+            <class name ="SignInTest"/>
+            <class name ="PrettyWomenTest"/>
+            <class name ="PhotosPageTest"/>
+            <class name ="GiftsTest"/>
+            <class name ="MainPageTests"/>
+            <class name ="BlogPageTest"/>
+
         </classes>
     </test>
 </suite>
