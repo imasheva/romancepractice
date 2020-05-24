@@ -44,11 +44,25 @@
         <classes>
             <class name ="RegistrationTests"/>
             <class name ="SignInTest"/>
-            <class name ="PrettyWomenTest"/>
+            <class name ="PrettyWomenTest">
+                    <methods>
+                        <include name=" .*TestCase3.*"/>
+                        <include name=" .*TestCase4.*"/>
+                        <include name=" .*TestCase5.*"/>
+                        <include name=" .*TestCase6.*"/>
+
+                    </methods>
+            </class>
             <class name ="PhotosPageTest"/>
             <class name ="GiftsTest"/>
             <class name ="MainPageTests"/>
             <class name ="BlogPageTest"/>
+
+
+
+
+
+
 
         </classes>
     </test>
