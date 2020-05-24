@@ -15,7 +15,7 @@ public class RegistrationTests extends BaseUI {
 
     @Test
     public void testRegistration() {
-
+        signInPage.openSignInPage();
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistartion();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
