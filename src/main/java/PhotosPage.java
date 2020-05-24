@@ -12,7 +12,6 @@ public class PhotosPage extends BaseActions {
     }
 
 
-    //Doesn't find name. TEST CASE IN PROGRESS!!!! Boshka not working uje, zavtra eshe raz will try
     public void checkPhotosList() {
 
         //V teste est uje ajax wait,
