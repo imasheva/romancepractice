@@ -81,9 +81,12 @@ public class Locators {
     public static final By LINK_BLOG = By.cssSelector("a[href='https://romanceabroad.com/content/view/blog']");
     public static final By BLOG_LIST_RIGHT = By.xpath("//div[@class='info-content-block wysiwyg']//ul//li//a");
     public static final By RIGHT_MENU_BLOG_PAGE = By.xpath("//div[@class='info-content-block wysiwyg']");
+    public static final By RIGHT_MENU_BLOG_PAGE_CONTAINER =  By.xpath("//div[@class='info-content-block wysiwyg']");
+
 
     public static final By BLOG_LIST_LEFT = By.xpath("//div[@class='inside account_menu']//ul//li//a");
     public static final By LEFT_MENU_BLOG_PAGE = By.xpath("//div[@class='inside account_menu']");
+    public static final By LEFT_MENU_BLOG_PAGE_CONTAINER = By.xpath("//div[@class='inside account_menu']");
 
     //Photos Page
     public static final By LINK_PHOTOS_PAGE = By.xpath("//a[@href='https://romanceabroad.com/media/index']");

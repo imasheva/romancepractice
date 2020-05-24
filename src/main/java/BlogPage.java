@@ -31,8 +31,8 @@ public class BlogPage extends BaseActions {
 
         List<WebElement> list = driver.findElements(Locators.BLOG_LIST_RIGHT);
         System.out.println("Size of the list on the right: " + list.size());
-        //Kak nazvat?
-        ajaxClick(driver.findElement(By.xpath("//div[@class='info-content-block wysiwyg']")));
+
+        ajaxClick(Locators.RIGHT_MENU_BLOG_PAGE_CONTAINER);
 
         for (int i = 0; i < list.size(); i++) {
             infoListOnRight = list.get(i).getText();
@@ -52,7 +52,7 @@ public class BlogPage extends BaseActions {
                     System.out.println("No special character. It is good url!");
                 }
             }
-            ajaxClick(driver.findElement(By.xpath("//div[@class='info-content-block wysiwyg']")));
+            ajaxClick(Locators.RIGHT_MENU_BLOG_PAGE_CONTAINER);
             list = driver.findElements(Locators.BLOG_LIST_RIGHT);
         }
     }
@@ -62,7 +62,7 @@ public class BlogPage extends BaseActions {
 
         List<WebElement> links = driver.findElements(Locators.BLOG_LIST_LEFT);
         System.out.println("Size of the list on the left" +links.size());
-        ajaxClick(driver.findElement(By.xpath("//div[@class='inside account_menu']")));
+        ajaxClick(Locators.LEFT_MENU_BLOG_PAGE_CONTAINER);
 
         for (int i = 0; i < links.size(); i++) {
 
@@ -83,11 +83,9 @@ public class BlogPage extends BaseActions {
                 }
             }
 
-            ajaxClick(driver.findElement(By.xpath("//div[@class='inside account_menu']")));
+            ajaxClick(Locators.LEFT_MENU_BLOG_PAGE_CONTAINER);
             links = driver.findElements(Locators.BLOG_LIST_LEFT);
-
         }
-
     }
 
     private void clickBlogMenuRight() {
