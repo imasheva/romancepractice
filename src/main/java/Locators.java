@@ -5,7 +5,10 @@ public class Locators {
     //MAIN PAGE
     public static final By LINK_HOME = By.xpath("//a[contains(text(),'HOME')]");
     //TABS ON MAIN PAGE
-    public static final By TAB_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li");
+    public static final By TAB_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li/a");
+  //  public static final By TAB_OF_MAIN_PAGE = By.cssSelector("ul[class='navbar-nav'] >li>a");
+
+
     public static final By TITLE_OF_PAGE = By.xpath("//h1");
     public static final By HEADER_ROMANCE_ABROAD = By.xpath("//a//img[@src='/img/logo.jpg']");
 
