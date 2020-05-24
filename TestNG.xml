@@ -68,15 +68,13 @@
 
             <class name="MainPageTests">
                 <methods>
-                    <include name=" .*TestCase9.*"/>
-                    <include name=" .*TestCase10.*"/>
-                    <include name=" .*TestCase11.*"/>
-                    <include name=" .*TestCase12.*"/>
-                    <include name=" .*TestCase13.*"/>
-                    <include name=" .*TestCase14.*"/>
-                    <include name=" .*TestCase15.*"/>
-                    <include name=" .*TestCase16.*"/>
-                    <include name=" .*TestCase17.*"/>
+                    <include name=" .*Tabs.*"/>
+                    <include name=" .*Links.*"/>
+                    <include name=" .*Size.*"/>
+                    <include name=" .*Frame.*"/>
+                    <include name=" .*Book.*"/>
+                    <include name=" .*Discount.*"/>
+                    <include name=" .*Header.*"/>
                 </methods>
 
             </class>
