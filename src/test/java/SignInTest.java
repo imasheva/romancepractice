@@ -9,7 +9,8 @@ public class SignInTest extends BaseUI {
     String actualUrlSignIn;
 
     //vid 16, 19:00 Set priority - most importnat part in test annotation
-
+    // Can identify groups - smoke test, regresiion test, production, pred production
+    //ie limited
     public static final boolean testCase1 = true;
 
     @Test (priority = 1, enabled = testCase1, groups ={"user", "admin"})
