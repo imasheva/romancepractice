@@ -53,8 +53,8 @@
             </class>
             <class name="PhotosPageTest">
                 <methods>
-                    <include name=" .*TestCase7.*"/>
-                    <include name=" .*TestCase8.*"/>
+                    <include name=" .*Page.*"/>
+                    <include name=" .*List.*"/>
                 </methods>
             </class>
 
