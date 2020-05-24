@@ -42,7 +42,7 @@ public class Data {
     public static final String expectedUrlGifts = "https://romanceabroad.com/store/category-sweets";
     public static final String expectedUrlTourUkraine = "https://romanceabroad.com/store/sweets/20-tour_to_ukraine";
     public static final String expectedUrlBlog = "https://romanceabroad.com/content/view/blog";
-    public static final String expectedUrlSignIn = "https://romanceabroad.com";
+    public static final String expectedUrlSignIn = "https://romanceabroad.com/";
 
     // Expected Titles
     public static final String expectedTitleHowWeWork = "Ukrainian women for marriage";
@@ -50,6 +50,7 @@ public class Data {
     public static final String expectedTitlePhotos = "Ukrainian women photos";
     public static final String expectedTitleTourToUkraine = "TOURS TO UKRAINE";
     public static final String expectedTitleBlog = "Blog";
+    public static final String expectedTitleSignIn = "UKRAINIAN GIRLS DATING SITE";
 
 
     public static final String expectedTitleMainPage = "Ukrainian Girls Dating Site";

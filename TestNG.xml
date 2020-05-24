@@ -33,6 +33,17 @@
     </test>
     <test name="ChromeTestCases">
         <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <exclude name = "ie"  />
+                <include name = "admin"  />
+                <include name = "user"  />
+            </run>
+        </groups>
+
+
+
+
         <classes>
             <class name ="RegistrationTests"/>
             <class name ="SignInTest"/>
