@@ -10,9 +10,13 @@ public class PrettyWomenTest extends BaseUI {
 
     String currentUrlPrettyWomen;
 
-    @Test
-    public void testSearchByAge() {
+    public static final boolean testCase3 = true;
+    public static final boolean testCase4 = true;
+    public static final boolean testCase5 = true;
+    public static final boolean testCase6 = true;
 
+    @Test (priority = 1, enabled = testCase3, groups ={"user"})
+    public void testSearchByAge() {
         prettyWomenPage.openPrettyWomenPage();
         currentUrlPrettyWomen = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlPrettyWomen, Data.expectedUrlPrettyWomen);
@@ -27,14 +31,15 @@ public class PrettyWomenTest extends BaseUI {
         prettyWomenPage.searchByAge();
     }
 
-    @Test
+    @Test (priority = 2, enabled = testCase4, groups ={"user"})
     public void testDropDownViewOptions() {
         prettyWomenPage.openPrettyWomenPage();
         prettyWomenPage.javaWait(3);
         prettyWomenPage.testDropDownSelectOptions();
     }
 
-    @Test   //Vid 14, 39:42
+    @Test (priority = 3, enabled = testCase5, groups ={"user"})
+    //Vid 14, 39:42
     public void selectRandomDropDownList() {
         prettyWomenPage.openPrettyWomenPage();
         prettyWomenPage.javaWaitSec(3);
@@ -45,7 +50,7 @@ public class PrettyWomenTest extends BaseUI {
             prettyWomenPage.selectItemRandomDropDownOption(Locators.DROP_DOWN_LIST_SORT_BY, "Sort by");
         }
     }
-    @Test
+    @Test (priority = 4, enabled = testCase6, groups ={"user"})
     public void testDropDownListSelectByAgeMin(){
         mainPage.navigateToLink(Locators.LINK_PRETTY_WOMEN);
         prettyWomenPage.javaWaitSec(3);

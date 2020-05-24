@@ -13,7 +13,9 @@ import java.util.concurrent.TimeUnit;
 
 public class RegistrationTests extends BaseUI {
 
-    @Test
+    public static final boolean testCase2 = true;
+
+    @Test (priority = 1, enabled = testCase2, groups ={"user"})
     public void testRegistration() {
         signInPage.openSignInPage();
         mainPage.clickJoinButton();
