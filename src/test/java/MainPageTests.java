@@ -10,61 +10,66 @@ public class MainPageTests extends BaseUI {
     public static final boolean testCase9 = true;
     public static final boolean testCase10 = true;
     public static final boolean testCase11 = true;
+    public static final boolean testCase12 = true;
+    public static final boolean testCase13 = true;
+    public static final boolean testCase14 = true;
+    public static final boolean testCase15 = true;
+    public static final boolean testCase16 = true;
+    public static final boolean testCase17 = true;
 
-    @Test (priority = 1, enabled = testCase9, groups ={"user"})
+    @Test (priority = 1, enabled = testCase9, groups ={"admin"})
     public void checkTabs() {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.javaWaitSec(3);
         mainPage.checkLinks();
     }
 
-    @Test (priority = 1, enabled = testCase10, groups ={"user"})
+    @Test (priority = 1, enabled = testCase10, groups ={"admin"})
     public void checkLinksWithAssertions() {       //VIDEO 10 36:57
         mainPage.javaWaitSec(3);
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.checkLinksAddAssertions();
     }
 
-    @Test (priority = 1, enabled = testCase11, groups ={"user"})
+    @Test (priority = 1, enabled = testCase11, groups ={"admin", "user"})
     public void checkTabsNames() {                   //  HW 10 - ArrayList<String>
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.checkTabsNamesTest();
-
     }
 
-    @Test
+    @Test (priority = 1, enabled = testCase12, groups ={"admin", "user"})
     public void verifyIFrameSizeOnMainPage() {
         mainPage.javaWaitSec(3);
         int numberOfIframes = mainPage.countIframeSize();
         Assert.assertTrue(numberOfIframes > 0, "Number is more than 0");
     }
 
-    @Test
+    @Test (priority = 1, enabled = testCase13, groups ={"admin", "user"})
     public void testMainPageIFrame() throws InterruptedException {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.javaWaitSec(3);
         mainPage.testIframeOnMainPage();      //use scroll in future
     }
 
-    @Test
+    @Test (priority = 1, enabled = testCase14, groups ={"admin", "user"})
     public void testBookNow() {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.verifyBookNow();
     }
 
-    @Test
+    @Test (priority = 1, enabled = testCase15, groups ={"admin", "user"})
     public void testDiscountAlert() {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.verifyDiscountAlert();
     }
 
-    @Test
+    @Test (priority = 1, enabled = testCase16, groups ={"admin", "user"})
     public void verifyRomanceAbroadHeader() {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.verifyHeader();
     }
 
-    @Test
+    @Test (priority = 1, enabled = testCase17, groups ={"admin", "user"})
     public void testLinksOnMainPage() {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.checkLinksOnWebPage("//a", "href"); //a  href

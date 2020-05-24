@@ -6,11 +6,11 @@ import java.util.concurrent.TimeUnit;
 public class GiftsTest extends BaseUI {
     String currentUrlGifts;
 
-    public static final boolean testCase12 = true;
-    public static final boolean testCase13 = true;
-    public static final boolean testCase14 = true;
+    public static final boolean testCase18 = true;
+    public static final boolean testCase19 = true;
+    public static final boolean testCase20 = true;
 
-    @Test (priority = 1, enabled = testCase12, groups ={"user"})
+    @Test (priority = 1, enabled = testCase18, groups ={"user"})
     public void testGiftsPage() {
 
         giftsPage.openGiftsPage();
@@ -27,7 +27,7 @@ public class GiftsTest extends BaseUI {
 
     //I COULDN'T GET TITLE - NETU TITLE
 
-    @Test (priority = 1, enabled = testCase13, groups ={"user"})
+    @Test (priority = 1, enabled = testCase19, groups ={"user"})
     public void testSelectionOfBestsellers() {
         giftsPage.openGiftsPage();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -35,7 +35,7 @@ public class GiftsTest extends BaseUI {
 
     }
 
-    @Test (priority = 1, enabled = testCase14, groups ={"user"})
+    @Test (priority = 1, enabled = testCase20, groups ={"user"})
     public void testSelectionOfRegularGifts(){
         giftsPage.openGiftsPage();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

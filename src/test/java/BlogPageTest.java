@@ -8,13 +8,13 @@ public class BlogPageTest extends BaseUI {
     String actualTitle;
     String actualUrlBlog;
 
-    public static final boolean testCase15 = true;
-    public static final boolean testCase16 = true;
-    public static final boolean testCase17 = true;
-    public static final boolean testCase18 = true;
+    public static final boolean testCase21 = true;
+    public static final boolean testCase22 = true;
+    public static final boolean testCase23 = true;
+    public static final boolean testCase24 = true;
 
 
-    @Test (priority = 1, enabled = testCase15, groups ={"user"})
+    @Test (priority = 1, enabled = testCase21, groups ={"user"})
     public void testBlogPage() {
 
         blogPage.javaWaitSec(3);
@@ -33,7 +33,7 @@ public class BlogPageTest extends BaseUI {
         }
     }
 
-    @Test (priority = 1, enabled = testCase16, groups ={"user"})
+    @Test (priority = 1, enabled = testCase22, groups ={"user"})
     //VIDEO 11, 27:55
     public void testBlogPageListOfLinksOnRight() {
         // blogPage.verifyBlogLinkIsDisplayed();
@@ -43,14 +43,14 @@ public class BlogPageTest extends BaseUI {
 
     }
 
-    @Test (priority = 1, enabled = testCase17, groups ={"user"})
+    @Test (priority = 1, enabled = testCase23, groups ={"user"})
     public void testBlogPageListOfLinksOnLeft() {
         mainPage.navigateToLink(Locators.LINK_BLOG);
         blogPage.testBlogPageLinksonOnLeft();
     }
 
 
-    @Test (priority = 1, enabled = testCase18, groups ={"user"})
+    @Test (priority = 1, enabled = testCase24, groups ={"user"})
     public void testLinksBlogPage() {
         mainPage.navigateToLink(Locators.LINK_BLOG);
         blogPage.checkLinksOnWebPage("//a", "//href");

@@ -10,7 +10,7 @@ public class PhotosPageTest extends BaseUI {
     public static final boolean testCase7 = true;
     public static final boolean testCase8 = true;
 
-    @Test (priority = 1, enabled = testCase7, groups ={"user"})
+    @Test (priority = 1, enabled = testCase7, groups ={"user", "admin"})
     public void testPhotosPage() {
         photosPage.javaWaitSec(3);
         photosPage.navigateToLink(Locators.LINK_PHOTOS_PAGE);
@@ -25,7 +25,7 @@ public class PhotosPageTest extends BaseUI {
             System.out.println("No special character. It is good url!");
         }
     }
-    @Test (priority = 1, enabled = testCase8, groups ={"user"})
+    @Test (priority = 1, enabled = testCase8, groups ={"admin"})
     public void checkPhotosList(){
         photosPage.javaWaitSec(3);
         photosPage.navigateToLink(Locators.LINK_PHOTOS_PAGE);
