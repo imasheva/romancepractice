@@ -34,7 +34,7 @@ public class PrettyWomenTest extends BaseUI {
     @Test (priority = 2, enabled = testCase4, groups ={"user", "admin"})
     public void testDropDownViewOptions() {
         prettyWomenPage.openPrettyWomenPage();
-        prettyWomenPage.javaWait(3);
+        prettyWomenPage.javaWaitSec(3);
         prettyWomenPage.testDropDownSelectOptions();
     }
 
