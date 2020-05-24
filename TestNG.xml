@@ -1,19 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestSuite" parallel="none" >
+<suite name="TestSuite" parallel="none">
 
     <test name="IETestCases">
 
         <parameter name="browser" value="ie"/>
 
         <classes>
-            <class name ="RegistrationTests"/>
-            <class name ="SignInTest"/>
-            <class name ="PrettyWomenTest"/>
-            <class name ="PhotosPageTest"/>
-            <class name ="GiftsTest"/>
-            <class name ="MainPageTests"/>
-            <class name ="BlogPageTest"/>
+            <class name="RegistrationTests"/>
+            <class name="SignInTest"/>
+            <class name="PrettyWomenTest"/>
+            <class name="PhotosPageTest"/>
+            <class name="GiftsTest"/>
+            <class name="MainPageTests"/>
+            <class name="BlogPageTest"/>
 
         </classes>
     </test>
@@ -22,48 +22,75 @@
 
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name ="RegistrationTests"/>
-            <class name ="SignInTest"/>
-            <class name ="PrettyWomenTest"/>
-            <class name ="PhotosPageTest"/>
-            <class name ="GiftsTest"/>
-            <class name ="MainPageTests"/>
-            <class name ="BlogPageTest"/>
+            <class name="RegistrationTests"/>
+            <class name="SignInTest"/>
+            <class name="PrettyWomenTest"/>
+            <class name="PhotosPageTest"/>
+            <class name="GiftsTest"/>
+            <class name="MainPageTests"/>
+            <class name="BlogPageTest"/>
         </classes>
     </test>
     <test name="ChromeTestCases">
         <parameter name="browser" value="chrome"/>
         <groups>
             <run>
-                <exclude name = "ie"  />
-                <include name = "admin"  />
-                <include name = "user"  />
+                <exclude name="ie"/>
+                <include name="admin"/>
+                <include name="user"/>
             </run>
         </groups>
 
         <classes>
-            <class name ="RegistrationTests"/>
-            <class name ="SignInTest"/>
-            <class name ="PrettyWomenTest">
-                    <methods>
-                        <include name=" .*TestCase3.*"/>
-                        <include name=" .*TestCase4.*"/>
-                        <include name=" .*TestCase5.*"/>
-                        <include name=" .*TestCase6.*"/>
-
-                    </methods>
+            <class name="RegistrationTests"/>
+            <class name="SignInTest"/>
+            <class name="PrettyWomenTest">
+                <methods>
+                    <include name=" .*TestCase3.*"/>
+                    <include name=" .*TestCase4.*"/>
+                    <include name=" .*TestCase5.*"/>
+                    <include name=" .*TestCase6.*"/>
+                </methods>
             </class>
-            <class name ="PhotosPageTest"/>
-            <class name ="GiftsTest"/>
-            <class name ="MainPageTests"/>
-            <class name ="BlogPageTest"/>
+            <class name="PhotosPageTest">
+                <methods>
+                    <include name=" .*TestCase7.*"/>
+                    <include name=" .*TestCase8.*"/>
+                </methods>
+            </class>
 
+            <class name="GiftsTest">
+                <methods>
+                    <include name=" .*TestCase18.*"/>
+                    <include name=" .*TestCase19.*"/>
+                    <include name=" .*TestCase20.*"/>
+                </methods>
 
+            </class>
 
+            <class name="MainPageTests">
+                <methods>
+                    <include name=" .*TestCase9.*"/>
+                    <include name=" .*TestCase10.*"/>
+                    <include name=" .*TestCase11.*"/>
+                    <include name=" .*TestCase12.*"/>
+                    <include name=" .*TestCase13.*"/>
+                    <include name=" .*TestCase14.*"/>
+                    <include name=" .*TestCase15.*"/>
+                    <include name=" .*TestCase16.*"/>
+                    <include name=" .*TestCase17.*"/>
+                </methods>
 
+            </class>
 
-
-
+            <class name="BlogPageTest">
+                <methods>
+                    <include name=" .*TestCase21.*"/>
+                    <include name=" .*TestCase22.*"/>
+                    <include name=" .*TestCase23.*"/>
+                    <include name=" .*TestCase24.*"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
