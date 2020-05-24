@@ -20,6 +20,8 @@ public class RegistrationTests extends BaseUI {
         signInPage.openSignInPage();
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistartion();
+        //can I use wait below or javaWaitSec(3);?
+        //What is better?
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         mainPage.completeSecondPartOfRegistration();
 
