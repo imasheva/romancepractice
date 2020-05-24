@@ -81,10 +81,8 @@
 
             <class name="BlogPageTest">
                 <methods>
-                    <include name=" .*TestCase21.*"/>
-                    <include name=" .*TestCase22.*"/>
-                    <include name=" .*TestCase23.*"/>
-                    <include name=" .*TestCase24.*"/>
+                    <include name=" .*List.*"/>
+                    <include name=" .*Links.*"/>
                 </methods>
             </class>
         </classes>
