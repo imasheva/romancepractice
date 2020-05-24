@@ -6,7 +6,9 @@ public class Locators {
     public static final By LINK_HOME = By.xpath("//a[contains(text(),'HOME')]");
     //TABS ON MAIN PAGE
     public static final By TAB_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li/a");
-  //  public static final By TAB_OF_MAIN_PAGE = By.cssSelector("ul[class='navbar-nav'] >li>a");
+
+    //not the best solution just for example
+    //  public static final By TAB_OF_MAIN_PAGE = By.cssSelector("ul[class='navbar-nav'] >li>a");
 
 
     public static final By TITLE_OF_PAGE = By.xpath("//h1");
@@ -84,7 +86,7 @@ public class Locators {
     public static final By LINK_BLOG = By.cssSelector("a[href='https://romanceabroad.com/content/view/blog']");
     public static final By BLOG_LIST_RIGHT = By.xpath("//div[@class='info-content-block wysiwyg']//ul//li//a");
     public static final By RIGHT_MENU_BLOG_PAGE = By.xpath("//div[@class='info-content-block wysiwyg']");
-    public static final By RIGHT_MENU_BLOG_PAGE_CONTAINER =  By.xpath("//div[@class='info-content-block wysiwyg']");
+    public static final By RIGHT_MENU_BLOG_PAGE_CONTAINER = By.xpath("//div[@class='info-content-block wysiwyg']");
 
 
     public static final By BLOG_LIST_LEFT = By.xpath("//div[@class='inside account_menu']//ul//li//a");

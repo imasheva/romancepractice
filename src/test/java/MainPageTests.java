@@ -1,8 +1,12 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.sql.SQLOutput;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class MainPageTests extends BaseUI {
@@ -74,6 +78,27 @@ public class MainPageTests extends BaseUI {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.checkLinksOnWebPage("//a", "href"); //a  href
         mainPage.checkLinksOnWebPage("//img", "src"); //img src   //*** video 14, 21:10
+    }
+
+    @Test // VIDEO 16   59:00
+    public void smokeTestMainPage(){
+
+        List<WebElement> mainTabs = driver.findElements(Locators.TAB_OF_MAIN_PAGE);
+        System.out.println("Size of tabs: " + mainTabs);
+
+        for (int i=0; i<mainTabs.size(); i++){
+            mainTabs.get(i).click();
+
+            // then we have to return after click
+            driver.get(Data.mainUrl);
+
+            //then collect again the list inside of loop
+            mainTabs = driver.findElements(Locators.TAB_OF_MAIN_PAGE);
+
+
+        }
+
+
     }
 
 
