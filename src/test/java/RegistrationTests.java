@@ -16,7 +16,7 @@ public class RegistrationTests extends BaseUI {
     public static final boolean testCase2 = true;
 
     @Test (priority = 1, enabled = testCase2, groups ={"user", "admin"})
-    public void testRegistration() {
+    public void testRegistrationTestCase2() {
         signInPage.openSignInPage();
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistartion();

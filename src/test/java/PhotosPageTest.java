@@ -11,7 +11,7 @@ public class PhotosPageTest extends BaseUI {
     public static final boolean testCase8 = true;
 
     @Test (priority = 1, enabled = testCase7, groups ={"user", "admin"})
-    public void testPhotosPage() {
+    public void testPhotosPageTestCase7() {
         photosPage.javaWaitSec(3);
         photosPage.navigateToLink(Locators.LINK_PHOTOS_PAGE);
       //  actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();  //bfr worked, now fails
@@ -26,7 +26,7 @@ public class PhotosPageTest extends BaseUI {
         }
     }
     @Test (priority = 1, enabled = testCase8, groups ={"admin"})
-    public void checkPhotosList(){
+    public void checkPhotosListTestCase8(){
         photosPage.javaWaitSec(3);
         photosPage.navigateToLink(Locators.LINK_PHOTOS_PAGE);
         photosPage.checkPhotosList();

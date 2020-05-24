@@ -11,8 +11,8 @@ public class GiftsTest extends BaseUI {
     public static final boolean testCase20 = true;
 
     @Test (priority = 1, enabled = testCase18, groups ={"user", "admin"})
-    public void testGiftsPage() {
 
+    public void testGiftsPageTestCase18(){
         giftsPage.openGiftsPage();
         currentUrlGifts = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
@@ -28,7 +28,7 @@ public class GiftsTest extends BaseUI {
     //I COULDN'T GET TITLE - NETU TITLE
 
     @Test (priority = 1, enabled = testCase19, groups ={"user", "admin"})
-    public void testSelectionOfBestsellers() {
+    public void testSelectionOfBestsellersTestCase19() {
         giftsPage.openGiftsPage();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         giftsPage.selectGiftsfromBestsellers();
@@ -36,7 +36,7 @@ public class GiftsTest extends BaseUI {
     }
 
     @Test (priority = 1, enabled = testCase20, groups ={"user", "admin"})
-    public void testSelectionOfRegularGifts(){
+    public void testSelectionOfRegularGiftsTestCase20(){
         giftsPage.openGiftsPage();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         giftsPage.selectGiftsFromRegularList();

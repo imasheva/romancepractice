@@ -16,7 +16,7 @@ public class PrettyWomenTest extends BaseUI {
     public static final boolean testCase6 = true;
 
     @Test (priority = 1, enabled = testCase3, groups ={"user", "admin"})
-    public void testSearchByAge() {
+    public void testSearchByAgeTestCase3() {
         prettyWomenPage.openPrettyWomenPage();
         currentUrlPrettyWomen = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlPrettyWomen, Data.expectedUrlPrettyWomen);
@@ -32,7 +32,7 @@ public class PrettyWomenTest extends BaseUI {
     }
 
     @Test (priority = 2, enabled = testCase4, groups ={"user", "admin"})
-    public void testDropDownViewOptions() {
+    public void testDropDownViewOptionsTestCase4() {
         prettyWomenPage.openPrettyWomenPage();
         prettyWomenPage.javaWaitSec(3);
         prettyWomenPage.testDropDownSelectOptions();
@@ -40,7 +40,7 @@ public class PrettyWomenTest extends BaseUI {
 
     @Test (priority = 3, enabled = testCase5, groups ={"user", "admin"})
     //Vid 14, 39:42
-    public void selectRandomDropDownList() {
+    public void selectRandomDropDownListTestCase5() {
         prettyWomenPage.openPrettyWomenPage();
         prettyWomenPage.javaWaitSec(3);
         //By.xpath("//div[@class='form-inline']//select");
@@ -51,7 +51,7 @@ public class PrettyWomenTest extends BaseUI {
         }
     }
     @Test (priority = 4, enabled = testCase6, groups ={"user", "admin"})
-    public void testDropDownListSelectByAgeMin(){
+    public void testDropDownListSelectByAgeMinTestCase6(){
         mainPage.navigateToLink(Locators.LINK_PRETTY_WOMEN);
         prettyWomenPage.javaWaitSec(3);
         int size = prettyWomenPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_MIN_AGE);

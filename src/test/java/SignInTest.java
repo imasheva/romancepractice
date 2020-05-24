@@ -15,7 +15,7 @@ public class SignInTest extends BaseUI {
 
     @Test (priority = 1, enabled = testCase1, groups ={"user", "admin"})
 
-    public void testSignIn() {
+    public void testSignInTestCase1() {
         signInPage.openSignInPage();
         actualUrlSignIn = driver.getCurrentUrl();
         actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();

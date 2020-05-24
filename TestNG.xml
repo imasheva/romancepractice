@@ -41,9 +41,6 @@
             </run>
         </groups>
 
-
-
-
         <classes>
             <class name ="RegistrationTests"/>
             <class name ="SignInTest"/>
