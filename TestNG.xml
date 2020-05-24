@@ -60,9 +60,8 @@
 
             <class name="GiftsTest">
                 <methods>
-                    <include name=" .*TestCase18.*"/>
-                    <include name=" .*TestCase19.*"/>
-                    <include name=" .*TestCase20.*"/>
+                    <include name=" .*Gifts.*"/>
+                    <include name=" .*Bestsellers.*"/>
                 </methods>
 
             </class>
