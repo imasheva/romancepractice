@@ -10,7 +10,7 @@ public class GiftsTest extends BaseUI {
     public static final boolean testCase19 = true;
     public static final boolean testCase20 = true;
 
-    @Test (priority = 1, enabled = testCase18, groups ={"user"})
+    @Test (priority = 1, enabled = testCase18, groups ={"user", "admin"})
     public void testGiftsPage() {
 
         giftsPage.openGiftsPage();
@@ -27,7 +27,7 @@ public class GiftsTest extends BaseUI {
 
     //I COULDN'T GET TITLE - NETU TITLE
 
-    @Test (priority = 1, enabled = testCase19, groups ={"user"})
+    @Test (priority = 1, enabled = testCase19, groups ={"user", "admin"})
     public void testSelectionOfBestsellers() {
         giftsPage.openGiftsPage();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -35,7 +35,7 @@ public class GiftsTest extends BaseUI {
 
     }
 
-    @Test (priority = 1, enabled = testCase20, groups ={"user"})
+    @Test (priority = 1, enabled = testCase20, groups ={"user", "admin"})
     public void testSelectionOfRegularGifts(){
         giftsPage.openGiftsPage();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

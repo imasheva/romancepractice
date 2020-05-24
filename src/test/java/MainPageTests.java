@@ -31,13 +31,13 @@ public class MainPageTests extends BaseUI {
         mainPage.checkLinksAddAssertions();
     }
 
-    @Test (priority = 1, enabled = testCase11, groups ={"admin", "user"})
+    @Test (priority = 1, enabled = testCase11, groups ={"admin"})
     public void checkTabsNames() {                   //  HW 10 - ArrayList<String>
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.checkTabsNamesTest();
     }
 
-    @Test (priority = 1, enabled = testCase12, groups ={"admin", "user"})
+    @Test (priority = 1, enabled = testCase12, groups ={"admin"})
     public void verifyIFrameSizeOnMainPage() {
         mainPage.javaWaitSec(3);
         int numberOfIframes = mainPage.countIframeSize();
@@ -57,19 +57,19 @@ public class MainPageTests extends BaseUI {
         mainPage.verifyBookNow();
     }
 
-    @Test (priority = 1, enabled = testCase15, groups ={"admin", "user"})
+    @Test (priority = 1, enabled = testCase15, groups ={"admin"})
     public void testDiscountAlert() {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.verifyDiscountAlert();
     }
 
-    @Test (priority = 1, enabled = testCase16, groups ={"admin", "user"})
+    @Test (priority = 1, enabled = testCase16, groups ={"admin"})
     public void verifyRomanceAbroadHeader() {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.verifyHeader();
     }
 
-    @Test (priority = 1, enabled = testCase17, groups ={"admin", "user"})
+    @Test (priority = 1, enabled = testCase17, groups ={"admin"})
     public void testLinksOnMainPage() {
         mainPage.navigateToLink(Locators.LINK_HOME);
         mainPage.checkLinksOnWebPage("//a", "href"); //a  href
