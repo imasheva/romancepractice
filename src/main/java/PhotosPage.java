@@ -23,9 +23,9 @@ public class PhotosPage extends BaseActions {
         System.out.println("Print size of photos list: " + photosList.size());
 
         for (int i = 0; i < photosList.size(); i++) {
+            String name = photosList.get(i).getText();
 
-            if (photosList.get(i).getText().contains("Tanya") || photosList.get(i).getText().contains("Tatyana")) {
-                String name = photosList.get(i).getText();
+            if (name.contains("Tanya") || name.contains("Tatyana")) {
                 System.out.println(name);
                 ajaxClick(photosList.get(i));
                 System.out.println("Found Tanya");
