@@ -15,7 +15,7 @@ public class PrettyWomenTest extends BaseUI {
     public static final boolean testCase5 = true;
     public static final boolean testCase6 = true;
 
-    @Test (priority = 1, enabled = testCase3, groups ={"user", "admin"})
+    @Test(priority = 1, enabled = testCase3, groups = {"user", "admin"})
     public void testSearchByAgeTestCase3() {
         prettyWomenPage.openPrettyWomenPage();
         currentUrlPrettyWomen = driver.getCurrentUrl();
@@ -31,18 +31,21 @@ public class PrettyWomenTest extends BaseUI {
         prettyWomenPage.searchByAge();
     }
 
-    @Test (priority = 2, enabled = testCase4, groups ={"user", "admin"})
+    @Test(priority = 2, enabled = testCase4, groups = {"user", "admin"})
     public void testDropDownViewOptionsTestCase4() {
         prettyWomenPage.openPrettyWomenPage();
         prettyWomenPage.javaWaitSec(3);
-        prettyWomenPage.testDropDownSelectOptions();
+        prettyWomenPage.selectDropDownViewOptions();
     }
 
-    @Test (priority = 3, enabled = testCase5, groups ={"user", "admin"})
+    @Test(priority = 3, enabled = testCase5, groups = {"user", "admin"})
     //Vid 14, 39:42
     public void selectRandomDropDownListTestCase5() {
         prettyWomenPage.openPrettyWomenPage();
         prettyWomenPage.javaWaitSec(3);
+
+        prettyWomenPage.selectRandomDropDownList();
+
         //By.xpath("//div[@class='form-inline']//select");
         int sizeOfDropDownListSortBy = prettyWomenPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY);
         System.out.println(sizeOfDropDownListSortBy);
@@ -50,10 +53,14 @@ public class PrettyWomenTest extends BaseUI {
             prettyWomenPage.selectItemRandomDropDownOption(Locators.DROP_DOWN_LIST_SORT_BY, "Sort by");
         }
     }
-    @Test (priority = 4, enabled = testCase6, groups ={"user", "admin"})
-    public void testDropDownListSelectByAgeMinTestCase6(){
+
+    @Test(priority = 4, enabled = testCase6, groups = {"user", "admin"})
+    public void selectDropDownListByAgeMinTestCase6() {
+
         mainPage.navigateToLink(Locators.LINK_PRETTY_WOMEN);
         prettyWomenPage.javaWaitSec(3);
+        prettyWomenPage.selectDropDownListByAge();
+
         int size = prettyWomenPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_MIN_AGE);
         System.out.println(size);
         for (int i = 0; i < size; i++) {

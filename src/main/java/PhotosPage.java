@@ -11,29 +11,14 @@ public class PhotosPage extends BaseActions {
         super(driver, wait);
     }
 
+    public void openPhotosPage() {
+        navigateToLink(Locators.LINK_PHOTOS_PAGE);
+    }
 
     public void checkPhotosList() {
 
-        //V teste est uje ajax wait,
-        // esli dobavit etot weight - visiblity, chto budet?
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
-
-        List<WebElement> photosList = driver.findElements(Locators.LIST_PHOTOS);
-        System.out.println("Print size of photos list: " + photosList.size());
-
-        for (int i = 0; i < photosList.size(); i++) {
-            String name = photosList.get(i).getText();
-
-            if (name.contains("Tanya") || name.contains("Tatyana")) {
-                System.out.println(name);
-                ajaxClick(photosList.get(i));
-                System.out.println("Found Tanya");
-                break;
-            }
-
-        }
-
-
     }
+
+
 }
+

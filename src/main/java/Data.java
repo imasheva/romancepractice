@@ -5,6 +5,7 @@ public class Data {
     public static final String mainUrl = "https://romanceabroad.com/";
     public static final String email = "11@gmail.com";
     public static final String password = "123456";
+    public static final String mainPageDiscountAlert = "Save 60%";
 
     // PRETTY WOMEN
     public static final String min_Age = "18";
@@ -19,12 +20,12 @@ public class Data {
 
     //Registration p2
 
-    public static final String dayOfBirth = "2";
-    public static final String monthOfBirth = "May";
-    public static final String yearOfBirth = "1995";
+    public static final String day = "2";
+    public static final String month = "May";
+    public static final String year = "1995";
 
-    //VOPROS - How to use it? Can't send string "Sunnyvale"
-    public static final String location = "Sunnyvale";
+    public static final String city = "Sydney";
+    public static final String location = "Sydney, State of New South Wales, Australia";
 
     //SIGN IN page    //VOPROS - tam 2 headera kogda nabirau //h1
     public static final String emailSignIn = "ima@gmail.com";
@@ -61,6 +62,23 @@ public class Data {
 
     public static final String expectedTitleKharkovDatingAgency = "Kharkov Dating & Marriage Agency";
     public static final String expectedUrlKharkovDatingAgency = "https://romanceabroad.com/content/view/kharkov-dating-agency";
+
+
+    //Contact Us Page
+    public static final String contactUsUrl = "https://romanceabroad.com/";
+
+    public static final String expectedUrlContactUsPage = "https://romanceabroad.com/tickets/";
+    public static final String expectedTitleContactUsPage = "Contact administrator";
+
+    public static final String reason_ContactUs = "Pre-Sales Questions";
+
+
+
+    public static final String yourname = "donaldrtrump";
+    public static final String youremail = "imasheva.a@gmail.com";
+    public static final String subject = "profile";
+    public static final String message = "Can't upload photo";
+
 
 
 

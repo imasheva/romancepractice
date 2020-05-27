@@ -17,35 +17,38 @@ public class Locators {
     public static final By IFRAME = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By YOUTUBE_PLAY_BUTTON = By.cssSelector("button.ytp-large-play-button.ytp-button");
     public static final By BUTTON_REGISTRATION = By.cssSelector("#show-registration-block");
-    public static final By LOCATION_INPUT = By.xpath("//input[@name='region_name']");
+
     public static final By CHECKBOX_CONFIRMATION = By.cssSelector("#confirmation");
+    public static final By AUTOFILLING_FORM_LOCATION = By.xpath("//input[@name='region_name']");
+    public static final By LIST_VALUE_LOCATION = By.xpath("//div[@class='dropdown dropdown_location']//ul//li");
+
+
     public static final By BOOK_NOW_TAB = By.xpath("//div[@class='discountalert']");
 
     //Registration part1
     public static final By TEXT_FIELD_EMAIL = By.cssSelector("#email");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("#password");
-    public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
+    public static final By BUTTON_NEXT_REGISTRATION= By.xpath("//button[@data-action='next-page'][text()='Next']");
 
     //Registration part2
     public static final By TEXT_FIELD_NICKNAME = By.cssSelector("#nickname");
     public static final By TEXT_FIELD_PHONE = By.cssSelector("[name='data[phone]'");
 
-    //Boostrap dropdown
+    //Boostrap dropdown for myself **diff-nt xpath
     public static final By DAY_LIST_DROPDOWN = By.xpath("//div[@id='daySelect']//ul//li");
     public static final By MONTH_LIST_DROPDOWN = By.xpath("//div[@id='monthSelect']//ul/li");
     public static final By YEAR_LIST_DROPDOWN = By.xpath("//div[@id='yearSelect']//ul/li");
 
-    //Boostrap dropdown **OLEKSII VERSION**
-    public static final By LIST_DAYS = By.xpath("//div[@id='daySelect']");
+
+    public static final By LIST_DAYS = By.xpath("//div[@id='daySelect']");     // By.cssSelector("#daySelect");
+    public static final By LIST_MONTHS = By.xpath("//div[@id='monthSelect']"); //  By.cssSelector("#monthSelect");
+    public static final By LIST_YEARS = By.xpath("//div[@id='yearSelect']");  // By.cssSelector("#yearSelect");
+
+
     public static final By LIST_VALUE_DAY = By.xpath("//li[@data-handler='selectDay']");
-
-    //MONTH DROP DOWN
-    public static final By LIST_MONTHS = By.xpath("//div[@id='monthSelect']");
     public static final By LIST_VALUE_MONTH = By.xpath("//li[@data-handler='selectMonth']");
-
-    //YEAR DROP DOWN
-    public static final By LIST_YEARS = By.xpath("//div[@id='yearSelect']");
     public static final By LIST_VALUE_YEAR = By.xpath("//li[@data-handler='selectYear']");
+
 
     //PRETTY WOMEN page
 
@@ -97,4 +100,31 @@ public class Locators {
     public static final By LINK_PHOTOS_PAGE = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__item col-xs-6 col-sm-4 col-md-3 col-lg-2 big']");
 
-}
+    //Contact Us Page
+    public static final By CONTACT_US_LINK = By.xpath("//a[@id='footer_footer-menu-help-item_footer-menu-tickets-item']//div");
+
+    public static final By TITLE_CONTACT_US_PAGE = By.xpath("//h1");
+    public static final By DROP_DOWN_REASON_CONTACT_US = By.cssSelector("select.form-control");
+
+    public static final By TEXT_FIELD_YOUR_NAME = By.xpath("//input[@name='user_name']");
+    public static final By TEXT_FIELD_YOUR_EMAIL = By.xpath("//input[@name='user_email']");
+    public static final By TEXT_FIELD_SUBJECT = By.xpath("//input[@name='subject']");
+    public static final By TEXT_FIELD_MESSAGE = By.xpath("//textarea[@name='message']");
+    public static final By BUTTON_SEND_CONTACT_US_PAGE= By.xpath("//input[@name='btn_save']");
+
+
+
+
+
+
+
+
+
+
+}   // HW 14 ADVANCED LOCATORS
+
+
+
+
+
+

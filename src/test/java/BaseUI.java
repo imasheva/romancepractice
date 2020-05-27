@@ -30,6 +30,7 @@ public class BaseUI {
     GiftsPage giftsPage;
     BlogPage blogPage;
     PhotosPage photosPage;
+    ContactsUsPage contactUsPage;
     SoftAssert softAssert = new SoftAssert();  //VID 10 16:36
 
     @BeforeMethod(groups = {"user", "admin"}, alwaysRun = true)
@@ -71,6 +72,8 @@ public class BaseUI {
         giftsPage = new GiftsPage(driver, wait);
         blogPage = new BlogPage(driver, wait);
         photosPage = new PhotosPage(driver, wait);
+        contactUsPage = new ContactsUsPage(driver, wait);
+
         driver.manage().window().maximize();
         driver.get(Data.mainUrl);
 

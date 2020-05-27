@@ -85,6 +85,15 @@
                     <include name=" .*Links.*"/>
                 </methods>
             </class>
+
+            <class name="ContactUsPageTest">
+                <methods>
+                    <include name=" .*DropDown.*"/>
+                    <include name=" .*Contact.*"/>
+                </methods>
+            </class>
+
+
         </classes>
     </test>
 </suite>

@@ -131,7 +131,8 @@ public class BaseActions {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    public void clickValueOfLists(By locator, String text) {
+    public void clickValueOfLists(By locator, String text) {  //CLICK -> ul/li
+
         List<WebElement> elements = driver.findElements(locator);
         for (int i = 0; i < elements.size(); i++) {
             WebElement elementOfList = elements.get(i);
@@ -141,6 +142,7 @@ public class BaseActions {
             }
         }
     }
+
     //WAITS
 
     public void javaWaitSec (int sec) {

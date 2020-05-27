@@ -13,7 +13,7 @@ public class SignInTest extends BaseUI {
     //ie limited
     public static final boolean testCase1 = true;
 
-    @Test (priority = 1, enabled = testCase1, groups ={"user", "admin"})
+    @Test
 
     public void testSignInTestCase1() {
         signInPage.openSignInPage();
@@ -24,7 +24,6 @@ public class SignInTest extends BaseUI {
         softAssert.assertEquals(actualTitle, Data.expectedTitleSignIn,  "title is wrong");
         String actualTitle = driver.findElement(Locators.TITLE_PRETTY_WOMEN).getText();
 
-        //etot wait mojno ostavit ili menyat na ajaxWait(sec) ?
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         signInPage.signIn();
         softAssert.assertAll();

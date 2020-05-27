@@ -13,20 +13,21 @@ import java.util.concurrent.TimeUnit;
 
 public class RegistrationTests extends BaseUI {
 
-    public static final boolean testCase2 = true;
+   // public static final boolean testCase2 = true; in case add more
 
-    @Test (priority = 1, enabled = testCase2, groups ={"user", "admin"})
+    @Test
     public void testRegistrationTestCase2() {
         signInPage.openSignInPage();
         mainPage.clickJoinButton();
-        mainPage.completeFirstPartOfRegistartion();
-        //can I use wait below or javaWaitSec(3);?
-        //What is better?
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        mainPage.completeSecondPartOfRegistration();
 
+        mainPage.completeFirstPartOfRegistration(Data.email, Data.password);
+
+        mainPage.completeSecondPartOfRegistration(mainPage.generateNewNumber(Data.nickname, 5),Data.phone,
+                Data.month, Data.day, Data.year, Data.city, Data.location);
 
     }
+
+
 }
 
 

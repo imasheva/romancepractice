@@ -27,10 +27,17 @@ public class PrettyWomenPage extends BaseActions {
     }
 
 
-    public void testDropDownSelectOptions() {
+    public void selectDropDownViewOptions() {
 
         WebElement dropDownListViewOptions = driver.findElement(Locators.DROP_DOWN_LIST_VIEW_OPTIONS);
         getDropDownListByIndex(dropDownListViewOptions, Data.view_Option);
+    }
+
+    public void selectDropDownListByAge() {
+
+    }
+
+    public void selectRandomDropDownList() {
     }
 }
 
