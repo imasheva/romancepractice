@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 import java.sql.SQLOutput;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -18,11 +19,22 @@ public class GiftsPage extends BaseActions {
         driver.findElement(Locators.LINK_GIFTS_PAGE).click();
     }
 
-    public void selectGiftsfromBestsellers() {
+
+    public List<WebElement> collectGiftsFromRegularList() {
+        List<WebElement> giftsRegularList = driver.findElements(Locators.REGULAR_GIFTS_LIST);
+        return giftsRegularList;
     }
 
+    public List<WebElement> collectBestsellerList() {
+        List<WebElement> bestSellersList = driver.findElements(Locators.BESTSELLERS_LIST);
+        return bestSellersList;
+    }
 
-    public void selectGiftsFromRegularList() {
+    public String getTitleOfGiftsPage() {
+
+        String titleOfGiftPage = driver.findElement(Locators.TITLE_GIFT_PAGE).getText();
+        return titleOfGiftPage;
 
     }
+
 }

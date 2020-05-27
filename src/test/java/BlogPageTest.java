@@ -1,29 +1,34 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 
 public class BlogPageTest extends BaseUI {
     String actualTitle;
     String actualUrlBlog;
-    String infoListOnLeft;
+    String articleName;
     String actualUrlKharkovDatingAgency;
     String infoListOnRight;
+    String nameOfArticle;
+    String titleOfArticle;
+    String titleOfArticleOnRight;
 
-    public static final boolean testCase21 = true;
-    public static final boolean testCase22 = true;
-    public static final boolean testCase23 = true;
-    public static final boolean testCase24 = true;
+    public static final boolean testCase27 = true;
+    public static final boolean testCase28 = true;
+    public static final boolean testCase29 = true;
 
 
-    @Test (priority = 1, enabled = testCase21, groups ={"admin"})
+    @Test(priority = 1, enabled = testCase27, groups = {"admin"})
 
-    public void testBlogPageTestCase21() {
+    public void testBlogPageTestCase27() {
         blogPage.javaWaitSec(3);
         blogPage.openLinkBlog();
-        actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
+        actualTitle = blogPage.getAnyTitle();
         actualUrlBlog = driver.getCurrentUrl();
         Assert.assertEquals(Data.expectedTitleBlog, actualTitle);
         Assert.assertEquals(Data.expectedUrlBlog, actualUrlBlog);
@@ -34,80 +39,75 @@ public class BlogPageTest extends BaseUI {
         }
     }
 
-    @Test (priority = 2, enabled = testCase22, groups ={"admin"})
 
-    public void testBlogPageListOfLinksOnRightTestCase22() { //VIDEO 11, 27:55
+    // A lot of repeatable data in UL//li - good for autamtion & Vid 18 StaleElementReferenceException: 38.08 explains
+    @Test(priority = 4, enabled = testCase28, groups = {"admin"})
+
+    public void testArticlesAndTitlesTestCase28() {
+        blogPage.clickTabBlog();
         blogPage.javaWaitSec(3);
-        blogPage.openLinkBlog();
-        blogPage.testBlogPageListOnRight();
 
-        List<WebElement> list = driver.findElements(Locators.BLOG_LIST_RIGHT);
-        System.out.println("Size of the list on the right: " + list.size());
-        mainPage.ajaxClick(Locators.RIGHT_MENU_BLOG_PAGE_CONTAINER);
-        for (int i = 0; i < list.size(); i++) {
-            infoListOnRight = list.get(i).getText();
-            System.out.println(infoListOnRight);
+        List<WebElement> linksOfArticles = blogPage.collectAllLinksOfArticles(); //= driver.findElements(Locators.LINKS_OF_ARTICLES);
+        System.out.println("Size of the articles " + linksOfArticles.size());
 
-            mainPage.ajaxClick(list.get(i));
+        for (int i = 0; i < linksOfArticles.size(); i++) {
+            WebElement link = linksOfArticles.get(i);
+            nameOfArticle = link.getText();              // if can't get text, can't collect list,
+                                              // can use wait -expected condition or collect list after each iteration
 
-            if (infoListOnRight.contains("Kharkov dating")) {
-                actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
-                actualUrlKharkovDatingAgency = driver.getCurrentUrl();
-                Assert.assertEquals(Data.expectedTitleKharkovDatingAgency, actualTitle);
-                Assert.assertEquals(Data.expectedUrlKharkovDatingAgency, actualUrlKharkovDatingAgency);
-
-                if (actualUrlKharkovDatingAgency.contains("#")) {
-                    Assert.fail("It contains restricted #");
-                } else {
-                    System.out.println("No special character. It is good url!");
-                }
+            if (nameOfArticle.contains("How it works")) {    //verify in dev tools
             }
-            mainPage.ajaxClick(Locators.RIGHT_MENU_BLOG_PAGE_CONTAINER);
-            list = driver.findElements(Locators.BLOG_LIST_RIGHT);
+            else if (nameOfArticle.contains("Kharkov dating agency")) {
+            }
+            else if (nameOfArticle.contains("Kiev dating agency")) {
+            }
+            else if (nameOfArticle.contains("Odessa dating agency")) {
+            }
+            else if (nameOfArticle.contains("Mail order girls")) {
+            }
+            else if (nameOfArticle.contains("Beautiful urkainian girls")) {
+            }
+            else if (nameOfArticle.contains("Real Ukrainian brides")) {
+            }
+            else if (nameOfArticle.contains("Eastern European women")) {
+            }
+            else if (nameOfArticle.contains("Marriage agency in Ukraine")) {
+            }
+            else if (nameOfArticle.contains("Kiev dating site")) {
+            }
+            else if (nameOfArticle.contains("Find Ukrainian girlfriend")) {
+            }
+            else if (nameOfArticle.contains("Slavic women for marriage")) {
+            }
+            else if (nameOfArticle.contains("Slavic women for marriage")) {
+            }
+            else if (nameOfArticle.contains("How to marry Ukrainian lady")) {
+            }
+            else if (nameOfArticle.contains("Free Ukrainian dating site")) {
+            }
+            else if (nameOfArticle.contains("9 Factors to Keep in Mind When Dating a Ukrainian Woman")) {
+            }
+            else if (nameOfArticle.contains("Is There a Difference Between Dating or Courting a Ukrainian Woman?")) {
+            }
+
+            else {                             //vid 18, 53:31 if condit not satisfied don't click & collect list again
+                                               // why we don't collect -> cause didn't click
+                link.click();
+                titleOfArticle = blogPage.getAnyTitle();
+                Assert.assertEquals(nameOfArticle, titleOfArticle);
+                //  - >  *****   can use wait -expected condition or collect list after each iteration
+                linksOfArticles = blogPage.collectAllLinksOfArticles();
+                //if it not helps, can add explicit wait w/expected condition
+            }
         }
     }
-
-
-
-    @Test (priority = 3, enabled = testCase23, groups ={"admin"})
-    public void testBlogPageListOfLinksOnLeftTestCase23() {
-        mainPage.navigateToLink(Locators.LINK_BLOG);
-        blogPage.testBlogPageLinksonOnLeft();
-
-            List<WebElement> links = driver.findElements(Locators.BLOG_LIST_LEFT);
-            System.out.println("Size of the list on the left" +links.size());
-            mainPage.ajaxClick(Locators.LEFT_MENU_BLOG_PAGE_CONTAINER);
-
-            for (int i = 0; i < links.size(); i++) {
-
-                infoListOnLeft = links.get(i).getText();
-                System.out.println(infoListOnLeft);
-                mainPage.ajaxClick(links.get(i));
-
-                if(infoListOnLeft.contains("Kharkov dating agency")) {
-                    actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
-                    actualUrlKharkovDatingAgency = driver.getCurrentUrl();
-                    Assert.assertEquals(Data.expectedTitleKharkovDatingAgency, actualTitle);
-                    Assert.assertEquals(Data.expectedUrlKharkovDatingAgency, actualUrlKharkovDatingAgency);
-
-                    if (actualUrlKharkovDatingAgency.contains("#")) {
-                        Assert.fail("It contains restricted #");
-                    } else {
-                        System.out.println("No special character. It is good url!");
-                    }
-                }
-                mainPage.ajaxClick(Locators.LEFT_MENU_BLOG_PAGE_CONTAINER);
-                links = driver.findElements(Locators.BLOG_LIST_LEFT);
-            }
-        }
-
-
-    @Test (priority = 4, enabled = testCase24, groups ={"admin"})
-    public void testLinksBlogPageTestCase24() {
+    @Test(priority = 3, enabled = testCase29, groups = {"admin"})
+    public void testLinksBlogPageTestCase29() {
         mainPage.navigateToLink(Locators.LINK_BLOG);
         blogPage.checkLinksOnWebPage("//a", "//href");
         blogPage.checkLinksOnWebPage("//img", "//src");
-
     }
+
 }
+
 

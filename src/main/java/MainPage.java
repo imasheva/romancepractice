@@ -97,26 +97,10 @@ public class MainPage extends BaseActions {
     }
 
 
-    public void checkLinks() {
+    public List<WebElement> collectLinks() {
 
-        List<WebElement> list = driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
-        System.out.println("Size of the the tabs: " + list.size());
-
-        ArrayList<String> linkText = new ArrayList<String>();
-
-        for (WebElement ele : list) {
-            try {
-                linkText.add(ele.getText());
-            } catch (Exception e) {
-                //TODO: HANDLE EXCEPTION
-            }
-        }
-        System.out.println("Size of the ArrayList " + linkText.size());
-        int i = 1;
-        for (String s : linkText) {
-            System.out.println(i + " ArrayList Text : " + s);
-            i++;
-        }
+        List<WebElement> list = driver.findElements(Locators.TAB_OF_MAIN_PAGE);
+        return list;
     }
 
     public void checkTabsNamesTest() {
@@ -220,11 +204,29 @@ public class MainPage extends BaseActions {
         //bookNow.click(); - simple click doesn't work
     }
 
-    public void verifyDiscountAlert() {
+    public String verifyDiscountAlert() {
 
         String actualString = driver.findElement(Locators.BOOK_NOW_TAB).getText();
-        Assert.assertTrue(actualString.contains("Save 60%"));
+        return actualString;
     }
+
+    public WebElement verifyHeader() {
+        WebElement header = driver.findElement(Locators.HEADER_ROMANCE_ABROAD);
+        return header;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /*public void verifyHeader() {
 

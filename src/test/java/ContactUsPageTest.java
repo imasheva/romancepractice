@@ -5,35 +5,28 @@ public class ContactUsPageTest extends BaseUI {
 
     String currentUrlContactUsPage;
     String actualTitleContactUsPage;
+    public static final boolean testCase23 = true;
+    public static final boolean testCase24 = true;
     public static final boolean testCase25 = true;
     public static final boolean testCase26 = true;
-    public static final boolean testCase27 = true;
-    public static final boolean testCase28 = true;
 
-    @Test(priority = 2, enabled = testCase25, groups = {"user", "admin"})
-    public void testContactUsPageTestCase25() {
-
-
+    @Test(priority = 2, enabled = testCase23, groups = {"user", "admin"})
+    public void testContactUsPageTestCase23() {
         contactUsPage.openContactUsPage();
-
         currentUrlContactUsPage = driver.getCurrentUrl();
+        actualTitleContactUsPage = contactUsPage.getAnyTitle();
         Assert.assertEquals(currentUrlContactUsPage, Data.expectedUrlContactUsPage);
-        System.out.println(currentUrlContactUsPage);
-
-        actualTitleContactUsPage = driver.findElement(Locators.TITLE_CONTACT_US_PAGE).getText();
-        // public static final By TITLE_CONTACT_US_PAGE = By.xpath("//h1"); ? Nado create generic GET_TITLE?
         Assert.assertEquals(Data.expectedTitleContactUsPage, actualTitleContactUsPage);
-        System.out.println(actualTitleContactUsPage);
     }
 
-    @Test(priority = 2, enabled = testCase26, groups = {"user", "admin"})
-    public void verifySelectReasonDropDownTestCase26() {
+    @Test(priority = 2, enabled = testCase24, groups = {"user", "admin"})
+    public void verifySelectReasonDropDownTestCase24() {
         contactUsPage.openContactUsPage();
         contactUsPage.selectReasonDropDownContactUs();
     }
 
-    @Test(priority = 3, enabled = testCase27, groups = {"user", "admin"})
-    public void verifyDropDownListTestCase() {
+    @Test(priority = 3, enabled = testCase25, groups = {"user", "admin"})
+    public void verifyDropDownListTestCase25() {
         contactUsPage.openContactUsPage();
         contactUsPage.verifySizeOfDropDownList();
         contactUsPage.javaWaitSec(4);
@@ -47,8 +40,8 @@ public class ContactUsPageTest extends BaseUI {
 
     }
 
-    @Test(priority = 4, enabled = testCase28, groups = {"user", "admin"})
-    public void fillOutContactAdministratorFormTestCase28() {
+    @Test(priority = 4, enabled = testCase26, groups = {"user", "admin"})
+    public void fillOutContactAdministratorFormTestCase26() {
         contactUsPage.openContactUsPage();
         contactUsPage.selectReasonDropDownContactUs();
         // nado javawait ili ne nado pered zapolneniem multiple input fields?

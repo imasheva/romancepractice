@@ -1,4 +1,5 @@
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -7,15 +8,24 @@ import java.util.concurrent.TimeUnit;
 
 public class GiftsTest extends BaseUI {
     String currentUrlGifts;
+    String giftRegular;
+    String giftBestseller;
+    String actualTitle;
 
-    public static final boolean testCase18 = true;
-    public static final boolean testCase19 = true;
     public static final boolean testCase20 = true;
+    public static final boolean testCase21 = true;
+    public static final boolean testCase22 = true;
 
-    @Test (priority = 1, enabled = testCase18, groups ={"user", "admin"})
+    @Test(priority = 1, enabled = testCase20, groups = {"user", "admin"})
 
-    public void testGiftsPageTestCase18(){
+    public void testGiftsPageTestCase20() {
+
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         giftsPage.openGiftsPage();
+        giftsPage.getTitleOfGiftsPage();
+        actualTitle = giftsPage.getTitleOfGiftsPage();
+
+        Assert.assertEquals(Data.expectedTitleGifts, actualTitle);
         currentUrlGifts = driver.getCurrentUrl();
         Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
         System.out.println(currentUrlGifts);
@@ -26,50 +36,46 @@ public class GiftsTest extends BaseUI {
         }
     }
 
-    @Test (priority = 2, enabled = testCase19, groups ={"user", "admin"})
-    public void testSelectionOfBestsellersTestCase19() {
+    @Test(priority = 2, enabled = testCase21, groups = {"user", "admin"})
 
+    public void testSelectionOfBestsellersTestCase21() {
         giftsPage.openGiftsPage();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        giftsPage.selectGiftsfromBestsellers();
 
-            List<WebElement> bestSellersList = driver.findElements(Locators.BESTSELLERS_LIST);
+        List<WebElement> bestSellersList = giftsPage.collectBestsellerList();
 
-            System.out.println("Bestseller items size: " + bestSellersList.size());
-            for (int i = 0; i < bestSellersList.size(); i++) {
+        System.out.println("Bestseller items size: " + bestSellersList.size());
+        for (int i = 0; i < bestSellersList.size(); i++) {
 
-                System.out.println("Bestseller items name: " + bestSellersList.get(i).getText()); //How to print each?
+            giftBestseller = bestSellersList.get(i).getText();
 
-                if (bestSellersList.get(i).getText().equalsIgnoreCase(Data.bestSellerItem)) {
-                    bestSellersList.get(i).click();
-                    break;
-                }
-            }
-        }
-
-
-    @Test (priority = 3, enabled = testCase20, groups ={"user", "admin"})
-    public void testSelectionOfRegularGiftsTestCase20(){
-        giftsPage.openGiftsPage();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        giftsPage.selectGiftsFromRegularList();
-
-        List<WebElement> giftsRegularList = driver.findElements(Locators.REGULAR_GIFTS_LIST);
-
-        for (int i = 0; i < giftsRegularList.size(); i++) {
-
-            WebElement element = giftsRegularList.get(i);
-
-            String gift = element.getText();
-
-            if (gift.toLowerCase().contains(Data.giftItemRegularList)) {
-                //click on Quick view button
-                driver.findElements(Locators.BUTTON_QUICK_VIEW).get(i).click();
+            if (giftBestseller.contains(Data.bestSellerItem)) {
+                System.out.println(giftBestseller);
+                giftsPage.ajaxClick(bestSellersList.get(i));
                 break;
             }
         }
+    }
 
 
+    @Test(priority = 3, enabled = testCase22, groups = {"user", "admin"})
+    public void testSelectionOfRegularGiftsTestCase22() {
+        giftsPage.openGiftsPage();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+
+        List<WebElement> giftsRegularList = giftsPage.collectGiftsFromRegularList();
+        System.out.println("Regular gifts size " + giftsRegularList.size());
+
+        for (int i = 0; i < giftsRegularList.size(); i++) {
+
+            giftRegular = giftsRegularList.get(i).getText();
+
+            if (giftRegular.contains(Data.giftItemRegularList)) {
+                System.out.println(giftRegular);
+                giftsPage.ajaxClick(giftsRegularList.get(i));
+                break;
+            }
+        }
 
 
     }

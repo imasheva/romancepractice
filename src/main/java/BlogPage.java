@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -39,6 +40,24 @@ public class BlogPage extends BaseActions {
         ajaxClick(Locators.LEFT_MENU_BLOG_PAGE);
     }
 
+    //Video 18 10:00 A lot of repeatable data - good for autamtion
+
+    public List<WebElement> collectAllLinksOfArticles() {  //Video 18, 28:34 instead of void return List
+
+        List<WebElement> linksOfArticles = driver.findElements(Locators.LINKS_OF_ARTICLES);
+        return linksOfArticles;
+    }
 
 
+    public void clickTabBlog() {
+        driver.findElement(Locators.LINK_BLOG).click();
+    }
+
+
+    public List<WebElement> collectAllArticlesInBlogRightMenu() {
+
+        List<WebElement> linksOfArticlesOnRight = driver.findElements(Locators.BLOG_LIST_RIGHT);
+        return linksOfArticlesOnRight;
+
+    }
 }

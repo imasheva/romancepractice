@@ -52,6 +52,7 @@ public class Data {
     public static final String expectedTitleTourToUkraine = "TOURS TO UKRAINE";
     public static final String expectedTitleBlog = "Blog";
     public static final String expectedTitleSignIn = "UKRAINIAN GIRLS DATING SITE";
+    public static final String expectedTitleGifts = "Gifts";
 
 
     public static final String expectedTitleMainPage = "Ukrainian Girls Dating Site";
@@ -78,6 +79,11 @@ public class Data {
     public static final String youremail = "imasheva.a@gmail.com";
     public static final String subject = "profile";
     public static final String message = "Can't upload photo";
+
+    //Photos
+    public static final String nameOnPhoto = "Tanya";
+    public static final String nameOnPhoto2 = "Tatyana";
+
 
 
 

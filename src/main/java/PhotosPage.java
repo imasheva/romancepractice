@@ -20,5 +20,10 @@ public class PhotosPage extends BaseActions {
     }
 
 
+    public List<WebElement> collectPhotosList() {
+
+        List<WebElement> photosList = driver.findElements(Locators.LIST_PHOTOS);
+        return photosList;
+    }
 }
 

@@ -17,17 +17,6 @@ public class ContactsUsPage extends BaseActions {
 
         ajaxClick(Locators.CONTACT_US_LINK);
 
-        // 1. Vopros chto luchshe to use?
-        // javaWaitSec(3);         ili      // driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-
-        // 2. If I use one of above the anjax click, is it double wait?
-        /*
-         public void ajaxClick(By by) {
-        wait.until(ExpectedConditions.elementToBeClickable(by));
-        ajaxClick(driver.findElement(by));
-    }
-         */
-
     }
 
     public void selectReasonDropDownContactUs() {

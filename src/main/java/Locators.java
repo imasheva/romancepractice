@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 
 public class Locators {
 
+   public static final By H1_TITLE = By.xpath("//h1");
+
     //MAIN PAGE
     public static final By LINK_HOME = By.xpath("//a[contains(text(),'HOME')]");
     //TABS ON MAIN PAGE
@@ -78,9 +80,9 @@ public class Locators {
     public static final By LINK_GIFTS_PAGE = By.cssSelector("a[href='https://romanceabroad.com/store/category-sweets']");
     public static final By BESTSELLERS_LIST = By.xpath("//div[@class='g-users-gallery__item col-xs-4 col-md-3 col-lg-2 bestseller']");
 
-    public static final By REGULAR_GIFTS_LIST = By.xpath("//div[@class='contrasting-block']");
-    public static final By BUTTON_QUICK_VIEW = By.xpath("//input[@value='Quick view']");
+    public static final By REGULAR_GIFTS_LIST = By.cssSelector(".col-xs-6.col-sm-6.col-md-3.b-store-list__item");
 
+    public static final By TITLE_GIFT_PAGE = (By.xpath("//*[@class='title']"));
 
     //Media page
     public static final By LINK_MEDIA = By.cssSelector("a[href='https://romanceabroad.com/media/index']");
@@ -93,7 +95,10 @@ public class Locators {
 
 
     public static final By BLOG_LIST_LEFT = By.xpath("//div[@class='inside account_menu']//ul//li//a");
+    public static final By LINKS_OF_ARTICLES = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");
+
     public static final By LEFT_MENU_BLOG_PAGE = By.xpath("//div[@class='inside account_menu']");
+
     public static final By LEFT_MENU_BLOG_PAGE_CONTAINER = By.xpath("//div[@class='inside account_menu']");
 
     //Photos Page
