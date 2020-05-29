@@ -1,4 +1,4 @@
-import org.openqa.selenium.By;
+package com.romanceabroad.ui;
 
 public class Data {
 
@@ -7,12 +7,15 @@ public class Data {
     public static final String email2 = "11yahoo.com";
     public static final String email3 = "11@yandex.com";
 
-    //Negative test case
-    public static final String expectedTootltipMessageForInvalidPassword = "Email is incorrect, please try again";
+    //For negative test cases
+    public static final String expectedTootltipMessageForInvalidEmail = "Email is incorrect, please try again";
     public static final String expectedTootltipMessageForExistingUser = "User with such email already exists";
-    public static final String email4 = "1";                          //msg - * error
-    public static final String email5 = "imasheva.anara1@gmail.com"; //msg - *already exist
-    public static final String email6 = " ";                         //msg - empty
+    public static final String expectedMessageForInvalidPassword
+            = "Please choose a password that is at least 6 characters lon";
+    public static final String email4 = "1";
+    public static final String emailExistingUser = "imasheva.anara1@gmail.com";
+    public static final String email6 = " ";
+    public static final String passwordInvalid = "12";
  //   public static final String email6 = "11@yandex.com";
 
     public static final String password = "123456";

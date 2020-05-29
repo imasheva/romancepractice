@@ -7,13 +7,13 @@
         <parameter name="browser" value="ie"/>
 
         <classes>
-            <class name="RegistrationTests"/>
-            <class name="SignInTest"/>
-            <class name="PrettyWomenTest"/>
-            <class name="PhotosPageTest"/>
-            <class name="GiftsTest"/>
-            <class name="MainPageTests"/>
-            <class name="BlogPageTest"/>
+            <class name="com.romanceabroad.ui.RegistrationTests"/>
+            <class name="com.romanceabroad.ui.SignInTest"/>
+            <class name="com.romanceabroad.ui.PrettyWomenTest"/>
+            <class name="com.romanceabroad.ui.PhotosPageTest"/>
+            <class name="com.romanceabroad.ui.GiftsTest"/>
+            <class name="com.romanceabroad.ui.MainPageTests"/>
+            <class name="com.romanceabroad.ui.BlogPageTest"/>
 
         </classes>
     </test>-->
@@ -22,13 +22,13 @@
 
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="RegistrationTests"/>
-            <class name="SignInTest"/>
-            <class name="PrettyWomenTest"/>
-            <class name="PhotosPageTest"/>
-            <class name="GiftsTest"/>
-            <class name="MainPageTests"/>
-            <class name="BlogPageTest"/>
+            <class name="com.romanceabroad.ui.RegistrationTests"/>
+            <class name="com.romanceabroad.ui.SignInTest"/>
+            <class name="com.romanceabroad.ui.PrettyWomenTest"/>
+            <class name="com.romanceabroad.ui.PhotosPageTest"/>
+            <class name="com.romanceabroad.ui.GiftsTest"/>
+            <class name="com.romanceabroad.ui.MainPageTests"/>
+            <class name="com.romanceabroad.ui.BlogPageTest"/>
         </classes>
     </test>-->
 
@@ -43,12 +43,12 @@
             </run>
         </groups>-->
         <classes>
-            <class name="RegistrationTests"/>
-            <class name="SignInTest"/>
-            <class name="PrettyWomenTest"/>
-            <class name="PhotosPageTest"/>
-            <class name="GiftsTest"/>
-            <class name="MainPageTests">
+            <class name="com.romanceabroad.ui.RegistrationTests"/>
+            <class name="com.romanceabroad.ui.SignInTest"/>
+            <class name="com.romanceabroad.ui.PrettyWomenTest"/>
+            <class name="com.romanceabroad.ui.PhotosPageTest"/>
+            <class name="com.romanceabroad.ui.GiftsTest"/>
+            <class name="com.romanceabroad.ui.MainPageTests">
             <!--    <methods>
                     <include name=" .*Tabs.*"/>
                     <include name=" .*Links.*"/>
@@ -59,8 +59,8 @@
                     <include name=" .*Header.*"/>
                 </methods>-->
             </class>
-            <class name="BlogPageTest"/>
-            <class name="ContactUsPageTest"/>
+            <class name="com.romanceabroad.ui.BlogPageTest"/>
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>
 
         </classes>
     </test>

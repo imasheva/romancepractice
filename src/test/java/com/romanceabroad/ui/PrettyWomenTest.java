@@ -1,10 +1,7 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+package com.romanceabroad.ui;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class PrettyWomenTest extends BaseUI {
 

@@ -1,9 +1,7 @@
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+package com.romanceabroad.ui;
 
-import java.nio.file.Paths;
-import java.util.ArrayList;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import static java.nio.file.Files.readAllLines;
 

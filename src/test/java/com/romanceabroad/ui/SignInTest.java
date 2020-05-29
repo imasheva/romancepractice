@@ -1,5 +1,5 @@
-import org.openqa.selenium.By;
-import org.testng.Assert;
+package com.romanceabroad.ui;
+
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;

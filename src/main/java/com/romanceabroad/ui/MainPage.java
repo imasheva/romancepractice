@@ -1,14 +1,14 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -35,15 +35,17 @@ public class MainPage extends BaseActions {
 
 
     public void completeFirstPartOfRegistration(String email, String password) {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(email);
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(password);
     }
-    public void clickNextButton(){
+
+    public void clickNextButton() {
         ajaxClick(Locators.BUTTON_NEXT_REGISTRATION);
-      //  wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT_REGISTRATION));
-      //  driver.findElement(Locators.BUTTON_NEXT_REGISTRATION);
+       // wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT_REGISTRATION));
+       // driver.findElement(Locators.BUTTON_NEXT_REGISTRATION);
     }
+
     public void completeSecondPartOfRegistration(String nickname, String phone, String month, String day,
                                                  String year, String city, String location) {
 
@@ -68,9 +70,6 @@ public class MainPage extends BaseActions {
         clickValueOfLists(Locators.LIST_VALUE_LOCATION, location); //div[@class='dropdown dropdown_location']//ul//li
 
     }
-
-
-
 
 
     public void testIframeOnMainPage() throws InterruptedException {
@@ -207,30 +206,17 @@ public class MainPage extends BaseActions {
         return message;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*public void verifyHeader() {
-
-        WebElement header = driver.findElement(Locators.HEADER_ROMANCE_ABROAD);
-        assertTrue(header.isDisplayed());
-    }*/
+    public String getValidationMessageForPassword() {
+        WebElement tooltipMessage = driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD);
+        String message = tooltipMessage.getText();
+        return message;
+    }
 
 
 }
-    //For myself
-    // String strEmail = driver.findElement(Locators.TEXT_FIELD_EMAIL).getAttribute("value");
-    // System.out.println("Email: " + strEmail);
+//For myself
+// String strEmail = driver.findElement(Locators.TEXT_FIELD_EMAIL).getAttribute("value");
+// System.out.println("Email: " + strEmail);
 
     /* VIDEO 17 Beginning ->  FOR MYSELF NEED CODE BELOW
 
@@ -248,7 +234,7 @@ public class MainPage extends BaseActions {
      */
 
 
-        //OLEKSII QUESTION BELOW:
+//OLEKSII QUESTION BELOW:
         /*NE POLUCHILOS to use generator: add dependency + method -> DOBAVILA / shows error
         driver.findElement(Locators.TEXT_FIELD_NICKNAME).sendKeys(generateNewNumber(Data.nickname));*/
 

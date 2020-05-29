@@ -1,13 +1,13 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import java.sql.SQLOutput;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
 import static org.testng.Assert.assertTrue;
 
 public class MainPageTests extends BaseUI {

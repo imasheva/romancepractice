@@ -1,10 +1,16 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import static java.nio.file.Files.readAllLines;
 
 public class GiftsTest extends BaseUI {
     String currentUrlGifts;
@@ -56,6 +62,18 @@ public class GiftsTest extends BaseUI {
             }
         }
     }
+
+    @DataProvider(name = "Gifts")
+    public static Object[][] testRegistration() throws Exception {
+        ArrayList<Object[]> out = new ArrayList<>();
+        readAllLines(Paths.get("Gifts.csv")).stream().forEach(s -> {
+            String[] data = s.split(",");
+            out.add(new Object[]{data[0], data[1], data[2], data[3], data[4], data[5]});
+        });
+        return out.toArray(new Object[out.size()][]);
+    }
+
+
 
 
     @Test(priority = 3, enabled = testCase22, groups = {"user", "admin"})

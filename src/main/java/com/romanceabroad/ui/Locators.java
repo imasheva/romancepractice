@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.By;
 
 public class Locators {
@@ -32,16 +34,12 @@ public class Locators {
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("#password");
     public static final By BUTTON_NEXT_REGISTRATION= By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TOOLTIP_ERROR= By.xpath("//div[@class='tooltip']");
+    public static final By TOOLTIP_ERROR_PASSWORD= By.xpath("//div[@class='tooltip']");
 
 
     //Registration part2
     public static final By TEXT_FIELD_NICKNAME = By.cssSelector("#nickname");
     public static final By TEXT_FIELD_PHONE = By.cssSelector("[name='data[phone]'");
-
-    //Boostrap dropdown for myself **diff-nt xpath
-    public static final By DAY_LIST_DROPDOWN = By.xpath("//div[@id='daySelect']//ul//li");
-    public static final By MONTH_LIST_DROPDOWN = By.xpath("//div[@id='monthSelect']//ul/li");
-    public static final By YEAR_LIST_DROPDOWN = By.xpath("//div[@id='yearSelect']//ul/li");
 
 
     public static final By LIST_DAYS = By.xpath("//div[@id='daySelect']");     // By.cssSelector("#daySelect");

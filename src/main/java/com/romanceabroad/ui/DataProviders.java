@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.testng.annotations.DataProvider;
 
 import java.nio.file.Paths;
@@ -26,15 +28,27 @@ public class DataProviders {
         };
     }
 
-
+    //For invalid password
     @DataProvider(name = "Registration3")
     public static Object[][] testRegistration3() {
         return new Object[][]{
-                {Data.email4, Data.nickname, true},  // email -1
-                //    {Data.email5, Data.nickname, true},  // email - exist
+                {Data.email4, Data.nickname, false},  // email -> 1
         };
     }
-
+    //For existingUser
+    @DataProvider(name = "Registration4")
+    public static Object[][] testRegistration4() {
+        return new Object[][]{
+                {Data.emailExistingUser, Data.nickname, false},  // email - exist
+        };
+    }
+    //For invalidPassword
+    @DataProvider(name = "Registration5")
+    public static Object[][] testRegistration5() {
+        return new Object[][]{
+                {Data.email3, Data.passwordInvalid, false},  // email: "11yahoo.com", pwd: 12, req-ts 6 characters
+        };
+    }
     @DataProvider(name = "ContactUs")
     public static Object[][] testContactUs() throws Exception{
         ArrayList<Object[]> out = new ArrayList<>();
