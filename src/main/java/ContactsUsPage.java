@@ -30,14 +30,11 @@ public class ContactsUsPage extends BaseActions {
 
     public void fillOutContactAdministratorForm(String yourname, String youremail, String subject, String message) {
 
-
         driver.findElement(Locators.TEXT_FIELD_YOUR_NAME).sendKeys(yourname);
         driver.findElement(Locators.TEXT_FIELD_YOUR_EMAIL).sendKeys(youremail);
         driver.findElement(Locators.TEXT_FIELD_SUBJECT).sendKeys(subject);
         driver.findElement(Locators.TEXT_FIELD_MESSAGE).sendKeys(message);
-
         driver.findElement(Locators.BUTTON_SEND_CONTACT_US_PAGE).click();
-
         //HOW TO DO SECURITY CODE? Maybe in upcoming lesson
     }
 

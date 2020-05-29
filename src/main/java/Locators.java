@@ -31,6 +31,8 @@ public class Locators {
     public static final By TEXT_FIELD_EMAIL = By.cssSelector("#email");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("#password");
     public static final By BUTTON_NEXT_REGISTRATION= By.xpath("//button[@data-action='next-page'][text()='Next']");
+    public static final By TOOLTIP_ERROR= By.xpath("//div[@class='tooltip']");
+
 
     //Registration part2
     public static final By TEXT_FIELD_NICKNAME = By.cssSelector("#nickname");

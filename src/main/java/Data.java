@@ -3,20 +3,27 @@ import org.openqa.selenium.By;
 public class Data {
 
     public static final String mainUrl = "https://romanceabroad.com/";
-    public static final String email = "11@gmail.com";
+    public static final String email1 = "11@gmail.com";
+    public static final String email2 = "11yahoo.com";
+    public static final String email3 = "11@yandex.com";
+
+    //Negative test case
+    public static final String expectedTootltipMessageForInvalidPassword = "Email is incorrect, please try again";
+    public static final String expectedTootltipMessageForExistingUser = "User with such email already exists";
+    public static final String email4 = "1";                          //msg - * error
+    public static final String email5 = "imasheva.anara1@gmail.com"; //msg - *already exist
+    public static final String email6 = " ";                         //msg - empty
+ //   public static final String email6 = "11@yandex.com";
+
     public static final String password = "123456";
     public static final String mainPageDiscountAlert = "Save 60%";
 
-    // PRETTY WOMEN
-    public static final String min_Age = "18";
-    public static final String max_Age = "40";
-    public static final int view_Option = 1;
-
-
     //Registration MainPage
 
-    public static final String nickname = "donaldtrump";
+    public static final String nickname1part = "Nick";
+    public static final String nickname = MainPage.generateNewNumber(Data.nickname1part, Data.lengthSecondPartOfNickname);
     public static final String phone = "6197247589";
+    public static final int lengthSecondPartOfNickname = 5;
 
     //Registration p2
 
@@ -83,6 +90,11 @@ public class Data {
     //Photos
     public static final String nameOnPhoto = "Tanya";
     public static final String nameOnPhoto2 = "Tatyana";
+
+    // PRETTY WOMEN
+    public static final String min_Age = "18";
+    public static final String max_Age = "40";
+    public static final int view_Option = 1;
 
 
 

@@ -1,5 +1,11 @@
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.nio.file.Paths;
+import java.util.ArrayList;
+
+import static java.nio.file.Files.readAllLines;
 
 public class ContactUsPageTest extends BaseUI {
 
@@ -37,16 +43,30 @@ public class ContactUsPageTest extends BaseUI {
         for (int i = 0; i < sizeOfDropDownListReasonOnContactUsPage; i++) {
             contactUsPage.selectItemRandomDropDownOption(Locators.DROP_DOWN_REASON_CONTACT_US, "Reason");
         }
-
     }
+
+
+  //HW 19
+
+    @Test(dataProvider = "ContactUs", dataProviderClass = DataProviders.class)
+    public void fillOutContactAdministratorForm(String youremail, String subject, String message) {
+        contactUsPage.openContactUsPage();
+        contactUsPage.selectReasonDropDownContactUs();
+        contactUsPage.javaWaitSec(3);
+        contactUsPage.fillOutContactAdministratorForm(mainPage.generateNewNumber(Data.yourname, 5),
+                youremail, subject, message);
+    }
+
+
+    //HW 18
 
     @Test(priority = 4, enabled = testCase26, groups = {"user", "admin"})
     public void fillOutContactAdministratorFormTestCase26() {
         contactUsPage.openContactUsPage();
         contactUsPage.selectReasonDropDownContactUs();
-        // nado javawait ili ne nado pered zapolneniem multiple input fields?
-        contactUsPage.javaWaitSec(4);
-        contactUsPage.fillOutContactAdministratorForm(mainPage.generateNewNumber(Data.yourname, 5), Data.youremail, Data.subject, Data.message);
+        contactUsPage.javaWaitSec(3);
+        contactUsPage.fillOutContactAdministratorForm(mainPage.generateNewNumber(Data.yourname, 5),
+                Data.youremail, Data.subject, Data.message);
 
     }
 

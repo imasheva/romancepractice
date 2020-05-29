@@ -2,7 +2,7 @@
 
 <suite name="TestSuite" parallel="none">
 
-    <test name="IETestCases">
+  <!--  <test name="IETestCases">
 
         <parameter name="browser" value="ie"/>
 
@@ -16,9 +16,9 @@
             <class name="BlogPageTest"/>
 
         </classes>
-    </test>
+    </test>-->
 
-    <test name="FirefoxTestCases">
+    <!--<test name="FirefoxTestCases">
 
         <parameter name="browser" value="firefox"/>
         <classes>
@@ -30,44 +30,26 @@
             <class name="MainPageTests"/>
             <class name="BlogPageTest"/>
         </classes>
-    </test>
+    </test>-->
+
+
     <test name="ChromeTestCases">
         <parameter name="browser" value="chrome"/>
-        <groups>
+       <!-- <groups>
             <run>
                 <exclude name="ie"/>
                 <include name="admin"/>
                 <include name="user"/>
             </run>
-        </groups>
-
+        </groups>-->
         <classes>
             <class name="RegistrationTests"/>
             <class name="SignInTest"/>
-            <class name="PrettyWomenTest">
-                <methods>
-                    <include name=" .*Random.*"/>
-                    <include name=" .*DropDown.*"/>
-                    <include name=" .*Search.*"/>
-                </methods>
-            </class>
-            <class name="PhotosPageTest">
-                <methods>
-                    <include name=" .*Page.*"/>
-                    <include name=" .*List.*"/>
-                </methods>
-            </class>
-
-            <class name="GiftsTest">
-                <methods>
-                    <include name=" .*Gifts.*"/>
-                    <include name=" .*Bestsellers.*"/>
-                </methods>
-
-            </class>
-
+            <class name="PrettyWomenTest"/>
+            <class name="PhotosPageTest"/>
+            <class name="GiftsTest"/>
             <class name="MainPageTests">
-                <methods>
+            <!--    <methods>
                     <include name=" .*Tabs.*"/>
                     <include name=" .*Links.*"/>
                     <include name=" .*Size.*"/>
@@ -75,24 +57,10 @@
                     <include name=" .*Book.*"/>
                     <include name=" .*Discount.*"/>
                     <include name=" .*Header.*"/>
-                </methods>
-
+                </methods>-->
             </class>
-
-            <class name="BlogPageTest">
-                <methods>
-                    <include name=" .*List.*"/>
-                    <include name=" .*Links.*"/>
-                </methods>
-            </class>
-
-            <class name="ContactUsPageTest">
-                <methods>
-                    <include name=" .*DropDown.*"/>
-                    <include name=" .*Contact.*"/>
-                </methods>
-            </class>
-
+            <class name="BlogPageTest"/>
+            <class name="ContactUsPageTest"/>
 
         </classes>
     </test>

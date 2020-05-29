@@ -35,51 +35,37 @@ public class MainPage extends BaseActions {
 
 
     public void completeFirstPartOfRegistration(String email, String password) {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(email);
-
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(password);
-
-        WebElement btnNext = driver.findElement(Locators.BUTTON_NEXT_REGISTRATION);
-        if (btnNext.isDisplayed() && btnNext.isEnabled()) {
-            btnNext.click();
-            System.out.println("Button next  is displyed, enabled and clicked");
-        }
-
     }
-
+    public void clickNextButton(){
+        ajaxClick(Locators.BUTTON_NEXT_REGISTRATION);
+      //  wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT_REGISTRATION));
+      //  driver.findElement(Locators.BUTTON_NEXT_REGISTRATION);
+    }
     public void completeSecondPartOfRegistration(String nickname, String phone, String month, String day,
                                                  String year, String city, String location) {
 
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-
         driver.findElement(Locators.TEXT_FIELD_NICKNAME).sendKeys(nickname);
 
-        //*************************************************
         driver.findElement(Locators.LIST_DAYS).click();
         clickValueOfLists(Locators.LIST_VALUE_DAY, day);
 
-         //*************************************************
         driver.findElement(Locators.LIST_MONTHS).click();
         clickValueOfLists(Locators.LIST_VALUE_MONTH, month);
-        //**************************************************
 
         driver.findElement(Locators.LIST_YEARS).click();
         clickValueOfLists(Locators.LIST_VALUE_YEAR, year);
-        //**************************************************
 
         driver.findElement(Locators.TEXT_FIELD_PHONE).sendKeys(phone);
-        //**************************************************
-
         driver.findElement((Locators.CHECKBOX_CONFIRMATION)).click();
 
         driver.findElement(Locators.AUTOFILLING_FORM_LOCATION).clear();
-        driver.findElement(Locators.AUTOFILLING_FORM_LOCATION).sendKeys(city);
-        clickValueOfLists(Locators.LIST_VALUE_LOCATION, location);
-
-       //  By AUTOFILLING_FORM_LOCATION = By.xpath("//input[@name='region_name']");
-       //  By LIST_VALUE_LOCATION = By.xpath("//div[@class='dropdown dropdown_location']//ul//li");
+        driver.findElement(Locators.AUTOFILLING_FORM_LOCATION).sendKeys(city); //input[@name='region_name']
+        //After we send city, it detects location
+        clickValueOfLists(Locators.LIST_VALUE_LOCATION, location); //div[@class='dropdown dropdown_location']//ul//li
 
     }
 
@@ -213,6 +199,12 @@ public class MainPage extends BaseActions {
     public WebElement verifyHeader() {
         WebElement header = driver.findElement(Locators.HEADER_ROMANCE_ABROAD);
         return header;
+    }
+
+    public String getErrorMessageFromTooltip() {
+        WebElement tooltipMessage = driver.findElement(Locators.TOOLTIP_ERROR);
+        String message = tooltipMessage.getText();
+        return message;
     }
 
 
