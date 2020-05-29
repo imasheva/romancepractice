@@ -93,15 +93,15 @@ public class RegistrationTests extends BaseUI {
         mainPage.completeFirstPartOfRegistration(email, password);
         mainPage.clickNextButton();
         if (!requirement) {
-
-            wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD)));
-         //   Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD).isDisplayed());
+           //wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD)));
+           Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD).isDisplayed());
             actualTooltipMessageForInvalidPassword = mainPage.getValidationMessageForPassword();
 
             if (actualTooltipMessageForInvalidPassword.contains("Please choose a password")) {
                 Assert.assertEquals(actualTooltipMessageForInvalidPassword , Data.expectedMessageForInvalidPassword);
                 System.out.println("Message displayed: " + actualTooltipMessageForInvalidPassword );
             } else {
+
                 mainPage.completeSecondPartOfRegistration(Data.nickname, Data.phone,
                         Data.month, Data.day, Data.year, Data.city, Data.location);
             }

@@ -46,7 +46,7 @@ public class DataProviders {
     @DataProvider(name = "Registration5")
     public static Object[][] testRegistration5() {
         return new Object[][]{
-                {Data.email3, Data.passwordInvalid, false},  // email: "11yahoo.com", pwd: 12, req-ts 6 characters
+                {Data.email3, Data.passwordInvalid, false},  // pwd: "12", req-ts 6 characters
         };
     }
     @DataProvider(name = "ContactUs")
