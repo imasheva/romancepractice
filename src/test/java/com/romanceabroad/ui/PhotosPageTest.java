@@ -52,6 +52,17 @@ public class PhotosPageTest extends BaseUI {
         }
     }
 
+     @Test
+    public void testUserTabs(){
+        photosPage.clickPhotosTab();
+     }
+
+
+
+
+
+
+
 }
 
 

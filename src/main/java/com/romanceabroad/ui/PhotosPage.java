@@ -25,5 +25,9 @@ public class PhotosPage extends BaseActions {
         List<WebElement> photosList = driver.findElements(Locators.LIST_PHOTOS);
         return photosList;
     }
+
+    public void clickPhotosTab(){
+        driver.findElement(Locators.LINK_PHOTOS_PAGE).click();
+    }
 }
 

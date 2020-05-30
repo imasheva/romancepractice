@@ -102,10 +102,10 @@ public class PrettyWomenTest extends BaseUI {
         prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), sortBy);
         prettyWomenPage.clickSearchButton(); //click the search button
 
-        //Vid 21, 12:00
+        //Vid 22, 12:00
         //1. Filter data from regions
         //2. Split data
-        //3. Everything you take from UI always string (vid 21, 11:28)
+        //3. Everything you take from UI always string (vid 22, 11:28)
         //   -> Convert data from String to Int == have to parse it
 
         // After we collect web elements
@@ -128,10 +128,10 @@ public class PrettyWomenTest extends BaseUI {
                 }else{
                     Assert.fail("Wrong age: " + ageNum);
                 }
-                
+
             }
             prettyWomenPage.javaWaitSec(3);
-            infoAboutUser = driver.findElements(Locators.TEXT_PRETTY_WOMEN_INFO);
+            infoAboutUser = driver.findElements(Locators.TEXT_PRETTY_WOMEN_INFO); //get elements
         }
     }
         @Test
