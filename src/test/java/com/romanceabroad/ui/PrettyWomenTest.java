@@ -121,8 +121,14 @@ public class PrettyWomenTest extends BaseUI {
                 String info = text.getText();
                 String[] splittedPhrase = info.split(", ");
                 String age = splittedPhrase[1];
-                System.out.println(age);
+                int ageNum = Integer.parseInt(age);
 
+                if(min <= ageNum || ageNum <= max){
+                    System.out.println("This age: " + ageNum + " is correct");
+                }else{
+                    Assert.fail("Wrong age: " + ageNum);
+                }
+                
             }
             prettyWomenPage.javaWaitSec(3);
             infoAboutUser = driver.findElements(Locators.TEXT_PRETTY_WOMEN_INFO);
