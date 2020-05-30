@@ -107,14 +107,22 @@ public class PrettyWomenTest extends BaseUI {
 
         List<WebElement> infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
         System.out.println(infoAboutUser.size());
-        for(int i = 0; i < infoAboutUser.size(); i++){
+        for (int i = 0; i < infoAboutUser.size(); i++) {
             WebElement text = infoAboutUser.get(i);
-           // prettyWomenPage.ajaxScroll(text);
+            // prettyWomenPage.ajaxScroll(text);
             wait.until(ExpectedConditions.visibilityOf(text));
             String info = text.getText();
             System.out.println(info);
             infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
         }
+    }
+        @Test
+        public void testSplit(){  //video 22, 10:10
+            String info = "Name, 23";
+            String[] splittedPhrase = info.split(", ");
+            String age = splittedPhrase[1];
+            System.out.println(age);
+
+        }
 
     }
-}

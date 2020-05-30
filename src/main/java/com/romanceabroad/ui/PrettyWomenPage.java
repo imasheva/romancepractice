@@ -3,6 +3,7 @@ package com.romanceabroad.ui;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class PrettyWomenPage extends BaseActions {
 
@@ -55,6 +56,7 @@ public class PrettyWomenPage extends BaseActions {
     public void clickSearchButton(){
         driver.findElement(Locators.BUTTON_SEARCH).click();
     }
+
 
 
 
