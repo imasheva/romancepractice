@@ -90,41 +90,39 @@ public class PrettyWomenTest extends BaseUI {
     @Test(dataProvider = "PrettyWomen", dataProviderClass = DataProviders.class, priority =3, enabled = testCase30, groups = {"user", "admin"})
     public void searchDifferentResultsTestCase30(String minAge, String maxAge, String sortBy) {
 
-        int min = Integer.parseInt(minAge);
-        int max = Integer.parseInt(maxAge);
+        int min = Integer.parseInt(minAge);  //3. Everything you take from UI always string (vid 21, 11:28)
+        int max = Integer.parseInt(maxAge);  //  -> Convert data from String to Int == have to parse it
+                                             //Then add value to - int min
 
-        prettyWomenPage.openPrettyWomenPage();
+        prettyWomenPage.openPrettyWomenPage(); //search pretty women link
+         //interact with dropdown list, add different values from data provider
         prettyWomenPage.javaWaitSec(3);
-
-
         prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MIN_AGE), minAge);
-
         prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MAX_AGE), maxAge);
-
         prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), sortBy);
+        prettyWomenPage.clickSearchButton(); //click the search button
 
-        prettyWomenPage.clickSearchButton();
+        //Vid 21, 12:00
+        //1. Filter data from regions
+        //2. Split data
+        //3. Everything you take from UI always string (vid 21, 11:28)
+        //   -> Convert data from String to Int == have to parse it
 
-        List<WebElement> infoAboutUser = driver.findElements(Locators.TEXT_PRETTY_WOMEN_INFO);
-        System.out.println(infoAboutUser.size());
-        for (int i = 0; i < infoAboutUser.size(); i++) {
+        // After we collect web elements
+        List<WebElement> infoAboutUser = driver.findElements(Locators.TEXT_PRETTY_WOMEN_INFO); //names, age, region
 
+                                                                    // System.out.println(infoAboutUser.size());
+
+        for (int i = 0; i < infoAboutUser.size(); i++) {    // prettyWomenPage.ajaxScroll(text);
+                                                                  // wait.until(ExpectedConditions.visibilityOf(text));
             if(i % 2==0) {
 
                 WebElement text = infoAboutUser.get(i);
-                // prettyWomenPage.ajaxScroll(text);
-                wait.until(ExpectedConditions.visibilityOf(text));
                 String info = text.getText();
                 String[] splittedPhrase = info.split(", ");
                 String age = splittedPhrase[1];
-                int ageNum = Integer.parseInt(age);
-                if(min <= ageNum || ageNum <= max){
-                    System.out.println("This age: " + ageNum + " is correct");
-                }else{
-                    Assert.fail("Wrong age: " + ageNum);
-                }
-
                 System.out.println(age);
+
             }
             prettyWomenPage.javaWaitSec(3);
             infoAboutUser = driver.findElements(Locators.TEXT_PRETTY_WOMEN_INFO);
@@ -132,7 +130,7 @@ public class PrettyWomenTest extends BaseUI {
     }
         @Test
         public void testSplit(){  //video 22, 10:10
-            String info = "Name, 23";
+            String info = "Number, 43";
             String[] splittedPhrase = info.split(", ");
             String age = splittedPhrase[1];
             System.out.println(age);
@@ -140,3 +138,13 @@ public class PrettyWomenTest extends BaseUI {
         }
 
     }
+/*String[] splittedPhrase = info.split(", ");
+                String age = splittedPhrase[1];
+                int ageNum = Integer.parseInt(age);
+
+                if(min <= ageNum || ageNum <= max){
+                    System.out.println("This age: " + ageNum + " is correct");
+                }else{
+                    Assert.fail("Wrong age: " + ageNum);
+                }
+*/
