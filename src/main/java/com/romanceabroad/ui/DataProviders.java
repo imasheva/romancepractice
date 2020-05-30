@@ -19,6 +19,7 @@ public class DataProviders {
         });
         return out.toArray(new Object[out.size()][]);
     }
+
     @DataProvider(name = "Registration2")
     public static Object[][] testRegistration2() {
         return new Object[][]{
@@ -35,6 +36,7 @@ public class DataProviders {
                 {Data.email4, Data.nickname, false},  // email -> 1
         };
     }
+
     //For existingUser
     @DataProvider(name = "Registration4")
     public static Object[][] testRegistration4() {
@@ -42,6 +44,7 @@ public class DataProviders {
                 {Data.emailExistingUser, Data.nickname, false},  // email - exist
         };
     }
+
     //For invalidPassword
     @DataProvider(name = "Registration5")
     public static Object[][] testRegistration5() {
@@ -49,10 +52,11 @@ public class DataProviders {
                 {Data.email3, Data.passwordInvalid, false},  // pwd: "12", req-ts 6 characters
         };
     }
+
     @DataProvider(name = "ContactUs")
-    public static Object[][] testContactUs() throws Exception{
+    public static Object[][] testContactUs() throws Exception {
         ArrayList<Object[]> out = new ArrayList<>();
-        readAllLines(Paths.get("ContactUs.csv")).stream().forEach(s-> {
+        readAllLines(Paths.get("ContactUs.csv")).stream().forEach(s -> {
 
             String[] data = s.split(",");
             out.add(new Object[]{data[0], data[1], data[2]});

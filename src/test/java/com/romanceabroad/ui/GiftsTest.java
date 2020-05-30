@@ -21,6 +21,7 @@ public class GiftsTest extends BaseUI {
     public static final boolean testCase20 = true;
     public static final boolean testCase21 = true;
     public static final boolean testCase22 = true;
+    public static final boolean testCase33 = true;
 
     @Test(priority = 1, enabled = testCase20, groups = {"user", "admin"})
 
@@ -63,9 +64,6 @@ public class GiftsTest extends BaseUI {
         }
     }
 
-
-    
-
     @Test(priority = 3, enabled = testCase22, groups = {"user", "admin"})
     public void testSelectionOfRegularGiftsTestCase22() {
         giftsPage.openGiftsPage();
@@ -84,7 +82,32 @@ public class GiftsTest extends BaseUI {
                 break;
             }
         }
-
-
     }
-}
+    /*
+
+    // IN PROGRESS NOT SURE HOW TO PASS ARRAY OF STRINGS
+
+        @Test(dataProvider = "Gifts", dataProviderClass = DataProviders.class,priority = 4, enabled = testCase33, groups = {"user", "admin"})
+        public void testSelectionOfRegularGiftsTestDataProvider(String gift) {
+            giftsPage.openGiftsPage();
+            driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+
+            List<WebElement> giftsRegularLists = giftsPage.collectGiftsFromRegularList();
+            System.out.println("Regular gifts size " + giftsRegularLists.size());
+
+            for (int i = 0; i < giftsRegularLists.size(); i++) {
+
+                giftRegular = giftsRegularLists.get(i).getText();
+
+                if (giftRegular.contains(Data.giftItemRegularList)) {
+                    System.out.println(giftRegular);
+                    giftsPage.ajaxClick(giftsRegularLists.get(i));
+                    break;
+                }
+            }
+
+        }
+
+*/
+    }
+

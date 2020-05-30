@@ -1,10 +1,12 @@
 package com.romanceabroad.ui;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class PrettyWomenTest extends BaseUI {
@@ -87,23 +89,32 @@ public class PrettyWomenTest extends BaseUI {
 
     @Test(dataProvider = "PrettyWomen", dataProviderClass = DataProviders.class, priority =3, enabled = testCase30, groups = {"user", "admin"})
     public void searchDifferentResultsTestCase30(String minAge, String maxAge, String sortBy) {
-      //  driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
-        prettyWomenPage.clickPrettyWomen();
+        int min = Integer.parseInt(minAge);
+        int max = Integer.parseInt(maxAge);
+
+        prettyWomenPage.openPrettyWomenPage();
         prettyWomenPage.javaWaitSec(3);
 
-        //  wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.DROP_DOWN_LIST_MIN_AGE));
-        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MIN_AGE), "minAge");
-        prettyWomenPage.javaWaitSec(3);
 
-        // wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.DROP_DOWN_LIST_MAX_AGE));
-        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MAX_AGE), "maxAge");
-        prettyWomenPage.javaWaitSec(3);
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MIN_AGE), minAge);
 
-        // wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.DROP_DOWN_LIST_SORT_BY));
-        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), "sortBy");
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MAX_AGE), maxAge);
+
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), sortBy);
 
         prettyWomenPage.clickSearchButton();
+
+        List<WebElement> infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
+        System.out.println(infoAboutUser.size());
+        for(int i = 0; i < infoAboutUser.size(); i++){
+            WebElement text = infoAboutUser.get(i);
+           // prettyWomenPage.ajaxScroll(text);
+            wait.until(ExpectedConditions.visibilityOf(text));
+            String info = text.getText();
+            System.out.println(info);
+            infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
+        }
 
     }
 }
