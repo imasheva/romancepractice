@@ -56,6 +56,7 @@ public class Locators {
 
     public static final By LINK_PRETTY_WOMEN = By.cssSelector("a[href='https://romanceabroad.com/users/search']");
     public static final By TITLE_PRETTY_WOMEN = By.xpath("//h1");
+    public static final By TEXT_PRETTY_WOMEN_INFO = By.xpath("//div[@class='text-overflow']");
 
 
     public static final By DROP_DOWN_LIST_MIN_AGE = By.cssSelector("select#age_min");

@@ -105,15 +105,29 @@ public class PrettyWomenTest extends BaseUI {
 
         prettyWomenPage.clickSearchButton();
 
-        List<WebElement> infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
+        List<WebElement> infoAboutUser = driver.findElements(Locators.TEXT_PRETTY_WOMEN_INFO);
         System.out.println(infoAboutUser.size());
         for (int i = 0; i < infoAboutUser.size(); i++) {
-            WebElement text = infoAboutUser.get(i);
-            // prettyWomenPage.ajaxScroll(text);
-            wait.until(ExpectedConditions.visibilityOf(text));
-            String info = text.getText();
-            System.out.println(info);
-            infoAboutUser = driver.findElements(By.xpath("//div[@class='text-overflow']"));
+
+            if(i % 2==0) {
+
+                WebElement text = infoAboutUser.get(i);
+                // prettyWomenPage.ajaxScroll(text);
+                wait.until(ExpectedConditions.visibilityOf(text));
+                String info = text.getText();
+                String[] splittedPhrase = info.split(", ");
+                String age = splittedPhrase[1];
+                int ageNum = Integer.parseInt(age);
+                if(min <= ageNum || ageNum <= max){
+                    System.out.println("This age: " + ageNum + " is correct");
+                }else{
+                    Assert.fail("Wrong age: " + ageNum);
+                }
+
+                System.out.println(age);
+            }
+            prettyWomenPage.javaWaitSec(3);
+            infoAboutUser = driver.findElements(Locators.TEXT_PRETTY_WOMEN_INFO);
         }
     }
         @Test
