@@ -63,18 +63,8 @@ public class GiftsTest extends BaseUI {
         }
     }
 
-    @DataProvider(name = "Gifts")
-    public static Object[][] testRegistration() throws Exception {
-        ArrayList<Object[]> out = new ArrayList<>();
-        readAllLines(Paths.get("Gifts.csv")).stream().forEach(s -> {
-            String[] data = s.split(",");
-            out.add(new Object[]{data[0], data[1], data[2], data[3], data[4], data[5]});
-        });
-        return out.toArray(new Object[out.size()][]);
-    }
 
-
-
+    
 
     @Test(priority = 3, enabled = testCase22, groups = {"user", "admin"})
     public void testSelectionOfRegularGiftsTestCase22() {

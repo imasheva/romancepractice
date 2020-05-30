@@ -60,4 +60,24 @@ public class DataProviders {
         return out.toArray(new Object[out.size()][]);
     }
 
+    @DataProvider(name = "Gifts")
+    public static Object[][] testGiftsRegularList() throws Exception {
+        ArrayList<Object[]> out = new ArrayList<>();
+        readAllLines(Paths.get("Gifts.csv")).stream().forEach(s -> {
+            String[] data = s.split(",");
+            out.add(new Object[]{data[0], data[1], data[2], data[3], data[4], data[5]});
+        });
+        return out.toArray(new Object[out.size()][]);
+    }
+
+    @DataProvider(name = "PrettyWomen")
+    public static Object[][] testPrettyWomenFeature() {
+        return new Object[][]{
+                {"18", "80", "Default"},
+                {"18", "19", "Name"},
+                {"30", "40", "Views"},
+                {"60", "80", "Registration date"},
+        };
+    }
+
 }

@@ -11,7 +11,7 @@ public class Data {
     public static final String expectedTootltipMessageForInvalidEmail = "Email is incorrect, please try again";
     public static final String expectedTootltipMessageForExistingUser = "User with such email already exists";
     public static final String expectedMessageForInvalidPassword
-            = "Please choose a password that is at least 6 characters lon";
+            = "Please choose a password that is at least 6 characters long";
     public static final String email4 = "1";
     public static final String emailExistingUser = "imasheva.anara1@gmail.com";
     public static final String email6 = " ";

@@ -1,7 +1,11 @@
 package com.romanceabroad.ui;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
 
 public class PrettyWomenTest extends BaseUI {
 
@@ -13,12 +17,14 @@ public class PrettyWomenTest extends BaseUI {
     public static final boolean testCase5 = true;
     public static final boolean testCase6 = true;
     public static final boolean testCase7 = true;
+    public static final boolean testCase30 = true;
 
     @Test(priority = 1, enabled = testCase3, groups = {"user", "admin"})
     public void testPrettyWomenPageTestCase3() {
 
         prettyWomenPage.openPrettyWomenPage();
         currentUrlPrettyWomen = driver.getCurrentUrl();
+        prettyWomenPage.javaWaitSec(3);
         actualTitlePrettyWomen = prettyWomenPage.getAnyTitle();
         Assert.assertEquals(currentUrlPrettyWomen, Data.expectedUrlPrettyWomen);
         Assert.assertEquals(actualTitlePrettyWomen, Data.expectedTitlePrettyWomen);
@@ -30,21 +36,22 @@ public class PrettyWomenTest extends BaseUI {
     }
 
 
-    @Test(priority = 1, enabled = testCase4, groups = {"user", "admin"})
+    @Test(priority = 2, enabled = testCase4, groups = {"user", "admin"})
     public void testSearchByAgeTestCase4() {
 
         prettyWomenPage.openPrettyWomenPage();
+        prettyWomenPage.javaWaitSec(3);
         prettyWomenPage.searchByAge();
     }
 
-    @Test(priority = 2, enabled = testCase5, groups = {"user", "admin"})
+    @Test(priority = 3, enabled = testCase5, groups = {"user", "admin"})
     public void testDropDownViewOptionsTestCase5() {
         prettyWomenPage.openPrettyWomenPage();
         prettyWomenPage.javaWaitSec(3);
         prettyWomenPage.selectDropDownViewOptions();
     }
 
-    @Test(priority = 3, enabled = testCase6, groups = {"user", "admin"})
+    @Test(priority = 4, enabled = testCase6, groups = {"user", "admin"})
 
     //Vid 14, 39:42
     public void selectRandomDropDownListTestCase6() {
@@ -60,7 +67,7 @@ public class PrettyWomenTest extends BaseUI {
         }
     }
 
-    @Test(priority = 4, enabled = testCase7, groups = {"user", "admin"})
+    @Test(priority = 5, enabled = testCase7, groups = {"user", "admin"})
     public void selectDropDownListByAgeMinTestCase7() {
 
         mainPage.navigateToLink(Locators.LINK_PRETTY_WOMEN);
@@ -72,5 +79,31 @@ public class PrettyWomenTest extends BaseUI {
         for (int i = 0; i < size; i++) {
             prettyWomenPage.selectItemRandomDropDownOption(Locators.DROP_DOWN_LIST_MIN_AGE, "Sort by");
         }
+    }
+   // HELP PLEASE!!!!! -- LOCATORS CORRECT, ALL PREVIOUS TEST CASES PASSES, IN THIS TEST CASE ERROR MESSAGE FOR BY VISIBLE TEXT METHOD
+    // & CAN'T FIN LOCATORS
+
+    //DROPDOWN LISTS MAX - MIN - SORT_BY     VIDEO 21 - Advanced TestCase Data Providers created
+
+    @Test(dataProvider = "PrettyWomen", dataProviderClass = DataProviders.class, priority =3, enabled = testCase30, groups = {"user", "admin"})
+    public void searchDifferentResultsTestCase30(String minAge, String maxAge, String sortBy) {
+      //  driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+
+        prettyWomenPage.clickPrettyWomen();
+        prettyWomenPage.javaWaitSec(3);
+
+        //  wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.DROP_DOWN_LIST_MIN_AGE));
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MIN_AGE), "minAge");
+        prettyWomenPage.javaWaitSec(3);
+
+        // wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.DROP_DOWN_LIST_MAX_AGE));
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MAX_AGE), "maxAge");
+        prettyWomenPage.javaWaitSec(3);
+
+        // wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.DROP_DOWN_LIST_SORT_BY));
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), "sortBy");
+
+        prettyWomenPage.clickSearchButton();
+
     }
 }

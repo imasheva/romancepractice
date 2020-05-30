@@ -40,7 +40,7 @@ public class BlogPageTest extends BaseUI {
 
 
     // A lot of repeatable data in UL//li - good for autamtion & Vid 18 StaleElementReferenceException: 38.08 explains
-    @Test(priority = 4, enabled = testCase28, groups = {"admin"})
+    @Test(priority = 2, enabled = testCase28, groups = {"admin"})
 
     public void testArticlesAndTitlesTestCase28() {
         blogPage.clickTabBlog();

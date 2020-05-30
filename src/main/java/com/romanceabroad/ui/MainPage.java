@@ -40,8 +40,11 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(password);
     }
 
+
+
     public void clickNextButton() {
-        ajaxClick(Locators.BUTTON_NEXT_REGISTRATION);
+      //  driver.findElement(Locators.BUTTON_NEXT_REGISTRATION).click();
+         ajaxClick(Locators.BUTTON_NEXT_REGISTRATION);
        // wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT_REGISTRATION));
        // driver.findElement(Locators.BUTTON_NEXT_REGISTRATION);
     }

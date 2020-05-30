@@ -10,8 +10,21 @@ public class PrettyWomenPage extends BaseActions {
 
 
     public void openPrettyWomenPage() {
+
         driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
     }
+
+    public void clickPrettyWomen(){
+
+        driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
+
+    }
+
+
+
+
+
+
 
     public void searchByAge() {
 
@@ -37,6 +50,14 @@ public class PrettyWomenPage extends BaseActions {
 
     public void selectRandomDropDownList() {
     }
+
+
+    public void clickSearchButton(){
+        driver.findElement(Locators.BUTTON_SEARCH).click();
+    }
+
+
+
 }
 
 

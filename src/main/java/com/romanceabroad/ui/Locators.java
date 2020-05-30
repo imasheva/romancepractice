@@ -58,9 +58,8 @@ public class Locators {
     public static final By TITLE_PRETTY_WOMEN = By.xpath("//h1");
 
 
-    public static final By DROP_DOWN_LIST_MIN_AGE = By.xpath("//div[@class='col-xs-5 no-padding-left']//select");
-    public static final By DROP_DOWN_LIST_MAX_AGE = By.xpath("//div[@class='col-xs-5 no-padding-right']//select");
-    //public static final By DROP_DOWN_MAX_AGE = By.cssSelector("select#age_max");
+    public static final By DROP_DOWN_LIST_MIN_AGE = By.cssSelector("select#age_min");
+    public static final By DROP_DOWN_LIST_MAX_AGE = By.cssSelector("select#age_max");
 
     public static final By BUTTON_SEARCH = By.cssSelector("#main_search_button_user_advanced");
     public static final By DROP_DOWN_LIST_VIEW_OPTIONS = By.xpath("//div[@class='form-inline']//select");

@@ -14,13 +14,18 @@ import static java.nio.file.Files.readAllLines;
 public class RegistrationTests extends BaseUI {
 
     public static final boolean testCase2 = true;
+    public static final boolean testCase31 = true;
+    public static final boolean testCase32 = true;
+    public static final boolean testCase33 = true;
+    public static final boolean testCase34 = true;
 
     String actualTooltipMessageForInvalidEmail;
     String actuaTooltpMessageForExistingUser;
     String actualTooltipMessageForInvalidPassword;
 
+
     //Passed - Oleksii's
-    @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class, priority = 1, enabled = testCase2, groups = {"user", "admin"})
     public void testRegistration2(String email, String nickname, boolean requirement) {
         System.out.println(email);
         signInPage.openSignInPage();
@@ -36,8 +41,8 @@ public class RegistrationTests extends BaseUI {
     }
 
 
-    @Test(dataProvider = "Registration3", dataProviderClass = DataProviders.class)
-    public void testRegistrationForInvalidEmail(String email, String nickname, boolean requirement) {   //Vid.20,  27:08
+    @Test(dataProvider = "Registration3", dataProviderClass = DataProviders.class, priority = 2, enabled = testCase31, groups = {"user", "admin"})
+    public void testRegistrationForInvalidEmailTestCase31(String email, String nickname, boolean requirement) {   //Vid.20,  27:08
 
         System.out.println(email);
         signInPage.openSignInPage();
@@ -59,8 +64,8 @@ public class RegistrationTests extends BaseUI {
     }
 
 
-    @Test(dataProvider = "Registration4", dataProviderClass = DataProviders.class)
-    public void testRegistrationForExistingUser(String email, String nickname, boolean requirement) {
+    @Test(dataProvider = "Registration4", dataProviderClass = DataProviders.class, priority = 3, enabled = testCase32, groups = {"user", "admin"})
+    public void testRegistrationForExistingUserTestCase32(String email, String nickname, boolean requirement) {
 
         System.out.println(email);
         signInPage.openSignInPage();
@@ -84,16 +89,15 @@ public class RegistrationTests extends BaseUI {
 
     }
 
-
-    @Test(dataProvider = "Registration5", dataProviderClass = DataProviders.class)
-    public void testRegistrationForInvalidPassword(String email, String password, boolean requirement) {
+    @Test(dataProvider = "Registration5", dataProviderClass = DataProviders.class, priority = 4, enabled = testCase33, groups = {"user", "admin"})
+    public void testRegistrationForInvalidPasswordTestCase33(String email, String password, boolean requirement) {
 
         signInPage.openSignInPage();
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, password);
-        mainPage.clickNextButton();
+        mainPage.clickNextButton();  //ajax click
         if (!requirement) {
-           //wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD)));
+           wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD)));
            Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD).isDisplayed());
             actualTooltipMessageForInvalidPassword = mainPage.getValidationMessageForPassword();
 
@@ -101,7 +105,6 @@ public class RegistrationTests extends BaseUI {
                 Assert.assertEquals(actualTooltipMessageForInvalidPassword , Data.expectedMessageForInvalidPassword);
                 System.out.println("Message displayed: " + actualTooltipMessageForInvalidPassword );
             } else {
-
                 mainPage.completeSecondPartOfRegistration(Data.nickname, Data.phone,
                         Data.month, Data.day, Data.year, Data.city, Data.location);
             }
@@ -110,7 +113,7 @@ public class RegistrationTests extends BaseUI {
     }
 
 
-    @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class, priority = 5, enabled = testCase34, groups = {"user", "admin"})
 
     public void testRegistration1(String email, String password, String month, String day, String year,
                                   String phone, String city, String location) {

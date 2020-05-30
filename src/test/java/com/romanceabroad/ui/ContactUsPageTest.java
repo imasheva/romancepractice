@@ -13,8 +13,9 @@ public class ContactUsPageTest extends BaseUI {
     public static final boolean testCase24 = true;
     public static final boolean testCase25 = true;
     public static final boolean testCase26 = true;
+    public static final boolean testCase31 = true;
 
-    @Test(priority = 2, enabled = testCase23, groups = {"user", "admin"})
+    @Test(priority = 1, enabled = testCase23, groups = {"user", "admin"})
     public void testContactUsPageTestCase23() {
         contactUsPage.openContactUsPage();
         currentUrlContactUsPage = driver.getCurrentUrl();
@@ -46,7 +47,7 @@ public class ContactUsPageTest extends BaseUI {
 
   //HW 19
 
-    @Test(dataProvider = "ContactUs", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "ContactUs", dataProviderClass = DataProviders.class, priority = 4, enabled = testCase31, groups = {"user", "admin"})
     public void fillOutContactAdministratorForm(String youremail, String subject, String message) {
         contactUsPage.openContactUsPage();
         contactUsPage.selectReasonDropDownContactUs();
@@ -58,7 +59,7 @@ public class ContactUsPageTest extends BaseUI {
 
     //HW 18
 
-    @Test(priority = 4, enabled = testCase26, groups = {"user", "admin"})
+    @Test(priority = 5, enabled = testCase26, groups = {"user", "admin"})
     public void fillOutContactAdministratorFormTestCase26() {
         contactUsPage.openContactUsPage();
         contactUsPage.selectReasonDropDownContactUs();
