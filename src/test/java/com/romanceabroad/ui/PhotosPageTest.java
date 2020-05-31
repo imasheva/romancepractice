@@ -15,6 +15,10 @@ public class PhotosPageTest extends BaseUI {
 
     public static final boolean testCase8 = true;
     public static final boolean testCase9 = true;
+    public static final boolean testCase32 = true;
+    public static final boolean testCase33 = true;
+    public static final boolean testCase34 = true;
+    public static final boolean testCase35 = true;
 
     @Test(priority = 1, enabled = testCase8, groups = {"user", "admin"})
     public void testPhotosPageTestCase8() {
@@ -54,7 +58,7 @@ public class PhotosPageTest extends BaseUI {
         }
     }
 
-    @Test
+    @Test(priority = 3, enabled = testCase32, groups = {"admin"})
     public void testUserTabs() {       //Vid 22  54:00
         photosPage.clickPhotosTab();
         wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
@@ -80,7 +84,7 @@ public class PhotosPageTest extends BaseUI {
         }
     }
 
-    @Test
+    @Test(priority = 4, enabled = testCase33, groups = {"admin"})
     public void testUserTabsWithMoreVerifications() {       //Vid 23
         photosPage.clickPhotosTab();
         wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
@@ -103,7 +107,7 @@ public class PhotosPageTest extends BaseUI {
         }
     }
 
-    @Test //Vid 22  54:00, Vid 23
+    @Test(priority = 5, enabled = testCase34, groups = {"admin"})         //Vid 22  54:00, Vid 23
     public void testUserTabs2() {       //Vid 22  54:00
         photosPage.clickPhotosTab();
         wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
@@ -142,7 +146,7 @@ public class PhotosPageTest extends BaseUI {
         }
     }
 
-    @Test  // Home Work 23  (vid 23)
+    @Test(priority = 6, enabled = testCase35, groups = {"admin"})  // Home Work 23  (vid 23)
     public void testUserTabs3() {
         photosPage.clickPhotosTab();
         wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
