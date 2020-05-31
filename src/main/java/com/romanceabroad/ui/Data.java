@@ -89,15 +89,19 @@ public class Data {
     public static final String subject = "profile";
     public static final String message = "Can't upload photo";
 
+
     //Photos
     public static final String nameOnPhoto = "Tanya";
     public static final String nameOnPhoto2 = "Tatyana";
+    public static final String textPhotoInAlbums = "On our website you have access to photos of all different kinds of women";
 
+    //User profile
     public static final String expectedTitlePhotos = "Ukrainian women photos";
     public static final String expectedTitleGallery = "Gallery";
     public static final String expectedTitlePhotoGallery = "Photo gallery";
     public static final String expectedTitleVideoGallery = "Video gallery";
     public static final String expectedTitleGalleryAlbums = "Gallery albums";
+
 
 
 

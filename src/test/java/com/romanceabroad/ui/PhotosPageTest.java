@@ -75,12 +75,72 @@ public class PhotosPageTest extends BaseUI {
             } else if (i == 3) {
                 Assert.assertEquals(actualTitle, Data.expectedTitleGalleryAlbums);
             }
-
             //refresh the list inside of a loop
             userTabs = driver.findElements(Locators.LINK_TAB_USER_PROFILE);
         }
     }
-}
 
+    @Test
+    public void testUserTabsWithMoreVerifications() {       //Vid 23
+        photosPage.clickPhotosTab();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
+
+        List<WebElement> userTabs = driver.findElements(Locators.LINK_TAB_USER_PROFILE);
+        actualTitle = photosPage.getAnyTitle();
+        Assert.assertEquals(actualTitle, Data.expectedTitlePhotos);
+
+        for (int i = 0; i < userTabs.size(); i++) {
+            userTabs.get(i).click();
+            actualTitle = photosPage.getAnyTitle();
+            if (actualTitle.contains(Data.expectedTitleGallery) || actualTitle.contains(Data.expectedTitlePhotoGallery)
+                    || actualTitle.contains(Data.expectedTitleVideoGallery) || actualTitle.contains(Data.expectedTitleGalleryAlbums)) {
+                System.out.println("Title is valid: " + actualTitle);
+            } else {
+                Assert.fail("Title is not valid");
+            }
+            //refresh the list inside of a loop
+            userTabs = driver.findElements(Locators.LINK_TAB_USER_PROFILE);
+        }
+    }
+
+    @Test //Vid 22  54:00, Vid 23
+    public void testUserTabs2() {       //Vid 22  54:00
+        photosPage.clickPhotosTab();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
+
+        List<WebElement> userTabs = driver.findElements(Locators.LINK_TAB_USER_PROFILE);
+        actualTitle = photosPage.getAnyTitle();
+        Assert.assertEquals(actualTitle, Data.expectedTitlePhotos);
+
+        for (int i = 0; i < userTabs.size(); i++) {
+            userTabs.get(i).click();
+            actualTitle = photosPage.getAnyTitle();
+            if (i == 0) {
+                Assert.assertEquals(actualTitle, Data.expectedTitleGallery);
+            } else if (i == 1) {
+                Assert.assertEquals(actualTitle, Data.expectedTitlePhotoGallery);
+            } else if (i == 2) {
+                Assert.assertEquals(actualTitle, Data.expectedTitleVideoGallery);
+                photosPage.ajaxClick(By.xpath("//div[@class='g-flatty-block']"));
+                String textMedia = driver.findElement
+                        (By.xpath("//div[@class='g-flatty-block']")).getText();
+                System.out.println(textMedia);
+                if(textMedia.contains(Data.textPhotoInAlbums)){
+                    System.out.println("Text media is correct");
+                }
+            } else if (i == 3) {
+                Assert.assertEquals(actualTitle, Data.expectedTitleGalleryAlbums);
+                photosPage.ajaxClick(By.xpath("//div[@class='main-inner-content']"));
+                photosPage.javaWaitSec(2);
+                Assert.assertTrue(driver.findElement
+                        (By.xpath("//span[@data-click='album']")).isDisplayed());
+            }
+            //refresh the list inside of a loop
+            userTabs = driver.findElements(Locators.LINK_TAB_USER_PROFILE);
+        }
+    }
+
+
+}
 
 
