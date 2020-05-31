@@ -105,6 +105,16 @@ public class Locators {
     public static final By LINK_PHOTOS_PAGE = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__item col-xs-6 col-sm-4 col-md-3 col-lg-2 big']");
     public static final By LINK_TAB_USER_PROFILE = By.xpath("//ul[@id='gallery_filters']//a");
+    public static final By VIDEO_GALLERY_FLATTY_BLOCK = By.xpath("//div[@class='g-flatty-block']");
+    public static final By PHOTO_GALLERY_FLATTY_BLOCK = By.xpath("//div[@class='g-flatty-block']");
+    public static final By DROPDOWN_UNDER_TAB_LIST = By.xpath("//div[@class='col-xs-12']");
+    public static final By P1 = By.xpath("//p[1]");
+    public static final By P2 = By.xpath("//p[1]");
+    public static final By PHOTO_GALLERY_TEXT_ALIGN = By.xpath("//div[@style='text-align: justify;']");
+    public static final By GALLERY_ALBUMS_MAIN_INNER_CONTAINER = By.xpath("//div[@class='main-inner-content']");
+    public static final By GALLERY_ALBUMS_DATA_CLICK_ALBUM = By.xpath("//span[@data-click='album']");
+    public static final By GALLERY_CONTAINER = By.xpath("//div[@class='col-xs-12 content-block']");
+    public static final By GALLERY_TAB_NAMES = By.xpath("//div[@class='row g-flatty-block__header']");
 
     //Contact Us Page
     public static final By CONTACT_US_LINK = By.xpath("//a[@id='footer_footer-menu-help-item_footer-menu-tickets-item']//div");
