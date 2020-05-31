@@ -144,13 +144,3 @@ public class PrettyWomenTest extends BaseUI {
         }
 
     }
-/*String[] splittedPhrase = info.split(", ");
-                String age = splittedPhrase[1];
-                int ageNum = Integer.parseInt(age);
-
-                if(min <= ageNum || ageNum <= max){
-                    System.out.println("This age: " + ageNum + " is correct");
-                }else{
-                    Assert.fail("Wrong age: " + ageNum);
-                }
-*/

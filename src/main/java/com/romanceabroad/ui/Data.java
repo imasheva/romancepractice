@@ -58,7 +58,6 @@ public class Data {
     // Expected Titles
     public static final String expectedTitleHowWeWork = "Ukrainian women for marriage";
     public static final String expectedTitlePrettyWomen = "Single Ukrainian women online";
-    public static final String expectedTitlePhotos = "Ukrainian women photos";
     public static final String expectedTitleTourToUkraine = "TOURS TO UKRAINE";
     public static final String expectedTitleBlog = "Blog";
     public static final String expectedTitleSignIn = "UKRAINIAN GIRLS DATING SITE";
@@ -93,6 +92,14 @@ public class Data {
     //Photos
     public static final String nameOnPhoto = "Tanya";
     public static final String nameOnPhoto2 = "Tatyana";
+
+    public static final String expectedTitlePhotos = "Ukrainian women photos";
+    public static final String expectedTitleGallery = "Gallery";
+    public static final String expectedTitlePhotoGallery = "Photo gallery";
+    public static final String expectedTitleVideoGallery = "Video gallery";
+    public static final String expectedTitleGalleryAlbums = "Gallery albums";
+
+
 
     // PRETTY WOMEN
     public static final String min_Age = "18";
