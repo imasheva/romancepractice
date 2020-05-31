@@ -109,7 +109,7 @@ public class Locators {
     public static final By PHOTO_GALLERY_FLATTY_BLOCK = By.xpath("//div[@class='g-flatty-block']");
     public static final By DROPDOWN_UNDER_TAB_LIST = By.xpath("//div[@class='col-xs-12']");
     public static final By P1 = By.xpath("//p[1]");
-    public static final By P2 = By.xpath("//p[1]");
+    public static final By P2 = By.xpath("//p[2]");
     public static final By PHOTO_GALLERY_TEXT_ALIGN = By.xpath("//div[@style='text-align: justify;']");
     public static final By GALLERY_ALBUMS_MAIN_INNER_CONTAINER = By.xpath("//div[@class='main-inner-content']");
     public static final By GALLERY_ALBUMS_DATA_CLICK_ALBUM = By.xpath("//span[@data-click='album']");
@@ -131,13 +131,7 @@ public class Locators {
 
 
 
-
-
-
-
-
-
-}   // HW 14 ADVANCED LOCATORS
+}
 
 
 
