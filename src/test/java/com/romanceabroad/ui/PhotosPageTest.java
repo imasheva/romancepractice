@@ -59,7 +59,7 @@ public class PhotosPageTest extends BaseUI {
         photosPage.clickPhotosTab();
         wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PHOTOS));
 
-        List<WebElement> userTabs = driver.findElements(By.xpath("//ul[@id='gallery_filters']//a"));
+        List<WebElement> userTabs = driver.findElements(Locators.LINK_TAB_USER_PROFILE);
         actualTitle = photosPage.getAnyTitle();
         Assert.assertEquals(actualTitle, Data.expectedTitlePhotos);
 
@@ -77,7 +77,7 @@ public class PhotosPageTest extends BaseUI {
             }
 
             //refresh the list inside of a loop
-            userTabs = driver.findElements(By.xpath("//ul[@id='gallery_filters']//a"));
+            userTabs = driver.findElements(Locators.LINK_TAB_USER_PROFILE);
         }
     }
 }

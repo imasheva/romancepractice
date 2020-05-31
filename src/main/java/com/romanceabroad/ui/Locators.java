@@ -104,6 +104,7 @@ public class Locators {
     //Photos Page
     public static final By LINK_PHOTOS_PAGE = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By LIST_PHOTOS = By.xpath("//div[@class='g-users-gallery__item col-xs-6 col-sm-4 col-md-3 col-lg-2 big']");
+    public static final By LINK_TAB_USER_PROFILE = By.xpath("//ul[@id='gallery_filters']//a");
 
     //Contact Us Page
     public static final By CONTACT_US_LINK = By.xpath("//a[@id='footer_footer-menu-help-item_footer-menu-tickets-item']//div");
