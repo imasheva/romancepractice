@@ -1,5 +1,6 @@
 package com.romanceabroad.ui;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -76,10 +77,10 @@ public class RegistrationTests extends BaseUI {
 
             actuaTooltpMessageForExistingUser = mainPage.getErrorMessageFromTooltip();
 
-            if (actuaTooltpMessageForExistingUser .contains("User with such email")) {
+            if (actuaTooltpMessageForExistingUser.contains("User with such email")) {
 
-                Assert.assertEquals(actuaTooltpMessageForExistingUser , Data.expectedTootltipMessageForExistingUser);
-                System.out.println("Message displayed: " + actuaTooltpMessageForExistingUser );
+                Assert.assertEquals(actuaTooltpMessageForExistingUser, Data.expectedTootltipMessageForExistingUser);
+                System.out.println("Message displayed: " + actuaTooltpMessageForExistingUser);
             } else {
                 mainPage.clickNextButton(); //disabled for wrong email - doesn't redirect to next modal window
                 mainPage.completeSecondPartOfRegistration(nickname, Data.phone,
@@ -92,31 +93,37 @@ public class RegistrationTests extends BaseUI {
     @Test(dataProvider = "Registration5", dataProviderClass = DataProviders.class, priority = 4, enabled = testCase33, groups = {"user", "admin"})
     public void testRegistrationForInvalidPasswordTestCase33(String email, String password, boolean requirement) {
 
-        signInPage.openSignInPage();
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, password);
-        mainPage.clickNextButton();  //ajax click
+        mainPage.clickNextButton();
+        mainPage.performClick(driver.findElements(By.xpath("//div[@class='g-flatty-block']")).get(1));
+        mainPage.javaWaitSec(3);
+
         if (!requirement) {
-           wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD)));
-           Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD).isDisplayed());
+            wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD)));
+
+            Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR_PASSWORD).isDisplayed());
+
             actualTooltipMessageForInvalidPassword = mainPage.getValidationMessageForPassword();
 
             if (actualTooltipMessageForInvalidPassword.contains("Please choose a password")) {
-                Assert.assertEquals(actualTooltipMessageForInvalidPassword , Data.expectedMessageForInvalidPassword);
-                System.out.println("Message displayed: " + actualTooltipMessageForInvalidPassword );
-            } else {
-                mainPage.completeSecondPartOfRegistration(Data.nickname, Data.phone,
-                        Data.month, Data.day, Data.year, Data.city, Data.location);
+
+                Assert.assertEquals(actualTooltipMessageForInvalidPassword, Data.expectedMessageForInvalidPassword);
+
+                System.out.println("Message displayed: " + actualTooltipMessageForInvalidPassword);
             }
+        } else {
+            System.out.println("No error message displayed");
+
+            mainPage.completeSecondPartOfRegistration(Data.nickname, Data.phone,
+                    Data.month, Data.day, Data.year, Data.city, Data.location);
         }
-
     }
-
 
     @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class, priority = 5, enabled = testCase34, groups = {"user", "admin"})
 
-    public void testRegistration1(String email, String password, String month, String day, String year,
-                                  String phone, String city, String location) {
+    public void testRegistration1(String email, String password, String phone, String month, String day, String year,
+                                  String city, String location) {
 
         signInPage.openSignInPage();
         mainPage.clickJoinButton();
@@ -125,8 +132,8 @@ public class RegistrationTests extends BaseUI {
 
         mainPage.clickNextButton();
 
-        mainPage.completeSecondPartOfRegistration(Data.nickname, month,
-                day, year, phone, city, location);
+        mainPage.completeSecondPartOfRegistration(Data.nickname, phone, month,
+                day, year, city, location);
     }
 
 

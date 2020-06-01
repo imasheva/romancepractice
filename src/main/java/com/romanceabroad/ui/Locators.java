@@ -20,7 +20,8 @@ public class Locators {
 
     public static final By IFRAME = By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
     public static final By YOUTUBE_PLAY_BUTTON = By.cssSelector("button.ytp-large-play-button.ytp-button");
-    public static final By BUTTON_REGISTRATION = By.cssSelector("#show-registration-block");
+   // public static final By BUTTON_REGISTRATION = By.cssSelector("#show-registration-block");
+    public static final By BUTTON_REGISTRATION = By.xpath("//button[@id='show-registration-block']");
 
     public static final By CHECKBOX_CONFIRMATION = By.cssSelector("#confirmation");
     public static final By AUTOFILLING_FORM_LOCATION = By.xpath("//input[@name='region_name']");

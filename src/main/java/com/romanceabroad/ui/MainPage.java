@@ -43,8 +43,8 @@ public class MainPage extends BaseActions {
 
 
     public void clickNextButton() {
-      //  driver.findElement(Locators.BUTTON_NEXT_REGISTRATION).click();
-         ajaxClick(Locators.BUTTON_NEXT_REGISTRATION);
+        driver.findElement(Locators.BUTTON_NEXT_REGISTRATION).click();
+        // ajaxClick(Locators.BUTTON_NEXT_REGISTRATION);
        // wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT_REGISTRATION));
        // driver.findElement(Locators.BUTTON_NEXT_REGISTRATION);
     }
