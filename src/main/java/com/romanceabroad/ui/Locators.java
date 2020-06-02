@@ -58,6 +58,7 @@ public class Locators {
     public static final By LINK_PRETTY_WOMEN = By.cssSelector("a[href='https://romanceabroad.com/users/search']");
     public static final By TITLE_PRETTY_WOMEN = By.xpath("//h1");
     public static final By TEXT_PRETTY_WOMEN_INFO = By.xpath("//div[@class='text-overflow']");
+    public static final By LIST_PROFILE_PRETTY_WOMEN = By.xpath("//div[@class='g-users-gallery__item col-xs-6 col-sm-3 col-md-3 col-lg-3 ']");
 
 
     public static final By DROP_DOWN_LIST_MIN_AGE = By.cssSelector("select#age_min");
@@ -67,6 +68,8 @@ public class Locators {
     public static final By DROP_DOWN_LIST_VIEW_OPTIONS = By.xpath("//div[@class='form-inline']//select");
     public static final By LIST_VIEW_ICON = By.xpath("//a[contains(text(),'List view')]");
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
+    public static final By MAIN_USERS_RESULT = (By.cssSelector("#main_users_results"));
+    public static final By DESCRIPTION_OF_PROFILE = (By.cssSelector("div.description"));
 
     //SIGN IN page
     public static final By LINK_SIGN_IN = By.xpath("//a[@href='https://romanceabroad.com/users/login_form']");
@@ -74,6 +77,7 @@ public class Locators {
     public static final By EMAIL_LOGIN = By.xpath("//div[@class='col-xs-8']//input[@id='email']");
     public static final By PASSWORD_LOGIN = By.xpath("//div[@class='col-xs-8']//input[@id='password']");
     public static final By BUTTON_LOGIN = By.xpath("//div[@class='col-xs-8']//input[@id='password']");
+    public static final By PEOPLE_FOUND = (By.xpath("//div[@class='lh30']"));
 
 
     //GIFTS

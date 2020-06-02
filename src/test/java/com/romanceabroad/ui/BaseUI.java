@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
+
 import java.lang.reflect.Method;
 
 public class BaseUI {
@@ -38,7 +39,7 @@ public class BaseUI {
 
     @BeforeMethod(groups = {"user", "admin"}, alwaysRun = true)
     @Parameters("browser")
-    public void setup(@Optional("chrome") String browser, Method method){
+    public void setup(@Optional("chrome") String browser, Method method) {
 
         // Check if parameter passed from TestNG is 'firefox'
         if (browser.equalsIgnoreCase("firefox")) {
@@ -83,7 +84,7 @@ public class BaseUI {
     }
 
     @AfterMethod
-    public void closeBrowser(){
+    public void closeBrowser() {
         driver.quit();
     }
 

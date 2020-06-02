@@ -192,28 +192,8 @@ public class PhotosPageTest extends BaseUI {
                 photosPage.javaWaitSec(2);
                 Assert.assertTrue(driver.findElement
                         (Locators.GALLERY_ALBUMS_DATA_CLICK_ALBUM).isDisplayed());
+                //Removed dropdown assertion with pictures
 
-                List<WebElement> photos = driver.findElements(Locators.GALLERY_ALBUMS_DATA_CLICK_ALBUM);
-               // System.out.println("Print number of photos in the list: " + photos);
-
-                for (int j = 0; j < photos.size(); j++) {
-                    if (j == 0) {
-                        Assert.assertTrue(driver.findElement(Locators.DROPDOWN_UNDER_TAB_LIST).isDisplayed());
-                        String text = driver.findElement(Locators.P1).getText();
-                        System.out.println("Text for portrait :" + text);
-                    } else if (j == 1) {
-                        Assert.assertTrue(driver.findElement(Locators.DROPDOWN_UNDER_TAB_LIST).isDisplayed());
-                        String text = driver.findElement(Locators.P2).getText();
-                        System.out.println("Text for animals :" + text);
-                    } else if (j == 2) {
-                        Assert.assertTrue(driver.findElement(Locators.DROPDOWN_UNDER_TAB_LIST).isDisplayed());
-                        String text = driver.findElement(Locators.P1).getText();
-                        System.out.println("Text for travel :" + text);
-                    }
-                    photosPage.javaWaitSec(3);
-                    photos = driver.findElements(Locators.GALLERY_ALBUMS_DATA_CLICK_ALBUM);
-
-                }
             }
             //refresh the list inside of a loop
             photosPage.javaWaitSec(3);

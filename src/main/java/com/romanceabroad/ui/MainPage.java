@@ -28,6 +28,15 @@ public class MainPage extends BaseActions {
     String currentUrlTourUkraine;
     String currentUrlSearch;
     String currentUrlContactUs;
+    String actualTitle;
+    String actualUrlPrettyWomen;
+    String actualUrlPhotos;
+    String actualUrlGifts;
+    String actualUrlTourToUkraine;
+    String actualUrlBlog;
+    String actualUrlSignIn;
+    String actualStringDiscount;
+    WebElement header;
 
     public void clickJoinButton() {
         driver.findElement(Locators.BUTTON_REGISTRATION).click();
@@ -89,6 +98,7 @@ public class MainPage extends BaseActions {
 
         List<WebElement> list = driver.findElements(Locators.TAB_OF_MAIN_PAGE);
         return list;
+
     }
 
     public void checkTabsNamesTest() {
@@ -216,7 +226,95 @@ public class MainPage extends BaseActions {
     }
 
 
-}
+    public void collectLinksWithAssertions() {
+        List<WebElement> links = collectLinks();
+
+        for (int i = 0; i < links.size(); i++) {
+
+            String info = links.get(i).getText();
+            System.out.println(info);
+            links.get(i).click();
+            javaWaitSec(3);
+
+            if (info.contains("WORK")) {
+                String actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
+                Assert.assertEquals(Data.expectedTitleHowWeWork, actualTitle);
+            }
+            if (info.contains("PRETTY WOMEN")) {
+
+                actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
+                actualUrlPrettyWomen = driver.getCurrentUrl();
+
+                Assert.assertEquals(Data.expectedTitlePrettyWomen, actualTitle);
+                Assert.assertEquals(Data.expectedUrlPrettyWomen, actualUrlPrettyWomen);
+
+            }
+            if (info.contains("PHOTOS")) {
+                actualUrlPhotos = driver.getCurrentUrl();
+                Assert.assertEquals(Data.expectedUrlPhotos, actualUrlPhotos);
+                if (actualUrlPhotos.contains("#")) {
+                    Assert.fail("It contains restricted #");
+                } else {
+                    System.out.println("No special character. It is good url!");
+                }
+            }
+            if (info.contains("GIFTS")) {
+                actualUrlGifts = driver.getCurrentUrl();
+                Assert.assertEquals(Data.expectedUrlGifts, actualUrlGifts);
+                if (actualUrlGifts.contains("#")) {
+                    Assert.fail("It contains restricted #");
+                } else {
+                    System.out.println("No special character. It is good url!");
+                }
+            }
+            if (info.contains("TOUR")) {
+                actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
+                actualUrlTourToUkraine = driver.getCurrentUrl();
+                Assert.assertEquals(Data.expectedTitleTourToUkraine, actualTitle);
+                Assert.assertEquals(Data.expectedUrlTourUkraine, actualUrlTourToUkraine);
+                if (actualUrlTourToUkraine.contains("#")) {
+                    Assert.fail("It contains restricted #");
+                } else {
+                    System.out.println("No special character. It is good url!");
+                }
+            }
+            if (info.contains("BLOG")) {
+                actualUrlBlog = driver.getCurrentUrl();
+                if (actualUrlBlog.contains("#")) {
+                    Assert.fail("It contains restricted #");
+                } else {
+                    System.out.println("No special character. It is good url!");
+                }
+            }
+            if (info.contains("SIGN")) {
+                driver.findElement(By.xpath("//div[@class='lc-content-outer']")).isDisplayed();
+            }
+            driver.get(Data.mainUrl);
+            links = driver.findElements(Locators.TAB_OF_MAIN_PAGE);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
 //For myself
 // String strEmail = driver.findElement(Locators.TEXT_FIELD_EMAIL).getAttribute("value");
 // System.out.println("Email: " + strEmail);

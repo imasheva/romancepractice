@@ -84,4 +84,11 @@ public class DataProviders {
         };
     }
 
+    @DataProvider(name = "PrettyWomenProfile")
+    public static Object[][] testPrettyWomenProfile() {
+        return new Object[][]{
+                {"18", "35", "Registration date", "AnnaB"},
+        };
+    }
+
 }

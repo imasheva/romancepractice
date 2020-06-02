@@ -68,72 +68,7 @@ public class MainPageTests extends BaseUI {
 
         mainPage.javaWaitSec(3);
         mainPage.navigateToLink(Locators.LINK_HOME);
-
-        List<WebElement> links = mainPage.collectLinks();
-
-        for (int i = 0; i < links.size(); i++) {
-
-            String info = links.get(i).getText();
-            System.out.println(info);
-            links.get(i).click();
-            mainPage.javaWaitSec(3);
-
-            if (info.contains("WORK")) {
-                actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
-                Assert.assertEquals(Data.expectedTitleHowWeWork, actualTitle);
-            }
-            if (info.contains("PRETTY WOMEN")) {
-
-                actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
-                actualUrlPrettyWomen = driver.getCurrentUrl();
-
-                Assert.assertEquals(Data.expectedTitlePrettyWomen, actualTitle);
-                Assert.assertEquals(Data.expectedUrlPrettyWomen, actualUrlPrettyWomen);
-
-            }
-            if (info.contains("PHOTOS")) {
-                actualUrlPhotos = driver.getCurrentUrl();
-                Assert.assertEquals(Data.expectedUrlPhotos, actualUrlPhotos);
-                if (actualUrlPhotos.contains("#")) {
-                    Assert.fail("It contains restricted #");
-                } else {
-                    System.out.println("No special character. It is good url!");
-                }
-            }
-            if (info.contains("GIFTS")) {
-                actualUrlGifts = driver.getCurrentUrl();
-                Assert.assertEquals(Data.expectedUrlGifts, actualUrlGifts);
-                if (actualUrlGifts.contains("#")) {
-                    Assert.fail("It contains restricted #");
-                } else {
-                    System.out.println("No special character. It is good url!");
-                }
-            }
-            if (info.contains("TOUR")) {
-                actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
-                actualUrlTourToUkraine = driver.getCurrentUrl();
-                Assert.assertEquals(Data.expectedTitleTourToUkraine, actualTitle);
-                Assert.assertEquals(Data.expectedUrlTourUkraine, actualUrlTourToUkraine);
-                if (actualUrlTourToUkraine.contains("#")) {
-                    Assert.fail("It contains restricted #");
-                } else {
-                    System.out.println("No special character. It is good url!");
-                }
-            }
-            if (info.contains("BLOG")) {
-                actualUrlBlog = driver.getCurrentUrl();
-                if (actualUrlBlog.contains("#")) {
-                    Assert.fail("It contains restricted #");
-                } else {
-                    System.out.println("No special character. It is good url!");
-                }
-            }
-            if (info.contains("SIGN")) {
-                driver.findElement(By.xpath("//div[@class='lc-content-outer']")).isDisplayed();
-            }
-            driver.get(Data.mainUrl);
-            links = driver.findElements(Locators.TAB_OF_MAIN_PAGE);
-        }
+        mainPage.collectLinksWithAssertions();
     }
 
     //  HW 10 - ArrayList<String>

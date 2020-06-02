@@ -91,7 +91,7 @@ public class Data {
 
 
     //Photos
-    public static final String nameOnPhoto = "Tanya";
+    public static final String nameOnPhoto = "Elena";
     public static final String nameOnPhoto2 = "Tatyana";
     public static final String textPhotoInAlbums = "On our website you have access to photos of all different kinds of women";
 
@@ -109,6 +109,12 @@ public class Data {
     public static final String min_Age = "18";
     public static final String max_Age = "40";
     public static final int view_Option = 1;
+    public static final String profileViewOption = "Profile";
+    public static final String expectedGender = "Woman";
+    public static final String expectedLookingForInfo = "Man, aged 18 - 80";
+    public static final String expectedUsername = "AnnaB";
+    public static final String expectedDateOfBirth = "15 October 1992";
+    public static final String expectedLocation = "Kharkiv, Ukraine";
 
 
 

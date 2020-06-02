@@ -13,6 +13,8 @@ public class PrettyWomenTest extends BaseUI {
 
     String currentUrlPrettyWomen;
     String actualTitlePrettyWomen;
+    String name;
+    String personalInfo;
 
     public static final boolean testCase3 = true;
     public static final boolean testCase4 = true;
@@ -82,20 +84,20 @@ public class PrettyWomenTest extends BaseUI {
             prettyWomenPage.selectItemRandomDropDownOption(Locators.DROP_DOWN_LIST_MIN_AGE, "Sort by");
         }
     }
-   // HELP PLEASE!!!!! -- LOCATORS CORRECT, ALL PREVIOUS TEST CASES PASSES, IN THIS TEST CASE ERROR MESSAGE FOR BY VISIBLE TEXT METHOD
+    // HELP PLEASE!!!!! -- LOCATORS CORRECT, ALL PREVIOUS TEST CASES PASSES, IN THIS TEST CASE ERROR MESSAGE FOR BY VISIBLE TEXT METHOD
     // & CAN'T FIN LOCATORS
 
     //DROPDOWN LISTS MAX - MIN - SORT_BY     VIDEO 21 - Advanced TestCase Data Providers created
 
-    @Test(dataProvider = "PrettyWomen", dataProviderClass = DataProviders.class, priority =3, enabled = testCase30, groups = {"user", "admin"})
+    @Test(dataProvider = "PrettyWomen", dataProviderClass = DataProviders.class, priority = 3, enabled = testCase30, groups = {"user", "admin"})
     public void searchDifferentResultsTestCase30(String minAge, String maxAge, String sortBy) {
 
         int min = Integer.parseInt(minAge);  //3. Everything you take from UI always string (vid 21, 11:28)
         int max = Integer.parseInt(maxAge);  //  -> Convert data from String to Int == have to parse it
-                                             //Then add value to - int min
+        //Then add value to - int min
 
         prettyWomenPage.openPrettyWomenPage(); //search pretty women link
-         //interact with dropdown list, add different values from data provider
+        //interact with dropdown list, add different values from data provider
         prettyWomenPage.javaWaitSec(3);
         prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MIN_AGE), minAge);
         prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MAX_AGE), maxAge);
@@ -111,11 +113,11 @@ public class PrettyWomenTest extends BaseUI {
         // After we collect web elements
         List<WebElement> infoAboutUser = driver.findElements(Locators.TEXT_PRETTY_WOMEN_INFO); //names, age, region
 
-                                                                    // System.out.println(infoAboutUser.size());
+        // System.out.println(infoAboutUser.size());
 
         for (int i = 0; i < infoAboutUser.size(); i++) {    // prettyWomenPage.ajaxScroll(text);
-                                                                  // wait.until(ExpectedConditions.visibilityOf(text));
-            if(i % 2==0) {
+            // wait.until(ExpectedConditions.visibilityOf(text));
+            if (i % 2 == 0) {
 
                 WebElement text = infoAboutUser.get(i);
                 String info = text.getText();
@@ -123,9 +125,9 @@ public class PrettyWomenTest extends BaseUI {
                 String age = splittedPhrase[1];
                 int ageNum = Integer.parseInt(age);
 
-                if(min <= ageNum || ageNum <= max){
+                if (min <= ageNum || ageNum <= max) {
                     System.out.println("This age: " + ageNum + " is correct");
-                }else{
+                } else {
                     Assert.fail("Wrong age: " + ageNum);
                 }
 
@@ -134,13 +136,50 @@ public class PrettyWomenTest extends BaseUI {
             infoAboutUser = driver.findElements(Locators.TEXT_PRETTY_WOMEN_INFO); //get elements
         }
     }
-        @Test
-        public void testSplit(){  //video 22, 10:10
-            String info = "Number, 43";
-            String[] splittedPhrase = info.split(", ");
-            String age = splittedPhrase[1];
-            System.out.println(age);
 
-        }
+    @Test
+    public void testSplit() {  //video 22, 10:10
+        String info = "Number, 43";
+        String[] splittedPhrase = info.split(", ");
+        String age = splittedPhrase[1];
+        System.out.println(age);
 
     }
+
+    //Homework 23
+    @Test(dataProvider = "PrettyWomenProfile", dataProviderClass = DataProviders.class, priority = 3, enabled = testCase30, groups = {"user", "admin"})
+    public void testUserProfile(String minAge, String maxAge, String sortBy, String name) {
+
+        prettyWomenPage.openPrettyWomenPage();
+
+        prettyWomenPage.javaWaitSec(3);
+
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MIN_AGE), minAge);
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_MAX_AGE), maxAge);
+        prettyWomenPage.getDropDownListByText(driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY), sortBy);
+        prettyWomenPage.clickSearchButton();
+        prettyWomenPage.checkPeopleFound();
+
+        prettyWomenPage.javaWaitSec(3);   // Mojno neskolko ajax waits stavit v test case? ili odin v nachale?
+
+        Assert.assertTrue(driver.findElement(Locators.PEOPLE_FOUND).isDisplayed(), "People found not displayd");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.LIST_PROFILE_PRETTY_WOMEN));
+
+        prettyWomenPage.ajaxClick(driver.findElement(Locators.MAIN_USERS_RESULT));
+
+        prettyWomenPage.selectGirlByName(name);
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.DESCRIPTION_OF_PROFILE));
+        Assert.assertTrue(driver.findElement(Locators.DESCRIPTION_OF_PROFILE).isDisplayed(), "Description not displayed");
+        prettyWomenPage.ajaxClick(Locators.DESCRIPTION_OF_PROFILE);
+
+        personalInfo = prettyWomenPage.verifyPersonalInformation();
+        System.out.println(personalInfo);
+        Assert.assertTrue(personalInfo.contains(Data.expectedGender));
+        Assert.assertTrue(personalInfo.contains(Data.expectedLookingForInfo));
+        Assert.assertTrue(personalInfo.contains(Data.expectedUsername));
+        Assert.assertTrue(personalInfo.contains(Data.expectedDateOfBirth));
+        Assert.assertTrue(personalInfo.contains(Data.expectedLocation));
+
+    }
+}
