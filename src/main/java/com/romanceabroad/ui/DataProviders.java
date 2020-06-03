@@ -91,4 +91,15 @@ public class DataProviders {
         };
     }
 
+    @DataProvider(name = "Footer")
+    public static Object[][] testFooter() throws Exception {
+        ArrayList<Object[]> out = new ArrayList<>();
+        readAllLines(Paths.get("Footer.csv")).stream().forEach(s -> {
+            String[] data = s.split(",");
+            out.add(new Object[]{data[0]});
+        });
+        return out.toArray(new Object[out.size()][]);
+    }
+
+
 }

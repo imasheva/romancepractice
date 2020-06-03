@@ -15,6 +15,7 @@ public class PrettyWomenTest extends BaseUI {
     String actualTitlePrettyWomen;
     String name;
     String personalInfo;
+    String footerName;
 
     public static final boolean testCase3 = true;
     public static final boolean testCase4 = true;
@@ -22,6 +23,8 @@ public class PrettyWomenTest extends BaseUI {
     public static final boolean testCase6 = true;
     public static final boolean testCase7 = true;
     public static final boolean testCase30 = true;
+    public static final boolean testCase31 = true;
+    public static final boolean testCase32 = true;
 
     @Test(priority = 1, enabled = testCase3, groups = {"user", "admin"})
     public void testPrettyWomenPageTestCase3() {
@@ -89,7 +92,7 @@ public class PrettyWomenTest extends BaseUI {
 
     //DROPDOWN LISTS MAX - MIN - SORT_BY     VIDEO 21 - Advanced TestCase Data Providers created
 
-    @Test(dataProvider = "PrettyWomen", dataProviderClass = DataProviders.class, priority = 3, enabled = testCase30, groups = {"user", "admin"})
+    @Test(dataProvider = "PrettyWomen", dataProviderClass = DataProviders.class, priority = 6, enabled = testCase30, groups = {"user", "admin"})
     public void searchDifferentResultsTestCase30(String minAge, String maxAge, String sortBy) {
 
         int min = Integer.parseInt(minAge);  //3. Everything you take from UI always string (vid 21, 11:28)
@@ -147,7 +150,7 @@ public class PrettyWomenTest extends BaseUI {
     }
 
     //Homework 23
-    @Test(dataProvider = "PrettyWomenProfile", dataProviderClass = DataProviders.class, priority = 3, enabled = testCase30, groups = {"user", "admin"})
+    @Test(dataProvider = "PrettyWomenProfile", dataProviderClass = DataProviders.class, priority = 7, enabled = testCase31, groups = {"user", "admin"})
     public void testUserProfile(String minAge, String maxAge, String sortBy, String name) {
 
         prettyWomenPage.openPrettyWomenPage();
@@ -182,4 +185,68 @@ public class PrettyWomenTest extends BaseUI {
         Assert.assertTrue(personalInfo.contains(Data.expectedLocation));
 
     }
+
+    // Homework 26
+    @Test(dataProvider = "Footer", dataProviderClass = DataProviders.class, priority = 8, enabled = testCase32, groups = {"user", "admin"})
+    public void testFooter(String footer) {
+        prettyWomenPage.openPrettyWomenPage();
+        prettyWomenPage.javaWaitSec(3);
+        WebElement footers = driver.findElement(Locators.FOOTER_PRETTY_WOMEN_PAGE);
+        prettyWomenPage.ajaxScroll(footers);
+        prettyWomenPage.clickValueOfLists(Locators.FOOTER_PRETTY_WOMEN_PAGE, footer); //send data from dataprovider
+
+       /* public void clickValueOfLists(By locator, String text) {  //CLICK -> ul/li
+            List<WebElement> elements = driver.findElements(locator);
+            for (int i = 0; i < elements.size(); i++) {
+                WebElement elementOfList = elements.get(i);
+                String value = elementOfList.getText();
+                if (value.contains(text)) {
+                    elementOfList.click();
+                }
+            }
+        }*/
+
+        if(footer.contains("ContactUs")){
+            Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Contact administrator')]")).isDisplayed());
+        }else if(footer.contains("Sitemap")){
+            Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Site map')]")).isDisplayed());
+        }else if(footer.contains("How it works")){
+            Assert.assertTrue(driver.findElement(By.xpath("//div[@class='title col-xs-12 col-sm-6 col-md-9 col-lg-9']")).isDisplayed());
+        }else if(footer.contains("Privacy")){
+            Assert.assertTrue(driver.findElement(By.xpath("//div[@class='title col-xs-12 col-sm-6 col-md-9 col-lg-9']")).isDisplayed());
+        }else if(footer.contains("Terms of use")){
+            Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Terms of use')]")).isDisplayed());
+        }
+
+
+/*
+        List<WebElement> footerList = prettyWomenPage.checkEachFooterItem();
+
+        for (int i = 0; i < footerList.size(); i++) {
+
+            footerName = footerList.get(i).getText();
+            System.out.println(footerName);
+
+            prettyWomenPage.javaWaitSec(3);
+
+            if (footerName.contains("Contact us")) {
+                System.out.println(footerName);
+                prettyWomenPage.ajaxClick(footerList.get(i));
+                break;
+            }
+            prettyWomenPage.javaWaitSec(3);
+            footerList = driver.findElements(Locators.FOOTER_PRETTY_WOMEN_PAGE);
+        }*/
+
+
+    }
+
 }
+
+
+
+
+
+
+
+

@@ -105,6 +105,11 @@ public class PrettyWomenPage extends BaseActions {
 
    return personalDetail;
     }
+
+    public List<WebElement> checkEachFooterItem() {
+        List<WebElement> footerList = driver.findElements(Locators.FOOTER_PRETTY_WOMEN_PAGE);
+        return footerList;
+    }
 }
 
 
