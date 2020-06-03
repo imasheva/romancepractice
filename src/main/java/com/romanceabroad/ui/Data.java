@@ -116,6 +116,16 @@ public class Data {
     public static final String expectedDateOfBirth = "15 October 1992";
     public static final String expectedLocation = "Kharkiv, Ukraine";
 
+    //Titles for footer
+    public static final String expectedTitleContactUsFooter = "Contact administrator";
+    public static final String expectedTitleSiteMapFooter = "Site map";
+    public static final String expectedTitleHowItWorksFooter = "Ukrainian women for marriage";
+    public static final String expectedTitlePolicyFooter = "Privacy Policy";
+    public static final String expectedTitleTermsOfUseFooter = "Terms of use";
+
+
+
+
 
 
 

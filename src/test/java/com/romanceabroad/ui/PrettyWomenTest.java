@@ -16,6 +16,7 @@ public class PrettyWomenTest extends BaseUI {
     String name;
     String personalInfo;
     String footerName;
+    String actualTitle;
 
     public static final boolean testCase3 = true;
     public static final boolean testCase4 = true;
@@ -195,53 +196,34 @@ public class PrettyWomenTest extends BaseUI {
         prettyWomenPage.ajaxScroll(footers);
         prettyWomenPage.clickValueOfLists(Locators.FOOTER_PRETTY_WOMEN_PAGE, footer); //send data from dataprovider
 
-       /* public void clickValueOfLists(By locator, String text) {  //CLICK -> ul/li
-            List<WebElement> elements = driver.findElements(locator);
-            for (int i = 0; i < elements.size(); i++) {
-                WebElement elementOfList = elements.get(i);
-                String value = elementOfList.getText();
-                if (value.contains(text)) {
-                    elementOfList.click();
-                }
-            }
-        }*/
+        prettyWomenPage.checkEachTitle();
 
-        if(footer.contains("ContactUs")){
-            Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Contact administrator')]")).isDisplayed());
-        }else if(footer.contains("Sitemap")){
-            Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Site map')]")).isDisplayed());
-        }else if(footer.contains("How it works")){
-            Assert.assertTrue(driver.findElement(By.xpath("//div[@class='title col-xs-12 col-sm-6 col-md-9 col-lg-9']")).isDisplayed());
-        }else if(footer.contains("Privacy")){
-            Assert.assertTrue(driver.findElement(By.xpath("//div[@class='title col-xs-12 col-sm-6 col-md-9 col-lg-9']")).isDisplayed());
-        }else if(footer.contains("Terms of use")){
-            Assert.assertTrue(driver.findElement(By.xpath("//h1[contains(text(),'Terms of use')]")).isDisplayed());
-        }
-
-
-/*
         List<WebElement> footerList = prettyWomenPage.checkEachFooterItem();
 
         for (int i = 0; i < footerList.size(); i++) {
 
-            footerName = footerList.get(i).getText();
-            System.out.println(footerName);
+            WebElement elementOfFooter = footerList.get(i);
+            footer = elementOfFooter.getText();
+            prettyWomenPage.ajaxClick(elementOfFooter);
 
-            prettyWomenPage.javaWaitSec(3);
-
-            if (footerName.contains("Contact us")) {
-                System.out.println(footerName);
-                prettyWomenPage.ajaxClick(footerList.get(i));
-                break;
+            if (!footer.contains("news")) {
+                actualTitle = prettyWomenPage.getAnyTitle();
+            } else if (footer.contains("Sitemap")) {
+            Assert.assertEquals(actualTitle, Data.expectedTitleContactUsFooter);
+            } else if (footer.contains("How it works")) {
+                Assert.assertEquals(actualTitle, Data.expectedTitleSiteMapFooter);
+            } else if (footer.contains("Privacy")) {
+                Assert.assertEquals(actualTitle, Data.expectedTitlePolicyFooter);
+            } else if (footer.contains("Terms of use")) {
+                Assert.assertEquals(actualTitle, Data.expectedTitleTermsOfUseFooter);
             }
             prettyWomenPage.javaWaitSec(3);
             footerList = driver.findElements(Locators.FOOTER_PRETTY_WOMEN_PAGE);
-        }*/
+        }
 
+        }
 
     }
-
-}
 
 
 
