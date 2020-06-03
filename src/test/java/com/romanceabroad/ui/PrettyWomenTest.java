@@ -1,13 +1,18 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+
+@Listeners(VideoListener.class)
 
 public class PrettyWomenTest extends BaseUI {
 
@@ -27,6 +32,8 @@ public class PrettyWomenTest extends BaseUI {
     public static final boolean testCase31 = true;
     public static final boolean testCase32 = true;
 
+
+    @Video(name = "PrettyWomen Tests")
     @Test(priority = 1, enabled = testCase3, groups = {"user", "admin"})
     public void testPrettyWomenPageTestCase3() {
 

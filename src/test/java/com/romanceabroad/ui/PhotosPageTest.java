@@ -1,12 +1,17 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import java.util.List;
+
+
+@Listeners(VideoListener.class)
 
 public class PhotosPageTest extends BaseUI {
     String actualTitle;
@@ -20,6 +25,7 @@ public class PhotosPageTest extends BaseUI {
     public static final boolean testCase34 = true;
     public static final boolean testCase35 = true;
 
+    @Video(name = "PhotosPage Tests")
     @Test(priority = 1, enabled = testCase8, groups = {"user", "admin"})
     public void testPhotosPageTestCase8() {
         photosPage.javaWaitSec(3);

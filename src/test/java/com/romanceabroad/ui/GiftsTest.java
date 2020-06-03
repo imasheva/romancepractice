@@ -1,17 +1,19 @@
 package com.romanceabroad.ui;
-
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import static java.nio.file.Files.readAllLines;
 
+
+@Listeners(VideoListener.class)
 public class GiftsTest extends BaseUI {
     String currentUrlGifts;
     String giftRegular;
@@ -23,6 +25,7 @@ public class GiftsTest extends BaseUI {
     public static final boolean testCase22 = true;
     public static final boolean testCase33 = true;
 
+    @Video(name = "Gifts Test")
     @Test(priority = 1, enabled = testCase20, groups = {"user", "admin"})
 
     public void testGiftsPageTestCase20() {

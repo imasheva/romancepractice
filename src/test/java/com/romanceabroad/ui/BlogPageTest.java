@@ -1,11 +1,15 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
+@Listeners(VideoListener.class)
 
 public class BlogPageTest extends BaseUI {
     String actualTitle;
@@ -23,7 +27,7 @@ public class BlogPageTest extends BaseUI {
 
 
     @Test(priority = 1, enabled = testCase27, groups = {"admin"})
-
+    @Video(name = "BlogPage Test")
     public void testBlogPageTestCase27() {
         blogPage.javaWaitSec(3);
         blogPage.openLinkBlog();

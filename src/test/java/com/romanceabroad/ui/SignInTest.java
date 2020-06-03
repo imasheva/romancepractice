@@ -1,8 +1,13 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
+
+
+@Listeners(VideoListener.class)
 
 public class SignInTest extends BaseUI {
     String actualTitle;
@@ -13,8 +18,8 @@ public class SignInTest extends BaseUI {
     //ie limited
     public static final boolean testCase1 = true;
 
+    @Video(name = "SignIn test")
     @Test
-
     public void testSignInTestCase1() {
         signInPage.openSignInPage();
         actualUrlSignIn = driver.getCurrentUrl();

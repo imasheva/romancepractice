@@ -1,66 +1,67 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
+<!--<suite name="TestSuite" parallel="tests" thread-count="3">-->
 <suite name="TestSuite" parallel="none">
 
-  <!--  <test name="IETestCases">
+    <test name="IETestCases">
 
         <parameter name="browser" value="ie"/>
 
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
-            <class name="com.romanceabroad.ui.SignInTest"/>
+          <!--  <class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
             <class name="com.romanceabroad.ui.MainPageTests"/>
-            <class name="com.romanceabroad.ui.BlogPageTest"/>
+            <class name="com.romanceabroad.ui.BlogPageTest"/>-->
 
         </classes>
-    </test>-->
+    </test>
 
-    <!--<test name="FirefoxTestCases">
+    <test name="FirefoxTestCases">
 
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
-            <class name="com.romanceabroad.ui.SignInTest"/>
+           <!-- <class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
             <class name="com.romanceabroad.ui.MainPageTests"/>
-            <class name="com.romanceabroad.ui.BlogPageTest"/>
+            <class name="com.romanceabroad.ui.BlogPageTest"/>-->
         </classes>
-    </test>-->
+    </test>
 
 
-    <test name="ChromeTestCases">
+    <test name="Chrome Tests">
         <parameter name="browser" value="chrome"/>
-       <!-- <groups>
-            <run>
-                <exclude name="ie"/>
-                <include name="admin"/>
-                <include name="user"/>
-            </run>
-        </groups>-->
+        <!-- <groups>
+             <run>
+                 <exclude name="ie"/>
+                 <include name="admin"/>
+                 <include name="user"/>
+             </run>
+         </groups>-->
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
-            <class name="com.romanceabroad.ui.SignInTest"/>
+           <!-- <class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
-            <class name="com.romanceabroad.ui.MainPageTests">
-            <!--    <methods>
-                    <include name=" .*Tabs.*"/>
-                    <include name=" .*Links.*"/>
-                    <include name=" .*Size.*"/>
-                    <include name=" .*Frame.*"/>
-                    <include name=" .*Book.*"/>
-                    <include name=" .*Discount.*"/>
-                    <include name=" .*Header.*"/>
-                </methods>-->
-            </class>
+            <class name="com.romanceabroad.ui.MainPageTests">-->
+                <!--    <methods>
+                        <include name=" .*Tabs.*"/>
+                        <include name=" .*Links.*"/>
+                        <include name=" .*Size.*"/>
+                        <include name=" .*Frame.*"/>
+                        <include name=" .*Book.*"/>
+                        <include name=" .*Discount.*"/>
+                        <include name=" .*Header.*"/>
+                    </methods>-->
+           <!-- </class>
             <class name="com.romanceabroad.ui.BlogPageTest"/>
-            <class name="com.romanceabroad.ui.ContactUsPageTest"/>
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>-->
 
         </classes>
     </test>

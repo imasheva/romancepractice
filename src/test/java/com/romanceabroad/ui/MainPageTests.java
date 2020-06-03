@@ -1,14 +1,18 @@
 package com.romanceabroad.ui;
-
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.testng.Assert.assertTrue;
+
+
+
+@Listeners(VideoListener.class)
 
 public class MainPageTests extends BaseUI {
 
@@ -33,7 +37,7 @@ public class MainPageTests extends BaseUI {
     String actualStringDiscount;
     WebElement header;
 
-
+    @Video(name = "MainPage Tests")
     @Test(priority = 1, enabled = testCase10, groups = {"admin"})
 
     public void checkTabsTestCase10() {

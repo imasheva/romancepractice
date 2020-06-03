@@ -1,10 +1,13 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import static java.nio.file.Files.readAllLines;
 
+@Listeners(VideoListener.class)
 public class ContactUsPageTest extends BaseUI {
 
     String currentUrlContactUsPage;
@@ -15,6 +18,7 @@ public class ContactUsPageTest extends BaseUI {
     public static final boolean testCase26 = true;
     public static final boolean testCase31 = true;
 
+    @Video(name = "ContactUsPage Test")
     @Test(priority = 1, enabled = testCase23, groups = {"user", "admin"})
     public void testContactUsPageTestCase23() {
         contactUsPage.openContactUsPage();

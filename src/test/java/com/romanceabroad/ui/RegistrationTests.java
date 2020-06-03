@@ -1,16 +1,19 @@
 package com.romanceabroad.ui;
 
+import com.automation.remarks.testng.VideoListener;
+import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
-
 import static java.nio.file.Files.readAllLines;
+
+@Listeners(VideoListener.class)
 
 public class RegistrationTests extends BaseUI {
 
@@ -24,8 +27,7 @@ public class RegistrationTests extends BaseUI {
     String actuaTooltpMessageForExistingUser;
     String actualTooltipMessageForInvalidPassword;
 
-
-    //Passed - Oleksii's
+    @Video(name = "Registration tests")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class, priority = 1, enabled = testCase2, groups = {"user", "admin"})
     public void testRegistration2(String email, String nickname, boolean requirement) {
         System.out.println(email);
