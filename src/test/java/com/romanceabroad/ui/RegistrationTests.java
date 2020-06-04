@@ -10,7 +10,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 import java.util.concurrent.TimeUnit;
+
 import static java.nio.file.Files.readAllLines;
 
 @Listeners(VideoListener.class)
@@ -30,11 +32,12 @@ public class RegistrationTests extends BaseUI {
     @Video(name = "Registration tests")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class, priority = 1, enabled = testCase2, groups = {"user", "admin"})
     public void testRegistration2(String email, String nickname, boolean requirement) {
-        System.out.println(email);
-        signInPage.openSignInPage();
+
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, Data.password);
+
         if (!requirement) { //Vid.20,  27:08
+            Reports.log("Error message is not displayed"); //vid 28, 37:30
             Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR).isDisplayed());
         } else {
             mainPage.clickNextButton();

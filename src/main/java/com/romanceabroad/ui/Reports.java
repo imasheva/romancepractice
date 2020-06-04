@@ -1,4 +1,4 @@
-/*
+
 package com.romanceabroad.ui;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -17,12 +17,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Reports {
+
     private static final boolean jenkinsOption =true;
 
     // initialize the HtmlReporter
     public static ExtentHtmlReporter htmlReporter;
-
-
     public static ExtentReports extent;
     private static ExtentTest currentTest;
     private static String lastAction;
@@ -40,7 +39,6 @@ public class Reports {
             currentTestSuiteResultsPath ="Suite" +formatttedDate + "/";
         }
 
-
         new File(ROOT_PATH + currentTestSuiteResultsPath).mkdir();
         htmlReporter = new ExtentHtmlReporter(ROOT_PATH + currentTestSuiteResultsPath + "report.html");
         extent = new ExtentReports();
@@ -49,7 +47,6 @@ public class Reports {
 
     public static void start(String testName) {
         currentTest = extent.createTest(testName);
-
     }
 
     public static void stop() {
@@ -60,11 +57,9 @@ public class Reports {
         currentTest.log(Status.PASS, message);
         System.out.println(message);
         lastAction = message;
-
     }
 
     public static void fail(WebDriver driver, String methodName) {
-
         try {
             currentTest.fail("Failed step: " + lastAction);
             File imageFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -75,8 +70,7 @@ public class Reports {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }
 
-*/
+
