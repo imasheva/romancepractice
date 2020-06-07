@@ -195,7 +195,7 @@ public class PhotosPageTest extends BaseUI {
             } else if (i == 3) {
                 Assert.assertEquals(actualTitle, Data.expectedTitleGalleryAlbums);
                 photosPage.ajaxClick(Locators.GALLERY_ALBUMS_MAIN_INNER_CONTAINER);
-                photosPage.javaWaitSec(2);
+                photosPage.javaWaitSec(3);
                 Assert.assertTrue(driver.findElement
                         (Locators.GALLERY_ALBUMS_DATA_CLICK_ALBUM).isDisplayed());
                 //Removed dropdown assertion with pictures

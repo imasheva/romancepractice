@@ -2,37 +2,32 @@
 
 <!--<suite name="TestSuite" parallel="tests" thread-count="3">-->
 <suite name="TestSuite" parallel="none">
-
+<!--
     <test name="IETestCases">
-
         <parameter name="browser" value="ie"/>
-
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
-          <!--  <class name="com.romanceabroad.ui.SignInTest"/>
+          &lt;!&ndash;  <class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
             <class name="com.romanceabroad.ui.MainPageTests"/>
-            <class name="com.romanceabroad.ui.BlogPageTest"/>-->
-
+            <class name="com.romanceabroad.ui.BlogPageTest"/>&ndash;&gt;
         </classes>
-    </test>
+    </test>-->
 
-    <test name="FirefoxTestCases">
-
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="com.romanceabroad.ui.RegistrationTests"/>
-           <!-- <class name="com.romanceabroad.ui.SignInTest"/>
-            <class name="com.romanceabroad.ui.PrettyWomenTest"/>
-            <class name="com.romanceabroad.ui.PhotosPageTest"/>
-            <class name="com.romanceabroad.ui.GiftsTest"/>
-            <class name="com.romanceabroad.ui.MainPageTests"/>
-            <class name="com.romanceabroad.ui.BlogPageTest"/>-->
-        </classes>
-    </test>
-
+<!--    <test name="FirefoxTestCases">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="com.romanceabroad.ui.RegistrationTests"/>-->
+<!--           &lt;!&ndash; <class name="com.romanceabroad.ui.SignInTest"/>-->
+<!--            <class name="com.romanceabroad.ui.PrettyWomenTest"/>-->
+<!--            <class name="com.romanceabroad.ui.PhotosPageTest"/>-->
+<!--            <class name="com.romanceabroad.ui.GiftsTest"/>-->
+<!--            <class name="com.romanceabroad.ui.MainPageTests"/>-->
+<!--            <class name="com.romanceabroad.ui.BlogPageTest"/>&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
 
     <test name="Chrome Tests">
         <parameter name="browser" value="chrome"/>
@@ -45,11 +40,11 @@
          </groups>-->
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
-           <!-- <class name="com.romanceabroad.ui.SignInTest"/>
+            <class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
-            <class name="com.romanceabroad.ui.MainPageTests">-->
+            <class name="com.romanceabroad.ui.MainPageTests">
                 <!--    <methods>
                         <include name=" .*Tabs.*"/>
                         <include name=" .*Links.*"/>
@@ -59,10 +54,9 @@
                         <include name=" .*Discount.*"/>
                         <include name=" .*Header.*"/>
                     </methods>-->
-           <!-- </class>
+            </class>
             <class name="com.romanceabroad.ui.BlogPageTest"/>
-            <class name="com.romanceabroad.ui.ContactUsPageTest"/>-->
-
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>
         </classes>
     </test>
 </suite>

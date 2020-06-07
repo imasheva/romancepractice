@@ -49,6 +49,7 @@ public class GiftsTest extends BaseUI {
     @Test(priority = 2, enabled = testCase21, groups = {"user", "admin"})
 
     public void testSelectionOfBestsellersTestCase21() {
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         giftsPage.openGiftsPage();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 

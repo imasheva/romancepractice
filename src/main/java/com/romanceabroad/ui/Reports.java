@@ -17,7 +17,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Reports {
-
     private static final boolean jenkinsOption =true;
 
     // initialize the HtmlReporter
@@ -33,7 +32,6 @@ public class Reports {
         String formatttedDate = ldt.format(DateTimeFormatter.ofPattern("yyyy`-MM-dd HH-mm-ss"));
 
         if (jenkinsOption) {
-
             currentTestSuiteResultsPath = "Suite/";
         }else{
             currentTestSuiteResultsPath ="Suite" +formatttedDate + "/";

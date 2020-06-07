@@ -1,0 +1,87 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 45, Failures: 11, Errors: 0, Skipped: 18, Time elapsed: 250.232 s <<< FAILURE! - in TestSuite
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.436 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.011 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.563 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.246 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.207 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.002 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.003 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.005 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.002 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: driver.version: InternetExplorerDriver
+
+testRegistrationForInvalidPasswordTestCase33(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 20.609 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-action='next-page'][text()='Next'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 76.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200507114007, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 1235, moz:profile: /var/folders/6y/hllg1rhd29j..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.7.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a872d312-4e0c-0747-8897-0b7ef9f469d5
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidPasswordTestCase33(RegistrationTests.java:103)
+
+testRegistrationForInvalidPasswordTestCase33(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 22.036 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-action='next-page'][text()='Next'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:52148}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: de2ad3af4b87a312f19e5afc8d6162db
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidPasswordTestCase33(RegistrationTests.java:103)
+

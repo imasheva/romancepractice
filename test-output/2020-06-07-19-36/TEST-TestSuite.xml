@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="975.748" tests="54" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/anaraimasheva/GitHub/roman/romancepractice/target/test-classes:/Users/anaraimasheva/GitHub/roman/romancepractice/target/classes:/Users/anaraimasheva/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/anaraimasheva/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/anaraimasheva/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/anaraimasheva/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/anaraimasheva/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/anaraimasheva/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/anaraimasheva/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/anaraimasheva/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/anaraimasheva/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/anaraimasheva/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/rest-assured/3.3.0/rest-assured-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy/2.4.15/groovy-2.4.15.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy-xml/2.4.15/groovy-xml-2.4.15.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/anaraimasheva/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/anaraimasheva/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/Users/anaraimasheva/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/anaraimasheva/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/Users/anaraimasheva/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/json-path/3.3.0/json-path-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy-json/2.4.15/groovy-json-2.4.15.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/rest-assured-common/3.3.0/rest-assured-common-3.3.0.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/xml-path/3.3.0/xml-path-3.3.0.jar:/Users/anaraimasheva/.m2/repository/javax/xml/bind/jaxb-api/2.2.12/jaxb-api-2.2.12.jar:/Users/anaraimasheva/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.2.10/jaxb-osgi-2.2.10.jar:/Users/anaraimasheva/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/Users/anaraimasheva/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/Users/anaraimasheva/.m2/repository/org/testng/testng/7.0.0/testng-7.0.0.jar:/Users/anaraimasheva/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/anaraimasheva/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar:/Users/anaraimasheva/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/bson/3.3.0/bson-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.jar:/Users/anaraimasheva/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/Users/anaraimasheva/.m2/repository/com/automation-remarks/video-recorder-testng/1.0/video-recorder-testng-1.0.jar:/Users/anaraimasheva/.m2/repository/com/automation-remarks/video-recorder-core/1.0/video-recorder-core-1.0.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/allure/allure-java-annotations/1.4.23/allure-java-annotations-1.4.23.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/allure/allure-model/1.4.23/allure-model-1.4.23.jar:/Users/anaraimasheva/.m2/repository/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.9.3/jaxb2-basics-runtime-0.9.3.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/properties/properties-loader/1.5/properties-loader-1.5.jar:/Users/anaraimasheva/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.3/commons-beanutils-core-1.8.3.jar:/Users/anaraimasheva/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar:"/>
+    <property name="java.vm.vendor" value="JetBrains s.r.o."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.jetbrains.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/anaraimasheva/GitHub/roman/romancepractice/target/surefire/surefirebooter1130717188688817037.jar /Users/anaraimasheva/GitHub/roman/romancepractice/target/surefire 2020-06-07T12-36-21_599-jvmRun1 surefire6956699619702822590tmp surefire_015186465593233447361tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/anaraimasheva/GitHub/roman/romancepractice/target/test-classes:/Users/anaraimasheva/GitHub/roman/romancepractice/target/classes:/Users/anaraimasheva/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/anaraimasheva/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/anaraimasheva/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/anaraimasheva/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/anaraimasheva/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/anaraimasheva/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/anaraimasheva/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/anaraimasheva/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/anaraimasheva/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/anaraimasheva/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/rest-assured/3.3.0/rest-assured-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy/2.4.15/groovy-2.4.15.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy-xml/2.4.15/groovy-xml-2.4.15.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/anaraimasheva/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/anaraimasheva/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/Users/anaraimasheva/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/anaraimasheva/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/Users/anaraimasheva/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/json-path/3.3.0/json-path-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy-json/2.4.15/groovy-json-2.4.15.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/rest-assured-common/3.3.0/rest-assured-common-3.3.0.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/xml-path/3.3.0/xml-path-3.3.0.jar:/Users/anaraimasheva/.m2/repository/javax/xml/bind/jaxb-api/2.2.12/jaxb-api-2.2.12.jar:/Users/anaraimasheva/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.2.10/jaxb-osgi-2.2.10.jar:/Users/anaraimasheva/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/Users/anaraimasheva/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/Users/anaraimasheva/.m2/repository/org/testng/testng/7.0.0/testng-7.0.0.jar:/Users/anaraimasheva/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/anaraimasheva/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar:/Users/anaraimasheva/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/bson/3.3.0/bson-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.jar:/Users/anaraimasheva/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/Users/anaraimasheva/.m2/repository/com/automation-remarks/video-recorder-testng/1.0/video-recorder-testng-1.0.jar:/Users/anaraimasheva/.m2/repository/com/automation-remarks/video-recorder-core/1.0/video-recorder-core-1.0.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/allure/allure-java-annotations/1.4.23/allure-java-annotations-1.4.23.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/allure/allure-model/1.4.23/allure-model-1.4.23.jar:/Users/anaraimasheva/.m2/repository/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.9.3/jaxb2-basics-runtime-0.9.3.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/properties/properties-loader/1.5/properties-loader-1.5.jar:/Users/anaraimasheva/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.3/commons-beanutils-core-1.8.3.jar:/Users/anaraimasheva/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/anaraimasheva"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-04-14"/>
+    <property name="java.home" value="/Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/anaraimasheva/GitHub/roman/romancepractice"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="idea.version2020.1.2" value="true"/>
+    <property name="surefire.real.class.path" value="/Users/anaraimasheva/GitHub/roman/romancepractice/target/surefire/surefirebooter1130717188688817037.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="11.0.7+10-b765.53"/>
+    <property name="user.name" value="anaraimasheva"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.14.6"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="JBR-11.0.7.10-765.53-jfx"/>
+    <property name="localRepository" value="/Users/anaraimasheva/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://youtrack.jetbrains.com"/>
+    <property name="java.io.tmpdir" value="/var/folders/6y/hllg1rhd29j8k1dgnzkw8tl00000gn/T/"/>
+    <property name="java.version" value="11.0.7"/>
+    <property name="user.dir" value="/Users/anaraimasheva/GitHub/roman/romancepractice"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/anaraimasheva/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vendor" value="JetBrains s.r.o."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.7+10-b765.53"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="testBoolean" classname="com.romanceabroad.ui.RegistrationTests" time="0.002"/>
+  <testcase name="testRegistration2" classname="com.romanceabroad.ui.RegistrationTests" time="5.016"/>
+  <testcase name="testRegistration2" classname="com.romanceabroad.ui.RegistrationTests" time="0.5"/>
+  <testcase name="testRegistration2" classname="com.romanceabroad.ui.RegistrationTests" time="4.628"/>
+  <testcase name="testRegistrationForInvalidEmailTestCase31" classname="com.romanceabroad.ui.RegistrationTests" time="0.366"/>
+  <testcase name="testRegistrationForExistingUserTestCase32" classname="com.romanceabroad.ui.RegistrationTests" time="1.874"/>
+  <testcase name="testRegistrationForInvalidPasswordTestCase33" classname="com.romanceabroad.ui.RegistrationTests" time="20.433">
+    <failure message="Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-action=&apos;next-page&apos;][text()=&apos;Next&apos;] (tried for 20 second(s) with 500 milliseconds interval)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:57373}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 54ae0cbd2d7223f49588a67b3bc000b7" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-action='next-page'][text()='Next'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:57373}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 54ae0cbd2d7223f49588a67b3bc000b7
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidPasswordTestCase33(RegistrationTests.java:103)
+</failure>
+    <system-out><![CDATA[Wait Join button
+Click Join button
+Wait email text field
+Type email in text field11@yandex.com
+Wait password text field
+Type password in text field12
+Wait Next button
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 47101
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 07, 2020 12:37:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Video recording
+[/Users/anaraimasheva/GitHub/roman/romancepractice/video/Registration tests_recording_2020_07_06_12_36_46.avi]
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="3.679"/>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="4.105"/>
+  <testcase name="testSignInTestCase1" classname="com.romanceabroad.ui.SignInTest" time="1.759"/>
+  <testcase name="testSplit" classname="com.romanceabroad.ui.PrettyWomenTest" time="0.001"/>
+  <testcase name="testPrettyWomenPageTestCase3" classname="com.romanceabroad.ui.PrettyWomenTest" time="8.565"/>
+  <testcase name="testSearchByAgeTestCase4" classname="com.romanceabroad.ui.PrettyWomenTest" time="5.046"/>
+  <testcase name="testDropDownViewOptionsTestCase5" classname="com.romanceabroad.ui.PrettyWomenTest" time="5.164"/>
+  <testcase name="selectRandomDropDownListTestCase6" classname="com.romanceabroad.ui.PrettyWomenTest" time="5.718"/>
+  <testcase name="selectDropDownListByAgeMinTestCase7" classname="com.romanceabroad.ui.PrettyWomenTest" time="22.876"/>
+  <testcase name="searchDifferentResultsTestCase30" classname="com.romanceabroad.ui.PrettyWomenTest" time="77.599"/>
+  <testcase name="searchDifferentResultsTestCase30" classname="com.romanceabroad.ui.PrettyWomenTest" time="8.959"/>
+  <testcase name="searchDifferentResultsTestCase30" classname="com.romanceabroad.ui.PrettyWomenTest" time="77.671"/>
+  <testcase name="searchDifferentResultsTestCase30" classname="com.romanceabroad.ui.PrettyWomenTest" time="8.472"/>
+  <testcase name="testUserProfile" classname="com.romanceabroad.ui.PrettyWomenTest" time="12.589"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="27.27"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="26.577"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="26.524"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="26.831"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="27.021"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="26.86"/>
+  <testcase name="testPhotosPageTestCase8" classname="com.romanceabroad.ui.PhotosPageTest" time="7.205"/>
+  <testcase name="checkPhotosListTestCase9" classname="com.romanceabroad.ui.PhotosPageTest" time="5.554"/>
+  <testcase name="testUserTabs" classname="com.romanceabroad.ui.PhotosPageTest" time="15.251"/>
+  <testcase name="testUserTabsWithMoreVerifications" classname="com.romanceabroad.ui.PhotosPageTest" time="15.569"/>
+  <testcase name="testUserTabs2" classname="com.romanceabroad.ui.PhotosPageTest" time="17.339"/>
+  <testcase name="testUserTabs3" classname="com.romanceabroad.ui.PhotosPageTest" time="29.357"/>
+  <testcase name="testGiftsPageTestCase20" classname="com.romanceabroad.ui.GiftsTest" time="5.995"/>
+  <testcase name="testSelectionOfBestsellersTestCase21" classname="com.romanceabroad.ui.GiftsTest" time="2.678"/>
+  <testcase name="testSelectionOfRegularGiftsTestCase22" classname="com.romanceabroad.ui.GiftsTest" time="2.185"/>
+  <testcase name="checkTabsTestCase10" classname="com.romanceabroad.ui.MainPageTests" time="3.292"/>
+  <testcase name="checkLinksWithAssertionsTestCase11" classname="com.romanceabroad.ui.MainPageTests" time="50.288"/>
+  <testcase name="checkTabsNamesTestCase12" classname="com.romanceabroad.ui.MainPageTests" time="0.227"/>
+  <testcase name="verifyIFrameSizeOnMainPageTestCase13" classname="com.romanceabroad.ui.MainPageTests" time="3.023"/>
+  <testcase name="testMainPageIFrameTestCase14" classname="com.romanceabroad.ui.MainPageTests" time="3.212"/>
+  <testcase name="testBookNowTestCase15" classname="com.romanceabroad.ui.MainPageTests" time="0.174"/>
+  <testcase name="testDiscountAlertTestCase16" classname="com.romanceabroad.ui.MainPageTests" time="0.166"/>
+  <testcase name="verifyRomanceAbroadHeaderTestCase17" classname="com.romanceabroad.ui.MainPageTests" time="0.106"/>
+  <testcase name="smokeTestMainPageTestCase19" classname="com.romanceabroad.ui.MainPageTests" time="25.763"/>
+  <testcase name="testLinksOnMainPageTestCase18" classname="com.romanceabroad.ui.MainPageTests" time="28.228"/>
+  <testcase name="testBlogPageTestCase27" classname="com.romanceabroad.ui.BlogPageTest" time="6.799"/>
+  <testcase name="testArticlesAndTitlesTestCase28" classname="com.romanceabroad.ui.BlogPageTest" time="20.062"/>
+  <testcase name="testLinksBlogPageTestCase29" classname="com.romanceabroad.ui.BlogPageTest" time="2.249"/>
+  <testcase name="testContactUsPageTestCase23" classname="com.romanceabroad.ui.ContactUsPageTest" time="4.469"/>
+  <testcase name="verifySelectReasonDropDownTestCase24" classname="com.romanceabroad.ui.ContactUsPageTest" time="4.492"/>
+  <testcase name="verifyDropDownListTestCase25" classname="com.romanceabroad.ui.ContactUsPageTest" time="8.481"/>
+  <testcase name="fillOutContactAdministratorForm" classname="com.romanceabroad.ui.ContactUsPageTest" time="10.93"/>
+  <testcase name="fillOutContactAdministratorFormTestCase26" classname="com.romanceabroad.ui.ContactUsPageTest" time="12.249"/>
+</testsuite>

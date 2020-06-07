@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-TestSuite" class="navigator-link">
+              <span class="suite-name border-failed">TestSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-TestSuite" class="navigator-link ">
+                    <span>TestNG.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-TestSuite" class="navigator-link ">
+                    <span class="test-stats">3 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-TestSuite" class="navigator-link ">
+                    <span>2 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-TestSuite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-TestSuite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-TestSuite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-TestSuite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">27 methods, 3 failed,  9 skipped,  15 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestSuite" class="hide-methods failed suite-TestSuite"> (hide)</a> <!-- hide-methods failed suite-TestSuite -->
+                      <a href="#" panel-name="suite-TestSuite" class="show-methods failed suite-TestSuite"> (show)</a> <!-- show-methods failed suite-TestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-TestSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration2(11@yandex.com, Nick13681, true)">testRegistration2(11@yandex.com, Nick13681, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistrationForInvalidPasswordTestCase33(11@yandex.com, 12, false)">testRegistrationForInvalidPasswordTestCase33(11@yandex.com, 12, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistrationForInvalidPasswordTestCase33(11@yandex.com, 12, false)">testRegistrationForInvalidPasswordTestCase33(11@yandex.com, 12, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-TestSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-TestSuite" class="hide-methods skipped suite-TestSuite"> (hide)</a> <!-- hide-methods skipped suite-TestSuite -->
+                      <a href="#" panel-name="suite-TestSuite" class="show-methods skipped suite-TestSuite"> (show)</a> <!-- show-methods skipped suite-TestSuite -->
+                    </span>
+                    <div class="method-list-content skipped suite-TestSuite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testBoolean">testBoolean</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration1">testRegistration1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration1">testRegistration1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration2">testRegistration2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration2">testRegistration2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration2">testRegistration2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistrationForExistingUserTestCase32">testRegistrationForExistingUserTestCase32</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistrationForInvalidEmailTestCase31">testRegistrationForInvalidEmailTestCase31</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistrationForInvalidPasswordTestCase33">testRegistrationForInvalidPasswordTestCase33</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-TestSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-TestSuite" class="hide-methods passed suite-TestSuite"> (hide)</a> <!-- hide-methods passed suite-TestSuite -->
+                      <a href="#" panel-name="suite-TestSuite" class="show-methods passed suite-TestSuite"> (show)</a> <!-- show-methods passed suite-TestSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-TestSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testBoolean">testBoolean</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testBoolean">testBoolean</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration1(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales)">testRegistration1(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration1(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts)">testRegistration1(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration1(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales)">testRegistration1(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration1(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts)">testRegistration1(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration2(11@gmail.com, Nick13681, true)">testRegistration2(11@gmail.com, Nick13681, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration2(11yahoo.com, Nick13681, false)">testRegistration2(11yahoo.com, Nick13681, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration2(11@yandex.com, Nick13681, true)">testRegistration2(11@yandex.com, Nick13681, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration2(11yahoo.com, Nick13681, false)">testRegistration2(11yahoo.com, Nick13681, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistration2(11@gmail.com, Nick13681, true)">testRegistration2(11@gmail.com, Nick13681, true)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistrationForExistingUserTestCase32(imasheva.anara1@gmail.com, Nick13681, false)">testRegistrationForExistingUserTestCase32(imasheva.anara1@gmail.com, Nick13681, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistrationForExistingUserTestCase32(imasheva.anara1@gmail.com, Nick13681, false)">testRegistrationForExistingUserTestCase32(imasheva.anara1@gmail.com, Nick13681, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistrationForInvalidEmailTestCase31(1, Nick13681, false)">testRegistrationForInvalidEmailTestCase31(1, Nick13681, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="com.romanceabroad.ui.RegistrationTests" class="method navigator-link" hash-for-method="testRegistrationForInvalidEmailTestCase31(1, Nick13681, false)">testRegistrationForInvalidEmailTestCase31(1, Nick13681, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-TestSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-TestSuite" class="panel TestSuite">
+          <div class="suite-TestSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.romanceabroad.ui.RegistrationTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration2(11@yandex.com, Nick13681, true)">
+                  </a> <!-- testRegistration2(11@yandex.com, Nick13681, true) -->
+                  <span class="method-name">testRegistration2</span>
+                  <span class="parameters">(11@yandex.com, Nick13681, true)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: Element &lt;li class=&quot;active&quot;&gt; could not be scrolled into view
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 76.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200507114007, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 27489, moz:profile: /var/folders/6y/hllg1rhd29j..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.7.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 8d2dfc7a-86f4-ba46-9cd1-c452182a7581
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.romanceabroad.ui.BaseActions.clickValueOfLists(BaseActions.java:156)
+	at com.romanceabroad.ui.MainPage.completeSecondPartOfRegistration(MainPage.java:115)
+	at com.romanceabroad.ui.RegistrationTests.testRegistration2(RegistrationTests.java:44)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistrationForInvalidPasswordTestCase33(11@yandex.com, 12, false)">
+                  </a> <!-- testRegistrationForInvalidPasswordTestCase33(11@yandex.com, 12, false) -->
+                  <span class="method-name">testRegistrationForInvalidPasswordTestCase33</span>
+                  <span class="parameters">(11@yandex.com, 12, false)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-action=&apos;next-page&apos;][text()=&apos;Next&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 76.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200507114007, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 27604, moz:profile: /var/folders/6y/hllg1rhd29j..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 18.7.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 062cf0cb-a986-674f-8d9f-8548ef2a5960
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.romanceabroad.ui.MainPage.clickNextButton(MainPage.java:66)
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidPasswordTestCase33(RegistrationTests.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistrationForInvalidPasswordTestCase33(11@yandex.com, 12, false)">
+                  </a> <!-- testRegistrationForInvalidPasswordTestCase33(11@yandex.com, 12, false) -->
+                  <span class="method-name">testRegistrationForInvalidPasswordTestCase33</span>
+                  <span class="parameters">(11@yandex.com, 12, false)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@data-action=&apos;next-page&apos;][text()=&apos;Next&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:55926}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: caf5f2d1ccc617b0b18e5c2a4725ec78
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.romanceabroad.ui.MainPage.clickNextButton(MainPage.java:66)
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidPasswordTestCase33(RegistrationTests.java:103)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuite-class-failed -->
+          <div class="suite-TestSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.romanceabroad.ui.RegistrationTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testBoolean">
+                  </a> <!-- testBoolean -->
+                  <span class="method-name">testBoolean</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.ie.InternetExplorerDriver.assertOnWindows(InternetExplorerDriver.java:235)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:217)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
+	at com.romanceabroad.ui.BaseUI.setup(BaseUI.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration1">
+                  </a> <!-- testRegistration1 -->
+                  <span class="method-name">testRegistration1</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.ie.InternetExplorerDriver.assertOnWindows(InternetExplorerDriver.java:235)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:217)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
+	at com.romanceabroad.ui.BaseUI.setup(BaseUI.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration1">
+                  </a> <!-- testRegistration1 -->
+                  <span class="method-name">testRegistration1</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.ie.InternetExplorerDriver.assertOnWindows(InternetExplorerDriver.java:235)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:217)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
+	at com.romanceabroad.ui.BaseUI.setup(BaseUI.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration2">
+                  </a> <!-- testRegistration2 -->
+                  <span class="method-name">testRegistration2</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.ie.InternetExplorerDriver.assertOnWindows(InternetExplorerDriver.java:235)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:217)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
+	at com.romanceabroad.ui.BaseUI.setup(BaseUI.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration2">
+                  </a> <!-- testRegistration2 -->
+                  <span class="method-name">testRegistration2</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.ie.InternetExplorerDriver.assertOnWindows(InternetExplorerDriver.java:235)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:217)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
+	at com.romanceabroad.ui.BaseUI.setup(BaseUI.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration2">
+                  </a> <!-- testRegistration2 -->
+                  <span class="method-name">testRegistration2</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.ie.InternetExplorerDriver.assertOnWindows(InternetExplorerDriver.java:235)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:217)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
+	at com.romanceabroad.ui.BaseUI.setup(BaseUI.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistrationForExistingUserTestCase32">
+                  </a> <!-- testRegistrationForExistingUserTestCase32 -->
+                  <span class="method-name">testRegistrationForExistingUserTestCase32</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.ie.InternetExplorerDriver.assertOnWindows(InternetExplorerDriver.java:235)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:217)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
+	at com.romanceabroad.ui.BaseUI.setup(BaseUI.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistrationForInvalidEmailTestCase31">
+                  </a> <!-- testRegistrationForInvalidEmailTestCase31 -->
+                  <span class="method-name">testRegistrationForInvalidEmailTestCase31</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.ie.InternetExplorerDriver.assertOnWindows(InternetExplorerDriver.java:235)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:217)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
+	at com.romanceabroad.ui.BaseUI.setup(BaseUI.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistrationForInvalidPasswordTestCase33">
+                  </a> <!-- testRegistrationForInvalidPasswordTestCase33 -->
+                  <span class="method-name">testRegistrationForInvalidPasswordTestCase33</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.7&apos;
+Driver info: driver.version: InternetExplorerDriver
+	at org.openqa.selenium.ie.InternetExplorerDriver.assertOnWindows(InternetExplorerDriver.java:235)
+	at org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:217)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:213)
+	at org.openqa.selenium.ie.InternetExplorerDriver.&lt;init&gt;(InternetExplorerDriver.java:150)
+	at com.romanceabroad.ui.BaseUI.setup(BaseUI.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuite-class-skipped -->
+          <div class="suite-TestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.romanceabroad.ui.RegistrationTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testBoolean">
+                  </a> <!-- testBoolean -->
+                  <span class="method-name">testBoolean</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testBoolean">
+                  </a> <!-- testBoolean -->
+                  <span class="method-name">testBoolean</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration1(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales)">
+                  </a> <!-- testRegistration1(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales) -->
+                  <span class="method-name">testRegistration1</span>
+                  <span class="parameters">(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration1(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts)">
+                  </a> <!-- testRegistration1(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts) -->
+                  <span class="method-name">testRegistration1</span>
+                  <span class="parameters">(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration1(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales)">
+                  </a> <!-- testRegistration1(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales) -->
+                  <span class="method-name">testRegistration1</span>
+                  <span class="parameters">(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration1(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts)">
+                  </a> <!-- testRegistration1(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts) -->
+                  <span class="method-name">testRegistration1</span>
+                  <span class="parameters">(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration2(11@gmail.com, Nick13681, true)">
+                  </a> <!-- testRegistration2(11@gmail.com, Nick13681, true) -->
+                  <span class="method-name">testRegistration2</span>
+                  <span class="parameters">(11@gmail.com, Nick13681, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration2(11yahoo.com, Nick13681, false)">
+                  </a> <!-- testRegistration2(11yahoo.com, Nick13681, false) -->
+                  <span class="method-name">testRegistration2</span>
+                  <span class="parameters">(11yahoo.com, Nick13681, false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration2(11@yandex.com, Nick13681, true)">
+                  </a> <!-- testRegistration2(11@yandex.com, Nick13681, true) -->
+                  <span class="method-name">testRegistration2</span>
+                  <span class="parameters">(11@yandex.com, Nick13681, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration2(11yahoo.com, Nick13681, false)">
+                  </a> <!-- testRegistration2(11yahoo.com, Nick13681, false) -->
+                  <span class="method-name">testRegistration2</span>
+                  <span class="parameters">(11yahoo.com, Nick13681, false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistration2(11@gmail.com, Nick13681, true)">
+                  </a> <!-- testRegistration2(11@gmail.com, Nick13681, true) -->
+                  <span class="method-name">testRegistration2</span>
+                  <span class="parameters">(11@gmail.com, Nick13681, true)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistrationForExistingUserTestCase32(imasheva.anara1@gmail.com, Nick13681, false)">
+                  </a> <!-- testRegistrationForExistingUserTestCase32(imasheva.anara1@gmail.com, Nick13681, false) -->
+                  <span class="method-name">testRegistrationForExistingUserTestCase32</span>
+                  <span class="parameters">(imasheva.anara1@gmail.com, Nick13681, false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistrationForExistingUserTestCase32(imasheva.anara1@gmail.com, Nick13681, false)">
+                  </a> <!-- testRegistrationForExistingUserTestCase32(imasheva.anara1@gmail.com, Nick13681, false) -->
+                  <span class="method-name">testRegistrationForExistingUserTestCase32</span>
+                  <span class="parameters">(imasheva.anara1@gmail.com, Nick13681, false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistrationForInvalidEmailTestCase31(1, Nick13681, false)">
+                  </a> <!-- testRegistrationForInvalidEmailTestCase31(1, Nick13681, false) -->
+                  <span class="method-name">testRegistrationForInvalidEmailTestCase31</span>
+                  <span class="parameters">(1, Nick13681, false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRegistrationForInvalidEmailTestCase31(1, Nick13681, false)">
+                  </a> <!-- testRegistrationForInvalidEmailTestCase31(1, Nick13681, false) -->
+                  <span class="method-name">testRegistrationForInvalidEmailTestCase31</span>
+                  <span class="parameters">(1, Nick13681, false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuite-class-passed -->
+        </div> <!-- panel TestSuite -->
+        <div panel-name="test-xml-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/anaraimasheva/GitHub/roman/romancepractice/TestNG.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;TestSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;IETestCases&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;ie&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.romanceabroad.ui.RegistrationTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- IETestCases --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;FirefoxTestCases&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.romanceabroad.ui.RegistrationTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FirefoxTestCases --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Chrome Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.romanceabroad.ui.RegistrationTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Chrome Tests --&gt;
+&lt;/suite&gt; &lt;!-- TestSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">IETestCases (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FirefoxTestCases (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Chrome Tests (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">admin</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRegistration1</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRegistration2</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRegistrationForExistingUserTestCase32</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRegistrationForInvalidEmailTestCase31</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRegistrationForInvalidPasswordTestCase33</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">user</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRegistration1</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRegistration2</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRegistrationForExistingUserTestCase32</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRegistrationForInvalidEmailTestCase31</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testRegistrationForInvalidPasswordTestCase33</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_TestSuite');
+function tableData_TestSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(27);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testRegistrationForInvalidPasswordTestCase33')
+data.setCell(0, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(0, 3, 20636);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testRegistrationForInvalidPasswordTestCase33')
+data.setCell(1, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(1, 3, 20340);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testRegistration2')
+data.setCell(2, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(2, 3, 5802);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testRegistration2')
+data.setCell(3, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(3, 3, 5240);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testRegistration1')
+data.setCell(4, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(4, 3, 4528);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testRegistration2')
+data.setCell(5, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(5, 3, 4200);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testRegistration1')
+data.setCell(6, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(6, 3, 3945);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testRegistration1')
+data.setCell(7, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(7, 3, 3867);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testRegistration2')
+data.setCell(8, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(8, 3, 3752);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testRegistration1')
+data.setCell(9, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(9, 3, 3692);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testRegistrationForExistingUserTestCase32')
+data.setCell(10, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(10, 3, 1459);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testRegistrationForExistingUserTestCase32')
+data.setCell(11, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(11, 3, 1445);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testRegistrationForInvalidEmailTestCase31')
+data.setCell(12, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(12, 3, 655);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testRegistration2')
+data.setCell(13, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(13, 3, 399);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testRegistration2')
+data.setCell(14, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(14, 3, 380);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testRegistrationForInvalidEmailTestCase31')
+data.setCell(15, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(15, 3, 336);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testRegistration1')
+data.setCell(16, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(16, 3, 0);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testRegistration2')
+data.setCell(17, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(17, 3, 0);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testRegistrationForInvalidPasswordTestCase33')
+data.setCell(18, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(18, 3, 0);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testRegistrationForExistingUserTestCase32')
+data.setCell(19, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(19, 3, 0);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testRegistration1')
+data.setCell(20, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(20, 3, 0);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testBoolean')
+data.setCell(21, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(21, 3, 0);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testRegistration2')
+data.setCell(22, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(22, 3, 0);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testRegistrationForInvalidEmailTestCase31')
+data.setCell(23, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(23, 3, 0);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testRegistration2')
+data.setCell(24, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(24, 3, 0);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testBoolean')
+data.setCell(25, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(25, 3, 0);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testBoolean')
+data.setCell(26, 2, 'com.romanceabroad.ui.RegistrationTests')
+data.setCell(26, 3, 0);
+window.suiteTableData['TestSuite']= { tableData: data, tableDiv: 'times-div-TestSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-TestSuite">
+              </div> <!-- times-div-TestSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for TestSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-TestSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.romanceabroad.ui.RegistrationTests</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(ie, public static void com.romanceabroad.ui.RegistrationTests.testBoolean())</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testBoolean</span>
+                <span class="method-start">223 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">225 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(ie, public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang....)</span>
+                <span class="method-start">234 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration2</span>
+                <span class="method-start">236 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">769 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(ie, public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang....)</span>
+                <span class="method-start">769 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration2</span>
+                <span class="method-start">771 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">1011 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(ie, public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.lang....)</span>
+                <span class="method-start">1012 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration2</span>
+                <span class="method-start">1014 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">1210 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(ie, public void com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidEmailTestCase31(jav...)</span>
+                <span class="method-start">1211 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistrationForInvalidEmailTestCase31</span>
+                <span class="method-start">1213 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">1213 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(ie, public void com.romanceabroad.ui.RegistrationTests.testRegistrationForExistingUserTestCase32(jav...)</span>
+                <span class="method-start">1214 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistrationForExistingUserTestCase32</span>
+                <span class="method-start">1215 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">1216 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(ie, public void com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidPasswordTestCase33(...)</span>
+                <span class="method-start">1217 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistrationForInvalidPasswordTestCase33</span>
+                <span class="method-start">1219 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">1221 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(ie, public void com.romanceabroad.ui.RegistrationTests.testRegistration1(java.lang.String,java.lang....)</span>
+                <span class="method-start">1228 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration1</span>
+                <span class="method-start">1231 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">1231 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup(ie, public void com.romanceabroad.ui.RegistrationTests.testRegistration1(java.lang.String,java.lang....)</span>
+                <span class="method-start">1232 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration1</span>
+                <span class="method-start">1233 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">1233 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox, public static void com.romanceabroad.ui.RegistrationTests.testBoolean())</span>
+                <span class="method-start">1439 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testBoolean</span>
+                <span class="method-start">12977 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testBoolean status=SUCCESS method=RegistrationTests.testBoolean()[pri:0, instance:c...)</span>
+                <span class="method-start">12978 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox, public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java....)</span>
+                <span class="method-start">16769 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration2(11@gmail.com, Nick13681, true)</span>
+                <span class="method-start">26245 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistration2 status=SUCCESS method=RegistrationTests.testRegistration2(java.la...)</span>
+                <span class="method-start">32232 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox, public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java....)</span>
+                <span class="method-start">35862 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration2(11yahoo.com, Nick13681, false)</span>
+                <span class="method-start">44427 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistration2 status=SUCCESS method=RegistrationTests.testRegistration2(java.la...)</span>
+                <span class="method-start">44952 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox, public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java....)</span>
+                <span class="method-start">48596 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testRegistration2(11@yandex.com, Nick13681, true)</span>
+                <span class="method-start">56543 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistration2 status=FAILURE method=RegistrationTests.testRegistration2(java.la...)</span>
+                <span class="method-start">61925 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox, public void com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidEmailTestCase3...)</span>
+                <span class="method-start">67901 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistrationForInvalidEmailTestCase31(1, Nick13681, false)</span>
+                <span class="method-start">76854 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistrationForInvalidEmailTestCase31 status=SUCCESS method=RegistrationTests.t...)</span>
+                <span class="method-start">77509 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox, public void com.romanceabroad.ui.RegistrationTests.testRegistrationForExistingUserTestCase3...)</span>
+                <span class="method-start">81109 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistrationForExistingUserTestCase32(imasheva.anara1@gmail.com, Nick13681, false)</span>
+                <span class="method-start">89117 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistrationForExistingUserTestCase32 status=SUCCESS method=RegistrationTests.t...)</span>
+                <span class="method-start">90562 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox, public void com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidPasswordTestCa...)</span>
+                <span class="method-start">94141 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testRegistrationForInvalidPasswordTestCase33(11@yandex.com, 12, false)</span>
+                <span class="method-start">102306 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistrationForInvalidPasswordTestCase33 status=FAILURE method=RegistrationTest...)</span>
+                <span class="method-start">122943 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox, public void com.romanceabroad.ui.RegistrationTests.testRegistration1(java.lang.String,java....)</span>
+                <span class="method-start">125826 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration1(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales)</span>
+                <span class="method-start">133230 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistration1 status=SUCCESS method=RegistrationTests.testRegistration1(java.la...)</span>
+                <span class="method-start">137759 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(firefox, public void com.romanceabroad.ui.RegistrationTests.testRegistration1(java.lang.String,java....)</span>
+                <span class="method-start">141377 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration1(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts)</span>
+                <span class="method-start">148588 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistration1 status=SUCCESS method=RegistrationTests.testRegistration1(java.la...)</span>
+                <span class="method-start">152533 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public static void com.romanceabroad.ui.RegistrationTests.testBoolean())</span>
+                <span class="method-start">156156 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testBoolean</span>
+                <span class="method-start">160511 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testBoolean status=SUCCESS method=RegistrationTests.testBoolean()[pri:0, instance:c...)</span>
+                <span class="method-start">160511 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.l...)</span>
+                <span class="method-start">160637 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration2(11@gmail.com, Nick13681, true)</span>
+                <span class="method-start">164714 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistration2 status=SUCCESS method=RegistrationTests.testRegistration2(java.la...)</span>
+                <span class="method-start">168613 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.l...)</span>
+                <span class="method-start">168728 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration2(11yahoo.com, Nick13681, false)</span>
+                <span class="method-start">172926 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistration2 status=SUCCESS method=RegistrationTests.testRegistration2(java.la...)</span>
+                <span class="method-start">173454 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTests.testRegistration2(java.lang.String,java.l...)</span>
+                <span class="method-start">173572 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration2(11@yandex.com, Nick13681, true)</span>
+                <span class="method-start">177745 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistration2 status=SUCCESS method=RegistrationTests.testRegistration2(java.la...)</span>
+                <span class="method-start">182138 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidEmailTestCase31...)</span>
+                <span class="method-start">182250 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistrationForInvalidEmailTestCase31(1, Nick13681, false)</span>
+                <span class="method-start">186086 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistrationForInvalidEmailTestCase31 status=SUCCESS method=RegistrationTests.t...)</span>
+                <span class="method-start">186422 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTests.testRegistrationForExistingUserTestCase32...)</span>
+                <span class="method-start">186534 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistrationForExistingUserTestCase32(imasheva.anara1@gmail.com, Nick13681, false)</span>
+                <span class="method-start">191023 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistrationForExistingUserTestCase32 status=SUCCESS method=RegistrationTests.t...)</span>
+                <span class="method-start">192483 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidPasswordTestCas...)</span>
+                <span class="method-start">192600 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testRegistrationForInvalidPasswordTestCase33(11@yandex.com, 12, false)</span>
+                <span class="method-start">196892 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistrationForInvalidPasswordTestCase33 status=FAILURE method=RegistrationTest...)</span>
+                <span class="method-start">217233 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTests.testRegistration1(java.lang.String,java.l...)</span>
+                <span class="method-start">217960 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration1(imashva@gmail.com, 123456, Jun, 18, 1985, 6197247589, Sydney, State of New South Wales)</span>
+                <span class="method-start">221858 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistration1 status=SUCCESS method=RegistrationTests.testRegistration1(java.la...)</span>
+                <span class="method-start">225550 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome, public void com.romanceabroad.ui.RegistrationTests.testRegistration1(java.lang.String,java.l...)</span>
+                <span class="method-start">225664 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testRegistration1(ya@yahoo.com, 5678910, Feb, 18, 1960,  6507899090, Boston, Massachusetts)</span>
+                <span class="method-start">230051 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser([TestResult name=testRegistration1 status=SUCCESS method=RegistrationTests.testRegistration1(java.la...)</span>
+                <span class="method-start">233918 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
