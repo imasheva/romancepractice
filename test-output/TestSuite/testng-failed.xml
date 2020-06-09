@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="IETestCases(failed)">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <methods>
+          <include name="testRegistrationForInvalidPasswordTestCase33"/>
+          <include name="testRegistration2"/>
+          <include name="testBoolean"/>
+          <include name="closeBrowser"/>
+          <include name="testRegistrationForExistingUserTestCase32"/>
+          <include name="testRegistrationForInvalidEmailTestCase31"/>
+          <include name="testRegistration1"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+    </classes>
+  </test> <!-- IETestCases(failed) -->
+  <test thread-count="5" name="FirefoxTestCases(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <methods>
+          <include name="testRegistration2" invocation-numbers="0 2"/>
+          <include name="closeBrowser"/>
+          <include name="testRegistration1" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+    </classes>
+  </test> <!-- FirefoxTestCases(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
