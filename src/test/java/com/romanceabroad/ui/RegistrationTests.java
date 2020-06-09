@@ -30,7 +30,8 @@ public class RegistrationTests extends BaseUI {
     String actualTooltipMessageForInvalidPassword;
 
     @Video(name = "Registration tests")
-    @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class, priority = 1, enabled = testCase2, groups = {"user", "admin"})
+    @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class, priority = 1,
+            enabled = testCase2, groups = {"user", "admin"})
     public void testRegistration2(String email, String nickname, boolean requirement) {
 
         mainPage.clickJoinButton();

@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Reports {
-    private static final boolean jenkinsOption =true;
+    private static final boolean jenkinsOption = true;
 
     // initialize the HtmlReporter
     public static ExtentHtmlReporter htmlReporter;

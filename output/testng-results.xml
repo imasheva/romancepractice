@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-06-07T16:13:26 PDT" name="Default Suite" finished-at="2020-06-07T16:13:35 PDT" duration-ms="8815">
+    <groups>
+      <group name="admin">
+        <method signature="GiftsTest.testSelectionOfBestsellersTestCase21()[pri:2, instance:com.romanceabroad.ui.GiftsTest@2a798d51]" name="testSelectionOfBestsellersTestCase21" class="com.romanceabroad.ui.GiftsTest"/>
+      </group> <!-- admin -->
+      <group name="user">
+        <method signature="GiftsTest.testSelectionOfBestsellersTestCase21()[pri:2, instance:com.romanceabroad.ui.GiftsTest@2a798d51]" name="testSelectionOfBestsellersTestCase21" class="com.romanceabroad.ui.GiftsTest"/>
+      </group> <!-- user -->
+    </groups>
+    <test started-at="2020-06-07T16:13:26 PDT" name="romance" finished-at="2020-06-07T16:13:35 PDT" duration-ms="8815">
+      <class name="com.romanceabroad.ui.GiftsTest">
+        <test-method is-config="true" signature="setup(java.lang.String, java.lang.reflect.Method)[pri:0, instance:com.romanceabroad.ui.GiftsTest@2a798d51]" started-at="2020-06-07T16:13:26 PDT" name="setup" finished-at="2020-06-07T16:13:32 PDT" duration-ms="5492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.romanceabroad.ui.GiftsTest.testSelectionOfBestsellersTestCase21()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testSelectionOfBestsellersTestCase21()[pri:2, instance:com.romanceabroad.ui.GiftsTest@2a798d51]" started-at="2020-06-07T16:13:32 PDT" name="testSelectionOfBestsellersTestCase21" finished-at="2020-06-07T16:13:35 PDT" duration-ms="2996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSelectionOfBestsellersTestCase21 -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:com.romanceabroad.ui.GiftsTest@2a798d51]" started-at="2020-06-07T16:13:35 PDT" name="closeBrowser" finished-at="2020-06-07T16:13:35 PDT" duration-ms="303" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSelectionOfBestsellersTestCase21 status=SUCCESS method=GiftsTest.testSelectionOfBestsellersTestCase21()[pri:2, instance:com.romanceabroad.ui.GiftsTest@2a798d51] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.romanceabroad.ui.GiftsTest -->
+    </test> <!-- romance -->
+  </suite> <!-- Default Suite -->
+</testng-results>
