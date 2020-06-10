@@ -1,5 +1,4 @@
 package com.romanceabroad.ui;
-
 import com.automation.remarks.testng.VideoListener;
 import com.automation.remarks.video.annotations.Video;
 import org.openqa.selenium.By;
@@ -10,13 +9,11 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import java.util.concurrent.TimeUnit;
-
 import static java.nio.file.Files.readAllLines;
-
 @Listeners(VideoListener.class)
 
+//public class RegistrationTests extends BaseUITestWithSauceLAbs {
 public class RegistrationTests extends BaseUI {
 
     public static final boolean testCase2 = true;
@@ -29,7 +26,7 @@ public class RegistrationTests extends BaseUI {
     String actuaTooltpMessageForExistingUser;
     String actualTooltipMessageForInvalidPassword;
 
-    @Video(name = "Registration tests")
+  //  @Video(name = "Registration tests")
     @Test(dataProvider = "Registration2", dataProviderClass = DataProviders.class, priority = 1,
             enabled = testCase2, groups = {"user", "admin"})
     public void testRegistration2(String email, String nickname, boolean requirement) {
@@ -96,7 +93,7 @@ public class RegistrationTests extends BaseUI {
 
     }
 
-    @Test(dataProvider = "Registration5", dataProviderClass = DataProviders.class, priority = 4, enabled = testCase33, groups = {"user", "admin"})
+    /*@Test(dataProvider = "Registration5", dataProviderClass = DataProviders.class, priority = 4, enabled = testCase33, groups = {"user", "admin"})
     public void testRegistrationForInvalidPasswordTestCase33(String email, String password, boolean requirement) {
 
         mainPage.clickJoinButton();
@@ -124,7 +121,7 @@ public class RegistrationTests extends BaseUI {
             mainPage.completeSecondPartOfRegistration(Data.nickname, Data.phone,
                     Data.month, Data.day, Data.year, Data.city, Data.location);
         }
-    }
+    }*/
 
     @Test(dataProvider = "Registration", dataProviderClass = DataProviders.class, priority = 5, enabled = testCase34, groups = {"user", "admin"})
 

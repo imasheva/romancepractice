@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="3" parallel="tests" name="Edge test cases(failed)" verbose="0">
+    <parameter name="browser" value="MicrosoftEdge"/>
+    <parameter name="version" value="68.0"/>
+    <parameter name="platform" value="Windows 10"/>
+    <parameter name="testBox" value="sauce"/>
+    <classes>
+      <class name="com.romanceabroad.ui.PhotosPageTest">
+        <methods>
+          <include name="testUserTabs2"/>
+          <include name="closeBrowser"/>
+          <include name="testPhotosPageTestCase8"/>
+          <include name="checkPhotosListTestCase9"/>
+          <include name="testUserTabs"/>
+          <include name="testUserTabsWithMoreVerifications"/>
+          <include name="setup"/>
+          <include name="testUserTabs3"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.PhotosPageTest -->
+      <class name="com.romanceabroad.ui.BlogPageTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="testLinksBlogPageTestCase29"/>
+          <include name="testBlogPageTestCase27"/>
+          <include name="setup"/>
+          <include name="testArticlesAndTitlesTestCase28"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.BlogPageTest -->
+      <class name="com.romanceabroad.ui.ContactUsPageTest">
+        <methods>
+          <include name="testContactUsPageTestCase23"/>
+          <include name="closeBrowser"/>
+          <include name="verifySelectReasonDropDownTestCase24"/>
+          <include name="fillOutContactAdministratorForm"/>
+          <include name="fillOutContactAdministratorFormTestCase26"/>
+          <include name="verifyDropDownListTestCase25"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.ContactUsPageTest -->
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <methods>
+          <include name="testRegistration2"/>
+          <include name="testBoolean"/>
+          <include name="closeBrowser"/>
+          <include name="testRegistrationForExistingUserTestCase32"/>
+          <include name="testRegistrationForInvalidEmailTestCase31"/>
+          <include name="testRegistration1"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+      <class name="com.romanceabroad.ui.GiftsTest">
+        <methods>
+          <include name="testSelectionOfBestsellersTestCase21"/>
+          <include name="closeBrowser"/>
+          <include name="testSelectionOfRegularGiftsTestCase22"/>
+          <include name="testGiftsPageTestCase20"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.GiftsTest -->
+      <class name="com.romanceabroad.ui.SignInTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="testSignInTestCase1"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.SignInTest -->
+      <class name="com.romanceabroad.ui.MainPageTests">
+        <methods>
+          <include name="testLinksOnMainPageTestCase18"/>
+          <include name="testMainPageIFrameTestCase14"/>
+          <include name="checkTabsNamesTestCase12"/>
+          <include name="smokeTestMainPageTestCase19"/>
+          <include name="checkTabsTestCase10"/>
+          <include name="closeBrowser"/>
+          <include name="testBookNowTestCase15"/>
+          <include name="verifyIFrameSizeOnMainPageTestCase13"/>
+          <include name="testDiscountAlertTestCase16"/>
+          <include name="verifyRomanceAbroadHeaderTestCase17"/>
+          <include name="checkLinksWithAssertionsTestCase11"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.MainPageTests -->
+      <class name="com.romanceabroad.ui.PrettyWomenTest">
+        <methods>
+          <include name="testDropDownViewOptionsTestCase5"/>
+          <include name="testSearchByAgeTestCase4"/>
+          <include name="selectDropDownListByAgeMinTestCase7"/>
+          <include name="closeBrowser"/>
+          <include name="testPrettyWomenPageTestCase3"/>
+          <include name="searchDifferentResultsTestCase30"/>
+          <include name="testSplit"/>
+          <include name="testUserProfile"/>
+          <include name="testFooter"/>
+          <include name="setup"/>
+          <include name="selectRandomDropDownListTestCase6"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.PrettyWomenTest -->
+    </classes>
+  </test> <!-- Edge test cases(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

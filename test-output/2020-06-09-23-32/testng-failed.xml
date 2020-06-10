@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Chrome Tests(failed)" verbose="0">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="version" value="68.0"/>
+    <parameter name="platform" value="Windows 10"/>
+    <classes>
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <methods>
+          <include name="testRegistrationForInvalidPasswordTestCase33" invocation-numbers="0"/>
+          <include name="testRegistration2" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="testRegistrationForExistingUserTestCase32" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
+          <include name="testRegistrationForInvalidEmailTestCase31" invocation-numbers="0"/>
+          <include name="testRegistration1" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+      <class name="com.romanceabroad.ui.PrettyWomenTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="searchDifferentResultsTestCase30" invocation-numbers="0"/>
+          <include name="testUserProfile"/>
+          <include name="testFooter"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.PrettyWomenTest -->
+    </classes>
+  </test> <!-- Chrome Tests(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

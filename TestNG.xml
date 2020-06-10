@@ -1,64 +1,92 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<!--<suite name="TestSuite" parallel="tests" thread-count="3">-->
-<suite name="TestSuite" parallel="none">
-<!--
-    <test name="IETestCases">
-        <parameter name="browser" value="ie"/>
-        <classes>
-            <class name="com.romanceabroad.ui.RegistrationTests"/>
-          &lt;!&ndash;  <class name="com.romanceabroad.ui.SignInTest"/>
-            <class name="com.romanceabroad.ui.PrettyWomenTest"/>
-            <class name="com.romanceabroad.ui.PhotosPageTest"/>
-            <class name="com.romanceabroad.ui.GiftsTest"/>
-            <class name="com.romanceabroad.ui.MainPageTests"/>
-            <class name="com.romanceabroad.ui.BlogPageTest"/>&ndash;&gt;
-        </classes>
-    </test>-->
+<suite name="TestSuite" parallel="tests" thread-count="3">
 
-<!--    <test name="FirefoxTestCases">-->
-<!--        <parameter name="browser" value="firefox"/>-->
-<!--        <classes>-->
-<!--            <class name="com.romanceabroad.ui.RegistrationTests"/>-->
-<!--           &lt;!&ndash; <class name="com.romanceabroad.ui.SignInTest"/>-->
-<!--            <class name="com.romanceabroad.ui.PrettyWomenTest"/>-->
-<!--            <class name="com.romanceabroad.ui.PhotosPageTest"/>-->
-<!--            <class name="com.romanceabroad.ui.GiftsTest"/>-->
-<!--            <class name="com.romanceabroad.ui.MainPageTests"/>-->
-<!--            <class name="com.romanceabroad.ui.BlogPageTest"/>&ndash;&gt;-->
-<!--        </classes>-->
-<!--    </test>-->
-
-    <test name="Chrome Tests">
-        <parameter name="browser" value="chrome"/>
-        <!-- <groups>
-             <run>
-                 <exclude name="ie"/>
-                 <include name="admin"/>
-                 <include name="user"/>
-             </run>
-         </groups>-->
+    <test name="Safari Mac test cases">
+        <parameter name="testBox" value="sauce"/>
+        <parameter name="version" value="12.1"/>
+        <parameter name="browser" value="Safari"/>
+        <parameter name="platform" value="macOS 10.13"/>
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
             <class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
-            <class name="com.romanceabroad.ui.MainPageTests">
-                <!--    <methods>
-                        <include name=" .*Tabs.*"/>
-                        <include name=" .*Links.*"/>
-                        <include name=" .*Size.*"/>
-                        <include name=" .*Frame.*"/>
-                        <include name=" .*Book.*"/>
-                        <include name=" .*Discount.*"/>
-                        <include name=" .*Header.*"/>
-                    </methods>-->
-            </class>
+            <class name="com.romanceabroad.ui.MainPageTests"/>
+            <class name="com.romanceabroad.ui.BlogPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Chrome Tests">
+        <parameter name="testBox" value="sauce"/>
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="version" value="68.0"/>
+        <parameter name="platform" value="Windows 10"/>
+        <classes>
+            <class name="com.romanceabroad.ui.RegistrationTests"/>
+            <class name="com.romanceabroad.ui.SignInTest"/>
+            <class name="com.romanceabroad.ui.PrettyWomenTest"/>
+            <class name="com.romanceabroad.ui.PhotosPageTest"/>
+            <class name="com.romanceabroad.ui.GiftsTest"/>
+            <class name="com.romanceabroad.ui.MainPageTests"/>
             <class name="com.romanceabroad.ui.BlogPageTest"/>
             <class name="com.romanceabroad.ui.ContactUsPageTest"/>
         </classes>
     </test>
+
+    <test name="IE test cases">
+        <parameter name="testBox" value="sauce"/>
+        <parameter name="version" value="11.285"/>
+        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="platform" value="Windows 10"/>
+        <classes>
+            <class name="com.romanceabroad.ui.RegistrationTests"/>
+            <class name="com.romanceabroad.ui.SignInTest"/>
+            <class name="com.romanceabroad.ui.PrettyWomenTest"/>
+            <class name="com.romanceabroad.ui.PhotosPageTest"/>
+            <class name="com.romanceabroad.ui.GiftsTest"/>
+            <class name="com.romanceabroad.ui.MainPageTests"/>
+            <class name="com.romanceabroad.ui.BlogPageTest"/>
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Firefox test cases">
+        <parameter name="testBox" value="sauce"/>
+        <parameter name="version" value="68.0"/>
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="platform" value="macOS 10.14"/>
+        <classes>
+            <class name="com.romanceabroad.ui.RegistrationTests"/>
+            <class name="com.romanceabroad.ui.SignInTest"/>
+            <class name="com.romanceabroad.ui.PrettyWomenTest"/>
+            <class name="com.romanceabroad.ui.PhotosPageTest"/>
+            <class name="com.romanceabroad.ui.GiftsTest"/>
+            <class name="com.romanceabroad.ui.MainPageTests"/>
+            <class name="com.romanceabroad.ui.BlogPageTest"/>
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>
+        </classes>
+    </test>
+
+    <test name="Edge test cases">
+        <parameter name="testBox" value="sauce"/>
+        <parameter name="version" value="68.0"/>
+        <parameter name="browser" value="MicrosoftEdge"/>
+        <parameter name="platform" value="Windows 10"/>
+        <classes>
+            <class name="com.romanceabroad.ui.RegistrationTests"/>
+            <class name="com.romanceabroad.ui.SignInTest"/>
+            <class name="com.romanceabroad.ui.PrettyWomenTest"/>
+            <class name="com.romanceabroad.ui.PhotosPageTest"/>
+            <class name="com.romanceabroad.ui.GiftsTest"/>
+            <class name="com.romanceabroad.ui.MainPageTests"/>
+            <class name="com.romanceabroad.ui.BlogPageTest"/>
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>
+        </classes>
+    </test>
+
+
 </suite>
 
 

@@ -151,7 +151,7 @@ public class BaseActions {
             if (value.contains(text)) {
                 Reports.log("Wait element of list to be clickable");
                 wait.until(ExpectedConditions.elementToBeClickable(elementOfList));
-
+              //  javaWaitSec(3); //tried to fix -> waiting for element to be clickable
                 Reports.log("Click list of elements");
                 elementOfList.click();
             }

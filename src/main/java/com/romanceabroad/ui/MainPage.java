@@ -39,11 +39,12 @@ public class MainPage extends BaseActions {
     WebElement header;
 
     public void clickJoinButton() {
-        Reports.log("Wait Join button");
-        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_REGISTRATION));
+     //   Reports.log("Wait Join button");
+     //   wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_REGISTRATION));
 
         Reports.log("Click Join button");
-        driver.findElement(Locators.BUTTON_REGISTRATION).click();
+        ajaxClick(Locators.BUTTON_REGISTRATION);
+       // driver.findElement(Locators.BUTTON_REGISTRATION).click();
     }
 
 
@@ -112,6 +113,7 @@ public class MainPage extends BaseActions {
         //After we send city, it detects location
 
         //No need to add information to this method, we have everything inside, don't need to duplicate steps
+        javaWaitSec(3);//tried to fix
         clickValueOfLists(Locators.LIST_VALUE_LOCATION, location); //div[@class='dropdown dropdown_location']//ul//li
 
     }
