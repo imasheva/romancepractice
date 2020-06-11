@@ -39,12 +39,12 @@ public class MainPage extends BaseActions {
     WebElement header;
 
     public void clickJoinButton() {
-     //   Reports.log("Wait Join button");
-     //   wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_REGISTRATION));
+        //   Reports.log("Wait Join button");
+        //   wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_REGISTRATION));
 
         Reports.log("Click Join button");
         ajaxClick(Locators.BUTTON_REGISTRATION);
-       // driver.findElement(Locators.BUTTON_REGISTRATION).click();
+        // driver.findElement(Locators.BUTTON_REGISTRATION).click();
     }
 
 
@@ -330,6 +330,22 @@ public class MainPage extends BaseActions {
     }
 
 
+    public void clickMobileMenu(String valueOfBox) {
+        if (valueOfBox.contains("mobile"))
+            driver.findElement(Locators.MOBILE_MENU).click();
+    }
+
+    public void clickMobileMenu2() {
+        if (driver.findElement(Locators.MOBILE_MENU).isDisplayed()) {
+            driver.findElement(Locators.MOBILE_MENU).click();
+        }
+    }
+
+    public void clickMobileMenu3() {
+        if (driver.findElements(Locators.MOBILE_MENU).size() > 0) {
+            driver.findElement(Locators.MOBILE_MENU).click();
+        }
+    }
 }
 
 //For myself

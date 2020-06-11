@@ -1,0 +1,147 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 62, Failures: 13, Errors: 0, Skipped: 10, Time elapsed: 770.441 s <<< FAILURE! - in TestSuite
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.429 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.016 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.004 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.005 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: driver.version: InternetExplorerDriver
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.003 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: driver.version: InternetExplorerDriver
+
+testRegistrationForInvalidEmailTestCase31(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.044 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://romanceabroad.com/users/login_form']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51155}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6174af23c0d2290339096191a5bdd627
+*** Element info: {Using=xpath, value=//a[@href='https://romanceabroad.com/users/login_form']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidEmailTestCase31(RegistrationTests.java:52)
+
+testRegistrationForExistingUserTestCase32(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.014 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://romanceabroad.com/users/login_form']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51286}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0e751b8d88093d066536685bd807d829
+*** Element info: {Using=xpath, value=//a[@href='https://romanceabroad.com/users/login_form']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForExistingUserTestCase32(RegistrationTests.java:75)
+
+testRegistration1(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.017 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://romanceabroad.com/users/login_form']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51385}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6ceaf3d08f5957ff5232de263ccca2ce
+*** Element info: {Using=xpath, value=//a[@href='https://romanceabroad.com/users/login_form']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistration1(RegistrationTests.java:131)
+
+testRegistration1(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.014 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://romanceabroad.com/users/login_form']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51625}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 97db740a4b59328af6c95b0ecdcc63a9
+*** Element info: {Using=xpath, value=//a[@href='https://romanceabroad.com/users/login_form']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistration1(RegistrationTests.java:131)
+
+selectRandomDropDownListTestCase6(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.036 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=83.0.4103.97)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:52804}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b448b785f56b329f4ceb4000f70f3540
+	at com.romanceabroad.ui.PrettyWomenTest.selectRandomDropDownListTestCase6(PrettyWomenTest.java:77)
+
+testRegistrationForInvalidEmailTestCase31(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 21.874 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id='show-registration-block'] (tried for 20 second(s) with 500 milliseconds interval)
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidEmailTestCase31(RegistrationTests.java:53)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='show-registration-block']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:55397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2a2da4d1f010d31510a5201be256b8c9
+*** Element info: {Using=xpath, value=//button[@id='show-registration-block']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidEmailTestCase31(RegistrationTests.java:53)
+
+testRegistrationForExistingUserTestCase32(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 21.977 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id='show-registration-block'] (tried for 20 second(s) with 500 milliseconds interval)
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForExistingUserTestCase32(RegistrationTests.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='show-registration-block']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:55531}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: e45ee3a0b1665952e6cb4120f58e43a1
+*** Element info: {Using=xpath, value=//button[@id='show-registration-block']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForExistingUserTestCase32(RegistrationTests.java:76)
+
+testRegistration1(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 22.112 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id='show-registration-block'] (tried for 20 second(s) with 500 milliseconds interval)
+	at com.romanceabroad.ui.RegistrationTests.testRegistration1(RegistrationTests.java:132)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='show-registration-block']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:55962}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c5d9acd02065f3faea1944946618a4a4
+*** Element info: {Using=xpath, value=//button[@id='show-registration-block']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistration1(RegistrationTests.java:132)
+

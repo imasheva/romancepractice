@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="770.441" tests="62" errors="0" skipped="10" failures="13">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/anaraimasheva/GitHub/roman/romancepractice/target/test-classes:/Users/anaraimasheva/GitHub/roman/romancepractice/target/classes:/Users/anaraimasheva/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/anaraimasheva/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/anaraimasheva/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/anaraimasheva/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/anaraimasheva/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/anaraimasheva/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/anaraimasheva/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/anaraimasheva/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/anaraimasheva/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/anaraimasheva/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/rest-assured/3.3.0/rest-assured-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy/2.4.15/groovy-2.4.15.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy-xml/2.4.15/groovy-xml-2.4.15.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/anaraimasheva/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/anaraimasheva/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/Users/anaraimasheva/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/anaraimasheva/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/Users/anaraimasheva/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/json-path/3.3.0/json-path-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy-json/2.4.15/groovy-json-2.4.15.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/rest-assured-common/3.3.0/rest-assured-common-3.3.0.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/xml-path/3.3.0/xml-path-3.3.0.jar:/Users/anaraimasheva/.m2/repository/javax/xml/bind/jaxb-api/2.2.12/jaxb-api-2.2.12.jar:/Users/anaraimasheva/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.2.10/jaxb-osgi-2.2.10.jar:/Users/anaraimasheva/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/Users/anaraimasheva/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/Users/anaraimasheva/.m2/repository/org/testng/testng/7.0.0/testng-7.0.0.jar:/Users/anaraimasheva/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/anaraimasheva/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar:/Users/anaraimasheva/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/bson/3.3.0/bson-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.jar:/Users/anaraimasheva/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/Users/anaraimasheva/.m2/repository/com/automation-remarks/video-recorder-testng/1.0/video-recorder-testng-1.0.jar:/Users/anaraimasheva/.m2/repository/com/automation-remarks/video-recorder-core/1.0/video-recorder-core-1.0.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/allure/allure-java-annotations/1.4.23/allure-java-annotations-1.4.23.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/allure/allure-model/1.4.23/allure-model-1.4.23.jar:/Users/anaraimasheva/.m2/repository/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.9.3/jaxb2-basics-runtime-0.9.3.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/properties/properties-loader/1.5/properties-loader-1.5.jar:/Users/anaraimasheva/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.3/commons-beanutils-core-1.8.3.jar:/Users/anaraimasheva/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/anaraimasheva/GitHub/roman/romancepractice/target/surefire/surefirebooter111424409594084493.jar /Users/anaraimasheva/GitHub/roman/romancepractice/target/surefire 2020-06-10T21-02-01_973-jvmRun1 surefire3234216792983601611tmp surefire_04154200372205266899tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/anaraimasheva/GitHub/roman/romancepractice/target/test-classes:/Users/anaraimasheva/GitHub/roman/romancepractice/target/classes:/Users/anaraimasheva/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/anaraimasheva/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/anaraimasheva/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/anaraimasheva/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/anaraimasheva/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/anaraimasheva/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/anaraimasheva/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/anaraimasheva/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/anaraimasheva/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/anaraimasheva/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/anaraimasheva/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/rest-assured/3.3.0/rest-assured-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy/2.4.15/groovy-2.4.15.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy-xml/2.4.15/groovy-xml-2.4.15.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/anaraimasheva/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/anaraimasheva/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/anaraimasheva/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/Users/anaraimasheva/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/anaraimasheva/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/Users/anaraimasheva/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/json-path/3.3.0/json-path-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/codehaus/groovy/groovy-json/2.4.15/groovy-json-2.4.15.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/rest-assured-common/3.3.0/rest-assured-common-3.3.0.jar:/Users/anaraimasheva/.m2/repository/io/rest-assured/xml-path/3.3.0/xml-path-3.3.0.jar:/Users/anaraimasheva/.m2/repository/javax/xml/bind/jaxb-api/2.2.12/jaxb-api-2.2.12.jar:/Users/anaraimasheva/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.2.10/jaxb-osgi-2.2.10.jar:/Users/anaraimasheva/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/Users/anaraimasheva/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/Users/anaraimasheva/.m2/repository/org/testng/testng/7.0.0/testng-7.0.0.jar:/Users/anaraimasheva/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/anaraimasheva/.m2/repository/com/aventstack/extentreports/3.1.5/extentreports-3.1.5.jar:/Users/anaraimasheva/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/bson/3.3.0/bson-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar:/Users/anaraimasheva/.m2/repository/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.jar:/Users/anaraimasheva/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/Users/anaraimasheva/.m2/repository/com/automation-remarks/video-recorder-testng/1.0/video-recorder-testng-1.0.jar:/Users/anaraimasheva/.m2/repository/com/automation-remarks/video-recorder-core/1.0/video-recorder-core-1.0.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/allure/allure-java-annotations/1.4.23/allure-java-annotations-1.4.23.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/allure/allure-model/1.4.23/allure-model-1.4.23.jar:/Users/anaraimasheva/.m2/repository/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.9.3/jaxb2-basics-runtime-0.9.3.jar:/Users/anaraimasheva/.m2/repository/ru/yandex/qatools/properties/properties-loader/1.5/properties-loader-1.5.jar:/Users/anaraimasheva/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.3/commons-beanutils-core-1.8.3.jar:/Users/anaraimasheva/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/anaraimasheva"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2019-10-15"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/anaraimasheva/GitHub/roman/romancepractice"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/anaraimasheva/GitHub/roman/romancepractice/target/surefire/surefirebooter111424409594084493.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="11.0.5+10-LTS"/>
+    <property name="user.name" value="anaraimasheva"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.14.6"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="/Users/anaraimasheva/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/6y/hllg1rhd29j8k1dgnzkw8tl00000gn/T/"/>
+    <property name="java.version" value="11.0.5"/>
+    <property name="user.dir" value="/Users/anaraimasheva/GitHub/roman/romancepractice"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/anaraimasheva/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.5+10-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="setup" classname="com.romanceabroad.ui.RegistrationTests" time="0.429">
+    <failure message="You appear to be running MAC. The IE driver only runs on Windows.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: driver.version: InternetExplorerDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: driver.version: InternetExplorerDriver
+</failure>
+  </testcase>
+  <testcase name="setup" classname="com.romanceabroad.ui.RegistrationTests" time="0.016">
+    <failure message="You appear to be running MAC. The IE driver only runs on Windows.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: driver.version: InternetExplorerDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: driver.version: InternetExplorerDriver
+</failure>
+  </testcase>
+  <testcase name="setup" classname="com.romanceabroad.ui.RegistrationTests" time="0.004">
+    <failure message="You appear to be running MAC. The IE driver only runs on Windows.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: driver.version: InternetExplorerDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: driver.version: InternetExplorerDriver
+</failure>
+  </testcase>
+  <testcase name="setup" classname="com.romanceabroad.ui.RegistrationTests" time="0.005">
+    <failure message="You appear to be running MAC. The IE driver only runs on Windows.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: driver.version: InternetExplorerDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: driver.version: InternetExplorerDriver
+</failure>
+  </testcase>
+  <testcase name="setup" classname="com.romanceabroad.ui.RegistrationTests" time="0.003">
+    <failure message="You appear to be running MAC. The IE driver only runs on Windows.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: driver.version: InternetExplorerDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+You appear to be running MAC. The IE driver only runs on Windows.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: driver.version: InternetExplorerDriver
+</failure>
+  </testcase>
+  <testcase name="testBoolean" classname="com.romanceabroad.ui.RegistrationTests" time="0">
+    <skipped message="You appear to be running MAC. The IE driver only runs on Windows.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: driver.version: InternetExplorerDriver"/>
+  </testcase>
+  <testcase name="testBoolean" classname="com.romanceabroad.ui.RegistrationTests" time="0.001"/>
+  <testcase name="testBoolean" classname="com.romanceabroad.ui.RegistrationTests" time="0"/>
+  <testcase name="testBoolean" classname="com.romanceabroad.ui.RegistrationTests" time="0"/>
+  <testcase name="testBoolean" classname="com.romanceabroad.ui.RegistrationTests" time="0.001"/>
+  <testcase name="testBoolean" classname="com.romanceabroad.ui.RegistrationTests" time="0"/>
+  <testcase name="testBoolean" classname="com.romanceabroad.ui.RegistrationTests" time="0"/>
+  <testcase name="closeBrowser" classname="com.romanceabroad.ui.RegistrationTests" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="closeBrowser" classname="com.romanceabroad.ui.RegistrationTests" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="closeBrowser" classname="com.romanceabroad.ui.RegistrationTests" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="closeBrowser" classname="com.romanceabroad.ui.RegistrationTests" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="closeBrowser" classname="com.romanceabroad.ui.RegistrationTests" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testRegistrationForInvalidEmailTestCase31" classname="com.romanceabroad.ui.RegistrationTests" time="0">
+    <skipped message="You appear to be running MAC. The IE driver only runs on Windows.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: driver.version: InternetExplorerDriver"/>
+  </testcase>
+  <testcase name="testRegistrationForInvalidEmailTestCase31" classname="com.romanceabroad.ui.RegistrationTests" time="0.044">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;https://romanceabroad.com/users/login_form&apos;]&quot;}&#10;  (Session info: chrome=83.0.4103.97)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51155}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 6174af23c0d2290339096191a5bdd627&#10;*** Element info: {Using=xpath, value=//a[@href=&apos;https://romanceabroad.com/users/login_form&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://romanceabroad.com/users/login_form']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51155}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6174af23c0d2290339096191a5bdd627
+*** Element info: {Using=xpath, value=//a[@href='https://romanceabroad.com/users/login_form']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidEmailTestCase31(RegistrationTests.java:52)
+</failure>
+    <system-out><![CDATA[1
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 30679
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 10, 2020 9:02:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistrationForInvalidEmailTestCase31" classname="com.romanceabroad.ui.RegistrationTests" time="0.547"/>
+  <testcase name="testRegistrationForInvalidEmailTestCase31" classname="com.romanceabroad.ui.RegistrationTests" time="0.389"/>
+  <testcase name="testRegistrationForInvalidEmailTestCase31" classname="com.romanceabroad.ui.RegistrationTests" time="21.874">
+    <failure message="Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id=&apos;show-registration-block&apos;] (tried for 20 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id='show-registration-block'] (tried for 20 second(s) with 500 milliseconds interval)
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidEmailTestCase31(RegistrationTests.java:53)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='show-registration-block']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:55397}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2a2da4d1f010d31510a5201be256b8c9
+*** Element info: {Using=xpath, value=//button[@id='show-registration-block']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForInvalidEmailTestCase31(RegistrationTests.java:53)
+</failure>
+    <system-out><![CDATA[1
+Click Join button
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 1108
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 10, 2020 9:12:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Video recording
+[/Users/anaraimasheva/GitHub/roman/romancepractice/video/PrettyWomen Tests_recording_2020_10_06_21_03_25.avi]
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistrationForInvalidEmailTestCase31" classname="com.romanceabroad.ui.RegistrationTests" time="0.359"/>
+  <testcase name="testRegistrationForInvalidEmailTestCase31" classname="com.romanceabroad.ui.RegistrationTests" time="0.357"/>
+  <testcase name="testRegistrationForExistingUserTestCase32" classname="com.romanceabroad.ui.RegistrationTests" time="0">
+    <skipped message="You appear to be running MAC. The IE driver only runs on Windows.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: driver.version: InternetExplorerDriver"/>
+  </testcase>
+  <testcase name="testRegistrationForExistingUserTestCase32" classname="com.romanceabroad.ui.RegistrationTests" time="0.014">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;https://romanceabroad.com/users/login_form&apos;]&quot;}&#10;  (Session info: chrome=83.0.4103.97)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51286}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 0e751b8d88093d066536685bd807d829&#10;*** Element info: {Using=xpath, value=//a[@href=&apos;https://romanceabroad.com/users/login_form&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://romanceabroad.com/users/login_form']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51286}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0e751b8d88093d066536685bd807d829
+*** Element info: {Using=xpath, value=//a[@href='https://romanceabroad.com/users/login_form']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForExistingUserTestCase32(RegistrationTests.java:75)
+</failure>
+    <system-out><![CDATA[imasheva.anara1@gmail.com
+]]></system-out>
+    <system-err><![CDATA[1591848131740	Marionette	INFO	Stopped listening on port 51036
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistrationForExistingUserTestCase32" classname="com.romanceabroad.ui.RegistrationTests" time="1.601"/>
+  <testcase name="testRegistrationForExistingUserTestCase32" classname="com.romanceabroad.ui.RegistrationTests" time="1.611"/>
+  <testcase name="testRegistrationForExistingUserTestCase32" classname="com.romanceabroad.ui.RegistrationTests" time="21.977">
+    <failure message="Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id=&apos;show-registration-block&apos;] (tried for 20 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id='show-registration-block'] (tried for 20 second(s) with 500 milliseconds interval)
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForExistingUserTestCase32(RegistrationTests.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='show-registration-block']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:55531}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: e45ee3a0b1665952e6cb4120f58e43a1
+*** Element info: {Using=xpath, value=//button[@id='show-registration-block']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistrationForExistingUserTestCase32(RegistrationTests.java:76)
+</failure>
+    <system-out><![CDATA[imasheva.anara1@gmail.com
+Click Join button
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 17559
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 10, 2020 9:12:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Video recording
+[/Users/anaraimasheva/GitHub/roman/romancepractice/video/PrettyWomen Tests_recording_2020_10_06_21_03_25.avi]
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistrationForExistingUserTestCase32" classname="com.romanceabroad.ui.RegistrationTests" time="1.267"/>
+  <testcase name="testRegistrationForExistingUserTestCase32" classname="com.romanceabroad.ui.RegistrationTests" time="1.68"/>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="0">
+    <skipped message="You appear to be running MAC. The IE driver only runs on Windows.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: driver.version: InternetExplorerDriver"/>
+  </testcase>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="0">
+    <skipped message="You appear to be running MAC. The IE driver only runs on Windows.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: driver.version: InternetExplorerDriver"/>
+  </testcase>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="0.017">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;https://romanceabroad.com/users/login_form&apos;]&quot;}&#10;  (Session info: chrome=83.0.4103.97)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51385}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 6ceaf3d08f5957ff5232de263ccca2ce&#10;*** Element info: {Using=xpath, value=//a[@href=&apos;https://romanceabroad.com/users/login_form&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://romanceabroad.com/users/login_form']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51385}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 6ceaf3d08f5957ff5232de263ccca2ce
+*** Element info: {Using=xpath, value=//a[@href='https://romanceabroad.com/users/login_form']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistration1(RegistrationTests.java:131)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 30526
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 10, 2020 9:02:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1591848135469	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/6y/hllg1rhd29j8k1dgnzkw8tl00000gn/T/rust_mozprofile2WMMM5"
+1591848135850	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1591848136230	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1591848136230	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1591848136230	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1591848136230	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="0.014">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;https://romanceabroad.com/users/login_form&apos;]&quot;}&#10;  (Session info: chrome=83.0.4103.97)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51625}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 97db740a4b59328af6c95b0ecdcc63a9&#10;*** Element info: {Using=xpath, value=//a[@href=&apos;https://romanceabroad.com/users/login_form&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='https://romanceabroad.com/users/login_form']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:51625}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 97db740a4b59328af6c95b0ecdcc63a9
+*** Element info: {Using=xpath, value=//a[@href='https://romanceabroad.com/users/login_form']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistration1(RegistrationTests.java:131)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 32527
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+1591848138056	Marionette	INFO	Listening on port 51503
+1591848138146	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jun 10, 2020 9:02:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Jun 10, 2020 9:02:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="6.581"/>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="6.133"/>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="5.75"/>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="5.698"/>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="5.688"/>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="5.614"/>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="22.112">
+    <failure message="Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id=&apos;show-registration-block&apos;] (tried for 20 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id='show-registration-block'] (tried for 20 second(s) with 500 milliseconds interval)
+	at com.romanceabroad.ui.RegistrationTests.testRegistration1(RegistrationTests.java:132)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='show-registration-block']"}
+  (Session info: chrome=83.0.4103.97)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:55962}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c5d9acd02065f3faea1944946618a4a4
+*** Element info: {Using=xpath, value=//button[@id='show-registration-block']}
+	at com.romanceabroad.ui.RegistrationTests.testRegistration1(RegistrationTests.java:132)
+</failure>
+    <system-out><![CDATA[Click Join button
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 21779
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 10, 2020 9:13:38 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Video recording
+[/Users/anaraimasheva/GitHub/roman/romancepractice/video/PrettyWomen Tests_recording_2020_10_06_21_03_25.avi]
+]]></system-err>
+  </testcase>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="5.76"/>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="5.597"/>
+  <testcase name="testRegistration1" classname="com.romanceabroad.ui.RegistrationTests" time="5.382"/>
+  <testcase name="testSplit" classname="com.romanceabroad.ui.PrettyWomenTest" time="0"/>
+  <testcase name="testPrettyWomenPageTestCase3" classname="com.romanceabroad.ui.PrettyWomenTest" time="8.387"/>
+  <testcase name="testSearchByAgeTestCase4" classname="com.romanceabroad.ui.PrettyWomenTest" time="5.722"/>
+  <testcase name="testDropDownViewOptionsTestCase5" classname="com.romanceabroad.ui.PrettyWomenTest" time="6.456"/>
+  <testcase name="selectRandomDropDownListTestCase6" classname="com.romanceabroad.ui.PrettyWomenTest" time="0.036">
+    <failure message="element not interactable&#10;  (Session info: chrome=83.0.4103.97)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Anaras-MacBook-Pro.local&apos;, ip: &apos;2601:647:4a00:ccf0:0:0:0:f5fd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;11.0.5&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:52804}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: b448b785f56b329f4ceb4000f70f3540" type="org.openqa.selenium.ElementNotInteractableException">org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=83.0.4103.97)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Anaras-MacBook-Pro.local', ip: '2601:647:4a00:ccf0:0:0:0:f5fd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '11.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: /var/folders/6y/hllg1rhd29j...}, goog:chromeOptions: {debuggerAddress: localhost:52804}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b448b785f56b329f4ceb4000f70f3540
+	at com.romanceabroad.ui.PrettyWomenTest.selectRandomDropDownListTestCase6(PrettyWomenTest.java:77)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 37781
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 10, 2020 9:03:54 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Video recording
+[/Users/anaraimasheva/GitHub/roman/romancepractice/video/PrettyWomen Tests_recording_2020_10_06_21_03_25.avi]
+]]></system-err>
+  </testcase>
+  <testcase name="selectDropDownListByAgeMinTestCase7" classname="com.romanceabroad.ui.PrettyWomenTest" time="24.501"/>
+  <testcase name="searchDifferentResultsTestCase30" classname="com.romanceabroad.ui.PrettyWomenTest" time="77.61"/>
+  <testcase name="searchDifferentResultsTestCase30" classname="com.romanceabroad.ui.PrettyWomenTest" time="8.452"/>
+  <testcase name="searchDifferentResultsTestCase30" classname="com.romanceabroad.ui.PrettyWomenTest" time="77.697"/>
+  <testcase name="searchDifferentResultsTestCase30" classname="com.romanceabroad.ui.PrettyWomenTest" time="13.607"/>
+  <testcase name="testUserProfile" classname="com.romanceabroad.ui.PrettyWomenTest" time="13.528"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="26.795"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="26.601"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="27.707"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="27.035"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="26.886"/>
+  <testcase name="testFooter" classname="com.romanceabroad.ui.PrettyWomenTest" time="26.85"/>
+</testsuite>

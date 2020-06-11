@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Mobile Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Galaxy S5 test cases(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="deviceName" value="Galaxy S5"/>
+    <parameter name="testBox" value="mobile"/>
+    <classes>
+      <class name="com.romanceabroad.ui.PrettyWomenTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="selectRandomDropDownListTestCase6" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.PrettyWomenTest -->
+    </classes>
+  </test> <!-- Galaxy S5 test cases(failed) -->
+  <test thread-count="5" name="iPhone 6/7/8 test cases(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="deviceName" value="iPhone 6/7/8"/>
+    <parameter name="testBox" value="mobile"/>
+    <classes>
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="testRegistrationForExistingUserTestCase32" invocation-numbers="0"/>
+          <include name="testRegistrationForInvalidEmailTestCase31" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+    </classes>
+  </test> <!-- iPhone 6/7/8 test cases(failed) -->
+  <test thread-count="5" name="iPhone 6/7/8 Plus test cases(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="deviceName" value="iPhone 6/7/8 Plus"/>
+    <parameter name="testBox" value="mobile"/>
+    <classes>
+      <class name="com.romanceabroad.ui.RegistrationTests">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="testRegistration1" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.romanceabroad.ui.RegistrationTests -->
+    </classes>
+  </test> <!-- iPhone 6/7/8 Plus test cases(failed) -->
+</suite> <!-- Failed suite [Mobile Test Suite] -->

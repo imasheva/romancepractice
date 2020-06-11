@@ -11,7 +11,9 @@ import java.util.List;
 
 public class PrettyWomenPage extends BaseActions {
 
-    public PrettyWomenPage(WebDriver driver, WebDriverWait wait) { super(driver, wait); }
+    public PrettyWomenPage(WebDriver driver, WebDriverWait wait) {
+        super(driver, wait);
+    }
 
 
     public void openPrettyWomenPage() {
@@ -19,17 +21,26 @@ public class PrettyWomenPage extends BaseActions {
         driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
     }
 
-    public void clickPrettyWomen(){
+    public void clickPrettyWomen() {
 
         driver.findElement(Locators.LINK_PRETTY_WOMEN).click();
 
     }
+    public void clickMobileMenu() {
+        try {
+            driver.findElement(Locators.MOBILE_MENU).click();
+        } catch (Exception e) {
+
+        }
+    }
 
 
+    public void clickSearchParameters(String valueOfBox) {
+        if (valueOfBox.contains("mobile")){
+            driver.findElement(Locators.MOBILE_LINK_SEARCH_PARAMETERS).click();
+        }
 
-
-
-
+    }
 
     public void searchByAge() {
 
@@ -57,7 +68,7 @@ public class PrettyWomenPage extends BaseActions {
     }
 
 
-    public void clickSearchButton(){
+    public void clickSearchButton() {
         driver.findElement(Locators.BUTTON_SEARCH).click();
     }
 
@@ -85,7 +96,7 @@ public class PrettyWomenPage extends BaseActions {
         for (int i = 0; i < profileList.size(); i++) {
             name = profileList.get(i).getText();
 
-            if (name.contains(name))  {
+            if (name.contains(name)) {
                 System.out.println(name);
                 ajaxClick(profileList.get(i));
                 profileList.get(i).click();
@@ -98,12 +109,10 @@ public class PrettyWomenPage extends BaseActions {
     }
 
 
-
-
     public String verifyPersonalInformation() {
-      String  personalDetail = driver.findElement(Locators.DESCRIPTION_OF_PROFILE).getText();
+        String personalDetail = driver.findElement(Locators.DESCRIPTION_OF_PROFILE).getText();
 
-   return personalDetail;
+        return personalDetail;
     }
 
     public List<WebElement> checkEachFooterItem() {

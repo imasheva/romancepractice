@@ -8,6 +8,10 @@ public class Locators {
 
     //MAIN PAGE
     public static final By LINK_HOME = By.xpath("//a[contains(text(),'HOME')]");
+    public static final By MOBILE_MENU = By.xpath("//span[@class='navbar-toggler-icon']");
+
+
+
     //TABS ON MAIN PAGE
     public static final By TAB_OF_MAIN_PAGE = By.xpath("//ul[@class='navbar-nav']//li/a");
 
@@ -71,6 +75,7 @@ public class Locators {
     public static final By MAIN_USERS_RESULT = By.cssSelector("#main_users_results");
     public static final By DESCRIPTION_OF_PROFILE = By.cssSelector("div.description");
     public static final By FOOTER_PRETTY_WOMEN_PAGE = By.xpath("//li[@class='footer-menu-list-group-item']");
+    public static final By MOBILE_LINK_SEARCH_PARAMETERS = By.xpath("//div[@class='search-param-button mb10']//a");
 
     //SIGN IN page
     public static final By LINK_SIGN_IN = By.xpath("//a[@href='https://romanceabroad.com/users/login_form']");

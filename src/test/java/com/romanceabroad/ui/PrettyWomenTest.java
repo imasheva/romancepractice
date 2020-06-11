@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import java.util.List;
@@ -23,14 +24,14 @@ public class PrettyWomenTest extends BaseUI {
     String footerName;
     String actualTitle;
 
-    public static final boolean testCase3 = true;
-    public static final boolean testCase4 = true;
-    public static final boolean testCase5 = true;
+    public static final boolean testCase3 = false;
+    public static final boolean testCase4 = false;
+    public static final boolean testCase5 = false;
     public static final boolean testCase6 = true;
-    public static final boolean testCase7 = true;
-    public static final boolean testCase30 = true;
-    public static final boolean testCase31 = true;
-    public static final boolean testCase32 = true;
+    public static final boolean testCase7 = false;
+    public static final boolean testCase30 = false;
+    public static final boolean testCase31 = false;
+    public static final boolean testCase32 = false;
 
 
     @Video(name = "PrettyWomen Tests")
@@ -70,6 +71,8 @@ public class PrettyWomenTest extends BaseUI {
 
     //Vid 14, 39:42
     public void selectRandomDropDownListTestCase6() {
+        String value = valueOfBox;
+        mainPage.clickMobileMenu(valueOfBox);
         prettyWomenPage.openPrettyWomenPage();
         prettyWomenPage.javaWaitSec(3);
 
@@ -77,6 +80,7 @@ public class PrettyWomenTest extends BaseUI {
 
         int sizeOfDropDownListSortBy = prettyWomenPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY);
         System.out.println(sizeOfDropDownListSortBy);
+        prettyWomenPage.clickSearchParameters(valueOfBox);
         for (int i = 0; i < sizeOfDropDownListSortBy; i++) {
             prettyWomenPage.selectItemRandomDropDownOption(Locators.DROP_DOWN_LIST_SORT_BY, "Sort by");
         }

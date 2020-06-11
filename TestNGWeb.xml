@@ -19,7 +19,8 @@
     </test>-->
 
     <test name="Chrome Test cases">
-        <parameter name="testBox" value="web"/>
+<!--        <parameter name="testBox" value="web"/>-->
+        <parameter name="testEnv" value="prod"/>
         <parameter name="version" value="59.0"/>
         <parameter name="browser" value="chrome"/>
         <parameter name="platform" value= "Windows 10"/>
