@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestSuite" parallel="tests" thread-count="3">
+<suite name="Web TestSuite" parallel="tests" thread-count="3">
 
-    <test name="Safari Mac test cases">
+   <!-- <test name="Safari Mac test cases">
         <parameter name="testBox" value="sauce"/>
         <parameter name="version" value="12.1"/>
         <parameter name="browser" value="Safari"/>
@@ -16,60 +16,64 @@
             <class name="com.romanceabroad.ui.MainPageTests"/>
             <class name="com.romanceabroad.ui.BlogPageTest"/>
         </classes>
-    </test>
+    </test>-->
 
-    <test name="Chrome Tests">
-        <parameter name="testBox" value="sauce"/>
-        <parameter name="browser" value="Chrome"/>
-        <parameter name="version" value="68.0"/>
-        <parameter name="platform" value="Windows 10"/>
+    <test name="Chrome Test cases">
+        <parameter name="testBox" value="web"/>
+        <parameter name="version" value="59.0"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="platform" value= "Windows 10"/>
+
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
-            <class name="com.romanceabroad.ui.SignInTest"/>
+            <!--<class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
             <class name="com.romanceabroad.ui.MainPageTests"/>
             <class name="com.romanceabroad.ui.BlogPageTest"/>
-            <class name="com.romanceabroad.ui.ContactUsPageTest"/>
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>-->
         </classes>
     </test>
 
+
+
+
     <test name="IE test cases">
-        <parameter name="testBox" value="sauce"/>
+        <parameter name="testBox" value="web"/>
         <parameter name="version" value="11.285"/>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="ie"/>
         <parameter name="platform" value="Windows 10"/>
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
-            <class name="com.romanceabroad.ui.SignInTest"/>
+            <!--<class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
             <class name="com.romanceabroad.ui.MainPageTests"/>
             <class name="com.romanceabroad.ui.BlogPageTest"/>
-            <class name="com.romanceabroad.ui.ContactUsPageTest"/>
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>-->
         </classes>
     </test>
 
     <test name="Firefox test cases">
-        <parameter name="testBox" value="sauce"/>
+        <parameter name="testBox" value="web"/>
         <parameter name="version" value="68.0"/>
         <parameter name="browser" value="Firefox"/>
         <parameter name="platform" value="macOS 10.14"/>
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
-            <class name="com.romanceabroad.ui.SignInTest"/>
+           <!-- <class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
             <class name="com.romanceabroad.ui.MainPageTests"/>
             <class name="com.romanceabroad.ui.BlogPageTest"/>
-            <class name="com.romanceabroad.ui.ContactUsPageTest"/>
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>-->
         </classes>
     </test>
 
-    <test name="Edge test cases">
+   <!-- <test name="Edge test cases">
         <parameter name="testBox" value="sauce"/>
         <parameter name="version" value="68.0"/>
         <parameter name="browser" value="MicrosoftEdge"/>
@@ -84,7 +88,7 @@
             <class name="com.romanceabroad.ui.BlogPageTest"/>
             <class name="com.romanceabroad.ui.ContactUsPageTest"/>
         </classes>
-    </test>
+    </test>-->
 
 
 </suite>

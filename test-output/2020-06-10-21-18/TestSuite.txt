@@ -1,0 +1,825 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 751, Failures: 273, Errors: 0, Skipped: 478, Time elapsed: 11.234 s <<< FAILURE! - in TestSuite
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.473 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.474 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.474 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.SignInTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.SignInTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.SignInTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.473 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testSignInTestCase1(com.romanceabroad.ui.SignInTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testSignInTestCase1(com.romanceabroad.ui.SignInTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testSplit(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.238 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testSplit(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.238 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.241 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+checkTabsTestCase10(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.152 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.152 s  <<< FAILURE!
+java.lang.NullPointerException
+
+checkTabsTestCase10(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.532 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testGiftsPageTestCase20(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.123 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.124 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.299 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.184 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testPrettyWomenPageTestCase3(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.119 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.174 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.275 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.569 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.005 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testRegistration2(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testGiftsPageTestCase20(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.448 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.139 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testPhotosPageTestCase8(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.146 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testBoolean(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.146 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.149 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.SignInTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.116 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testBoolean(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.SignInTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.672 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testSignInTestCase1(com.romanceabroad.ui.SignInTest)  Time elapsed: 0.002 s  <<< FAILURE!
+com.automation.remarks.video.exception.RecordingException: java.io.IOException: DataChunk "1768192049" actual size differs from given size: actual size:200 given size:200
+Caused by: java.io.IOException: DataChunk "1768192049" actual size differs from given size: actual size:200 given size:200
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.084 s  <<< FAILURE!
+java.lang.NullPointerException
+
+checkTabsTestCase10(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.455 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.458 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.485 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.133 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.541 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.221 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.348 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.254 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.413 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.243 s  <<< FAILURE!
+java.lang.NullPointerException
+
+testRegistration2(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.378 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.379 s  <<< FAILURE!
+java.lang.NullPointerException
+
+checkLinksWithAssertionsTestCase11(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+com.automation.remarks.video.exception.RecordingException: java.io.IOException: closed
+Caused by: java.io.IOException: closed
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.005 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.521 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.BlogPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.GiftsTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.ContactUsPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.RegistrationTests)  Time elapsed: 0.005 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PhotosPageTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.PrettyWomenTest)  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+
+setup(com.romanceabroad.ui.MainPageTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+
