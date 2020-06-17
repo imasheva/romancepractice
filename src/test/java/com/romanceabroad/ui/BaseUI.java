@@ -5,9 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -55,7 +57,7 @@ public class BaseUI {
     }
 
     protected enum TestBrowser {
-        CHROME, FIREFOX, IE
+        CHROME, FIREFOX, IE, REMOTE_CHROME, REMOTE_FIREFOX
     }
 
     @BeforeMethod(groups = {"user", "admin", "ie"}, alwaysRun = true)
@@ -82,6 +84,10 @@ public class BaseUI {
             testBrowser = TestBrowser.FIREFOX;
         } else if (browser.equalsIgnoreCase("ie")) {
             testBrowser = TestBrowser.IE;
+        }if (browser.equalsIgnoreCase("remoteChrome")) {
+            testBrowser = TestBrowser.REMOTE_CHROME;
+        }else if (browser.equalsIgnoreCase("remoteFirefox")) {
+            testBrowser = TestBrowser.REMOTE_FIREFOX;
         }
 
 
@@ -102,6 +108,21 @@ public class BaseUI {
                         driver = new InternetExplorerDriver();
                         driver.manage().deleteAllCookies();
                         break;
+
+                    case REMOTE_FIREFOX:
+                        System.out.println("Remote Firefox");
+                        FirefoxOptions firefoxOptions = new FirefoxOptions();
+                        firefoxOptions.addArguments("--headless");
+                        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
+                        break;
+
+                    case REMOTE_CHROME:
+                        System.out.println("Remote Chrome");
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.addArguments("--headless");
+                        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeOptions);
+                        break;
+
                     default:
                         System.out.println("Default!!!");
                         System.setProperty("webdriver.chrome.driver", "chromedriver");
@@ -155,7 +176,10 @@ public class BaseUI {
         photosPage = new PhotosPage(driver, wait);
         contactUsPage = new ContactsUsPage(driver, wait);
 
-       // driver.manage().window().maximize();
+        driver.manage().window().maximize();
+
+        PageFactory.initElements(driver, mainPage);
+        PageFactory.initElements(driver, prettyWomenPage);
 
         if(env.contains("qa")){
             driver.get(Data.mainUrl);

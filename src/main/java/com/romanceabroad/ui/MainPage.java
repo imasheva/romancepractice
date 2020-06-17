@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -15,6 +16,10 @@ import java.util.concurrent.TimeUnit;
 import static org.testng.Assert.assertTrue;
 
 public class MainPage extends BaseActions {
+
+    @FindBy(xpath = "//button[@id='show-registration-block']")
+    WebElement registrationButton;
+
 
     public MainPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
@@ -43,7 +48,8 @@ public class MainPage extends BaseActions {
         //   wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_REGISTRATION));
 
         Reports.log("Click Join button");
-        ajaxClick(Locators.BUTTON_REGISTRATION);
+        registrationButton.click();
+      //  ajaxClick(Locators.BUTTON_REGISTRATION);
         // driver.findElement(Locators.BUTTON_REGISTRATION).click();
     }
 

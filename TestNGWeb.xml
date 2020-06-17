@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Web TestSuite" parallel="tests" thread-count="3">
+<suite name="Web TestSuite" parallel="none" >
 
    <!-- <test name="Safari Mac test cases">
         <parameter name="testBox" value="sauce"/>
@@ -22,7 +22,9 @@
 <!--        <parameter name="testBox" value="web"/>-->
         <parameter name="testEnv" value="prod"/>
         <parameter name="version" value="59.0"/>
-        <parameter name="browser" value="chrome"/>
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <parameter name="browser" value="remoteChrome"/>-->
+        <parameter name="browser" value="remoteFirefox"/>
         <parameter name="platform" value= "Windows 10"/>
 
         <classes>
@@ -39,6 +41,7 @@
 
 
 
+<!--
 
     <test name="IE test cases">
         <parameter name="testBox" value="web"/>
@@ -47,13 +50,13 @@
         <parameter name="platform" value="Windows 10"/>
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
-            <!--<class name="com.romanceabroad.ui.SignInTest"/>
+            &lt;!&ndash;<class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
             <class name="com.romanceabroad.ui.MainPageTests"/>
             <class name="com.romanceabroad.ui.BlogPageTest"/>
-            <class name="com.romanceabroad.ui.ContactUsPageTest"/>-->
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>&ndash;&gt;
         </classes>
     </test>
 
@@ -64,17 +67,17 @@
         <parameter name="platform" value="macOS 10.14"/>
         <classes>
             <class name="com.romanceabroad.ui.RegistrationTests"/>
-           <!-- <class name="com.romanceabroad.ui.SignInTest"/>
+           &lt;!&ndash; <class name="com.romanceabroad.ui.SignInTest"/>
             <class name="com.romanceabroad.ui.PrettyWomenTest"/>
             <class name="com.romanceabroad.ui.PhotosPageTest"/>
             <class name="com.romanceabroad.ui.GiftsTest"/>
             <class name="com.romanceabroad.ui.MainPageTests"/>
             <class name="com.romanceabroad.ui.BlogPageTest"/>
-            <class name="com.romanceabroad.ui.ContactUsPageTest"/>-->
+            <class name="com.romanceabroad.ui.ContactUsPageTest"/>&ndash;&gt;
         </classes>
     </test>
 
-   <!-- <test name="Edge test cases">
+   &lt;!&ndash; <test name="Edge test cases">
         <parameter name="testBox" value="sauce"/>
         <parameter name="version" value="68.0"/>
         <parameter name="browser" value="MicrosoftEdge"/>
@@ -89,7 +92,8 @@
             <class name="com.romanceabroad.ui.BlogPageTest"/>
             <class name="com.romanceabroad.ui.ContactUsPageTest"/>
         </classes>
-    </test>-->
+    </test>&ndash;&gt;
+-->
 
 
 </suite>
